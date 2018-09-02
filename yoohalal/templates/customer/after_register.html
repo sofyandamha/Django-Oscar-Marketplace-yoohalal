@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Confirm Email" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item"><a href="{% url 'customer:register' %}">{% trans 'Register' %}</a></li>
+        <li class="breadcrumb-item current">{% trans 'Confirm Email' %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {% blocktrans with email=account.email %}
+        Hi <strong>{{ email }}</strong>, Please check your email to confirm your registration.
+        {% endblocktrans %}
+    </p>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "customer/baseaccountpage.html" %}
+
+
+{% load i18n %}
+
+{% block extra_breadcrumbs %}
+	<li class="breadcrumb-item">
+		<a href="{% url 'customer:address-list' %}">{% trans 'Address book' %}</a>
+	</li>
+{% endblock %}
+
+{% block tabcontent %}
+
+    {% with style='horizontal' %}
+    <div class="container">
+        {% include "partials/form.html" %}
+    </div>
+    {% endwith %}
+{% endblock tabcontent %}

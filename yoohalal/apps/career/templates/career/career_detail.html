@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {{ title }} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'career:career-list' %}">{% trans 'Careers' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{{ title }}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    {% if career %}
+        <section id="blog-single">
+            <div class="container">
+                <div class="posts col-md-12">
+                    <div class="post-entry">
+                        <div class="post-content">
+                            <h2 class="post-title">{{ career.title }}</h2>
+                            <ul class="meta">
+                                <li>{{ career.departement }}</li>
+                                <li>{{ career.date_published | date:' j-M-Y ' }}</li>
+                            </ul>
+                            {{ career.body|safe }}
+                        </div>
+                        <br><a href="{% url 'career:applicant-form' career_id=career.id %}" class="le-button small">{% trans 'Apply job' %}</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktrans with number=order_number %}We have received order confirmation with order number {{ number }} from you. We will validate your confirmation soon.{% endblocktrans %}

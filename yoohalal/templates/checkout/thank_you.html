@@ -1,0 +1,106 @@
+{% extends "checkout/layout.html" %}
+{% load currency_filters %}
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+{% load bank_account_tags %}
+
+{% block title %}
+    {% blocktrans with number=order.number %}
+        Order {{ number }}: confirmation
+    {% endblocktrans %} | {{ block.super }}
+{% endblock title %}
+
+{% block checkout_nav %}
+    {% include 'checkout/nav.html' with step=5 %}
+{% endblock %}
+
+{% block checkout_title %}
+    {% blocktrans with number=order.number %}
+        Order {{ number }}: confirmation
+    {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+<div id="thank-you-page">
+    <div class="well well-info">
+        <h1>{% trans "Thank you for shopping at yoohalal.com" %}</h1>
+        {% blocktrans with number=order.number %}We have to process your order and send a confirmation email. For order number <strong>#{{ number }}</strong>.{% endblocktrans %}
+    </div>
+    <div class="row">
+        <div class="col-sm-6 guide">
+            <div class="well">
+                <h2>{% trans "Payment Instructions" %}</h2>
+                
+                <p>
+                    {% trans "Make a payment to the destination bank you have selected by transfer through ATM, mobile banking or internet banking" %}
+                </p>
+
+                <hr/>
+
+                <h4>{% trans "Data Bank" %}</h4>
+                {% get_bank_account_by_order order_number=order.number as bank %}
+                <p>
+                    {{ bank.label }}<br>
+                    No. Rek. {{ bank.number }}<br>
+                    a/n {{ bank.name }}
+                </p>
+
+                <p>
+                {% blocktrans with total=order.total_incl_tax|currency:order.currency %}
+                    Transfer money in accordance with the nominal total spend of your transactions listed<br/>
+                    Total: <strong>{{ total }}</strong>
+                {% endblocktrans %}
+                </p>
+
+                <p>
+                {% blocktrans with number=order.number %}
+                    Fill in the note with your order number<br/>
+                    Order Number: <strong>#{{ number }}</strong>
+                {% endblocktrans %}
+                </p>
+
+                <hr/>
+
+                <div class="small">
+                    &#42;{% trans "Keep a proof of payment for your transaction proof on the payment confirmation page" %}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 attention">
+            <div class="alert alert-success">
+                <h2>{% trans "Don't forget to confirm" %}</h2>
+                <p>{% trans "Do a transfer within 1x10 hours. If in that time you do not transfer funds then we will cancel the transaction." %}</p>
+
+                <div class="block-info">
+                    <p>
+                    {% url "confirmation:payment-page" as the_url %}
+                    {% blocktrans %}Confirm your payment on the payment confirmation page<br/>
+                    <a target="_blank" href="{{ the_url }}">here</a> <- link to the confirmation page{% endblocktrans %}
+                    </p>
+                     
+                </div>
+
+                <p class="important-text">
+                    {% trans "Unconfirmed payments will not be processed!" %}
+                </p>
+            </div>          
+        </div>
+        <div class="col-sm-12 text-center">
+            <a onclick="window.print()" href="#" class="btn btn-lg le-button">{% trans "Print this page" %}</a>
+            <a href="{{ homepage_url }}" class="btn btn-lg le-button">{% trans "Continue shopping" %}</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block tracking %}
+    {% if send_analytics_event %}
+        {% include "partials/google_analytics_transaction.html" %}
+    {% endif %}
+{% endblock %}
+
+{% block extrastyles %}
+    <link rel="stylesheet" type="text/css" href="{% static "media-center/css/thank_you_page.css" %}" />
+{% endblock %}
+

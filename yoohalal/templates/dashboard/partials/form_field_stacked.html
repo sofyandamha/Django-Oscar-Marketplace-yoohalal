@@ -1,0 +1,27 @@
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+	{% annotate_form_field field %}
+    {% block control_group %}
+		<div class="form-group">
+			{% block label %}
+				<div class="col-md-4">
+					{{ field.label_tag }}
+				</div>
+			{% endblock %}
+			{% block controls %}
+				<div class="col-md-8">
+					{% render_field field class+='form-control' %}
+					{% for error in field.errors %}
+						<ul class="error-block">
+							<li>{{ error }}</li>
+						</ul>
+					{% endfor %}
+				</div>
+			{% endblock %}
+		</div>
+	{% endblock %}
+{% endif %}

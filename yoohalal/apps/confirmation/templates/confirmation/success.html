@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% load currency_filters %}
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}
+    {% trans "Success" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item"><a href="{% url 'confirmation:payment-page' %}">{% trans 'Payment Confirmation' %}</a></li>
+        <li class="breadcrumb-item current">{% trans 'Success' %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {% blocktrans with number=order.number %}
+            Thank you for submiting confirmation for order number <strong>#{{ number }}</strong>. We will validate your confirmation as soon.
+        {% endblocktrans %}
+    </p>
+{% endblock content %}

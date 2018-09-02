@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% load currency_filters %}
+{% load currency_filters %}
+{% load bank_account_tags %}
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}
+    {% trans "Payment" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Payment' %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+<div class="metode-pembayaran">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>{% trans 'Bank transfer' %}</h4>
+                    <p>
+                        {% trans 'Transfer via available bank. Do not forget the confirmation after payment is sent.' %}
+                    </p>
+
+                    {% bank_account_list as bank_accounts %}
+                    <div class="row pilihan-pembayaran">
+                        {% for item in bank_accounts %}
+                        <div class="col-sm-6">
+                            <div class="box">
+                                <h5>{{ item.label }}</h5>
+                                <p><i class="icon-pembayaran {{ item.slug }}"></i></p>
+                                <p>{{ item.label }}
+                                    <br>No. Rek. {{ item.number }}
+                                    <br>a/n {{ item.name }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <p class="text-center">
+                        <a href="{% url 'confirmation:confirmation-order' %}" target="_blank" class="btn le-button">
+                            {% trans 'Payment confirmation' %} <i class="glyphicon glyphicon-triangle-right"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

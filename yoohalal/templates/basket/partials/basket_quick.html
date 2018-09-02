@@ -1,0 +1,55 @@
+{% load history_tags %}
+{% load basket_tags %}
+{% load currency_filters %}
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+
+<ul class="dropdown-menu">
+    {% if request.basket.num_lines %}
+        {% for line in request.basket.all_lines %}
+            <li>
+                <div class="basket-item">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 no-margin text-center">
+                            <div class="thumb">
+                                {% with image=line.product.primary_image %}
+                                    {% thumbnail image.original "100x100" upscale=False as thumb %}
+                                    <img src="{{ thumb.url }}" alt="{{ line.product.get_title }}" width="73" height="73" />
+                                    {% endthumbnail %}
+                                {% endwith %}
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 no-margin">
+                            <div class="title">{{ line.description }}</div>
+                            <div class="price">{{ line.unit_price_excl_tax|currency:request.basket.currency }}</div>
+                        </div>
+                    </div>
+                    <!-- <a class="close-btn" href="#"></a> -->
+                </div>
+            </li>
+        {% endfor %}
+        <li class="checkout">
+            <div class="basket-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <a href="{% url 'basket:summary' %}" class="le-button inverse">{% trans "View basket" %}</a>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <a href="{% url 'checkout:index' %}" class="le-button">{% trans "Checkout" %}</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {% else %}
+        <li>
+             <div class="basket-item">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 no-margin text-center">
+                        <p>{% trans "Your basket is empty." %}</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    {% endif %}
+</ul>

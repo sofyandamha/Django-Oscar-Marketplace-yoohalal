@@ -1,0 +1,7 @@
+{% if record.proof_payment.url %}
+	<a href="{{ record.proof_payment.url }}" target="_blank">
+		{{ record.filename }}
+	</a>
+{% else %}
+    -
+{% endif %}

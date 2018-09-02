@@ -1,0 +1,125 @@
+{% extends "layout_2_col.html" %}
+
+{% load currency_filters %}
+{% load thumbnail %}
+{% load product_tags %}
+{% load i18n %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% block title %}
+    "{{ query }}" | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans "Search" %} "{{ query }}"</li>
+    </ul>
+{% endblock %}
+
+{% block column_left %}
+    {% if has_facets %}
+        <h4>{% trans "Refine your search" %}</h4>
+        <dl>
+            {% for field, data in facet_data.items %}
+                {% if data.results %}
+                    {% include 'search/partials/facet.html' with name=data.name items=data.results %}
+                {% endif %}
+            {% endfor %}
+        </dl>
+    {% endif %}
+{% endblock %}
+
+{% block headertext %}
+    {% blocktrans with q=query %}
+        Products matching "{{ q }}"
+    {% endblocktrans %}
+{% endblock %}
+
+{% block content %}
+    
+    {% if not paginator.count %}
+        <section>
+            <p>
+            {% trans "Found <strong>0</strong> results." %}
+            {% if suggestion %}
+                {% url 'search:search' as search_url %}
+                {% blocktrans %}
+                    Did you mean <a href="{{ search_url }}?q={{ suggestion }}">"{{ suggestion }}"</a>?
+                {% endblocktrans %}
+            {% endif %}
+            </p>
+        </section>
+    {% endif %}
+
+    {% if page.object_list %}
+        <section>
+            <div class="grid-list-products">
+                {% block section_title %}
+                    <h2 class="section-title">
+                        {% blocktrans with q=query %}
+                            Products matching "{{ q }}"
+                        {% endblocktrans %}
+                    </h2>
+                {% endblock %}
+                <div class="control-bar">
+                    <form method="get" action=".">
+                        {# Render other search params as hidden inputs #}
+                        {% for value in selected_facets %}
+                            <input type="hidden" name="selected_facets" value="{{ value }}" />
+                        {% endfor %}
+                        <input type="hidden" name="q" value="{{ search_form.q.value }}" />
+
+                        <div id="popularity-sort" class="le-select">
+                            {% render_field search_form.sort_by %}
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-content">
+                    <div id="grid-view" class="products-grid fade tab-pane in active">
+                        <div class="product-grid-holder">
+                            <div class="row no-margin">
+                                {% for result in page.object_list %}
+                                    {% render_product result.object %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="pagination-holder">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 text-left">
+                                    {% include "partials/pagination.html" with page_obj=page %}
+                                </div>
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="result-counter">
+                                        {% if paginator.count %}
+                                            {% if paginator.num_pages > 1 %}
+                                                {% blocktrans with start=page.start_index end=page.end_index num_results=paginator.count %}
+                                                    Found <span>{{ num_results }}</span> results, showing <span>{{ start }}</span> to <span>{{ end }}</span>.
+                                                {% endblocktrans %}
+                                            {% else %}
+                                                {% blocktrans count num_results=paginator.count %}
+                                                    Found <span>{{ num_results }}</span> result.
+                                                {% plural %}
+                                                    Found <span>{{ num_results }}</span> results.
+                                                {% endblocktrans %}
+                                            {% endif %}
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+
+{% endblock %}
+
+{% block onbodyload %}
+    {{ block.super }}
+    oscar.search.init();
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Subscribe' %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Subscribe' %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Subscribe" %}
+{% endblock %}
+
+{% block content %}
+    <h3>{% trans "Subscribe to our newsletter" %}</h3>
+    <hr>
+    <div class="row">
+        <div class="col-sm-9 subscribe_form">
+            <form id="subscribe_form" action="." method="post" class="form-stacked">
+                {% csrf_token %}
+                {% include "oscar/partials/form_fields.html"  %}
+                <button name="subscribe_submit" type="submit" value="Submit" class="btn le-button btn-lg" data-loading-text="{%trans 'Processing...' %}">{% trans 'Submit' %}</button>
+                {% if cancel_url %}
+                    {% trans "or" %} <a href="{{ cancel_url }}">{% trans "cancel" %}</a>.
+                {% endif %}
+            </form>
+            <br/>
+            <p>
+                {% blocktrans %}
+                By subscribing to the yoohalal newsletter you have read and understand <a href='#'>yoohalal.com's privacy policy</a>.
+                {% endblocktrans %}            
+            </p>
+        </div>
+    </div>
+{% endblock content %}

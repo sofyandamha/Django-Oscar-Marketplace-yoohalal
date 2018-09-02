@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}
+    {% trans 'Login or register' %} | {{ block.super }}
+{% endblock %}
+
+    <meta name="google-signin-client_id" content="559529269257-vd8q19k2ebmsu199is6e918g89n4jani.apps.googleusercontent.com">
+
+    
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Login or register' %}</li>
+    </ul>
+{% endblock %}
+
+{% block header %}{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-6 login_form">
+            <form id="login_form" action="{{ request.get_full_path }}" method="post" class="well" >
+                <h2>{% trans 'Log In' %}</h2>
+                {% csrf_token %}
+                {% include "partials/form_fields.html" with form=login_form %}
+                <p><a href="{% url 'password-reset' %}">{% trans "I've forgotten my password" %}</a></p>
+                <button name="login_submit" type="submit" value="Log In" class="btn btn-lg btn-primary" data-loading-text="{% trans "Logging in..." %}">{% trans 'Log In' %}</button>
+                <div class="hr-sect">{% trans 'OR' %}</div>
+                
+                <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-block btn-social btn-google"><span class="fa fa-google">&nbsp;</span>{% trans 'Sign in Google' %}</a><br>
+
+                <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook">&nbsp;</span>{% trans 'Sign in Facebook' %}</a>
+            </form>
+
+        </div>
+        <div class="col-sm-6 register_form">
+            <form id="register_form" action="{{ request.get_full_path }}" method="post" class="well">
+                <h2>{% trans 'Register' %}</h2>
+                {% csrf_token %}
+                {% include "partials/form_fields.html" with form=registration_form %}
+                <button name="registration_submit" type="submit" value="Register" class="btn btn-lg btn-primary" data-loading-text="{% trans 'Registering...' %}">{% trans 'Register' %}</button>
+                <div class="hr-sect">{% trans 'OR' %}</div>
+
+                <a href="{% url 'social:begin' 'google-oauth2' %}" class="btn btn-block btn-social btn-google"><span class="fa fa-google">&nbsp;</span>{% trans 'Sign up Google' %}</a><br>
+
+                <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-block btn-social btn-facebook"><span class="fa fa-facebook">&nbsp;</span>{% trans 'Sign up Facebook' %}</a>
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,9 @@
+{% load i18n %}
+
+{% url 'customer:activate' uidb64=uid token=token as confirmation_url %}
+
+{% blocktrans with email=user.email domain=site.name %}
+Hi {{ email }},
+Please click on the link to confirm your registration,
+https://{{ domain }}{{ confirmation_url }}
+{% endblocktrans %}

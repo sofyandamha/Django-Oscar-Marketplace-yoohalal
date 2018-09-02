@@ -1,0 +1,49 @@
+{% load i18n %}
+{% load wishlist_tags %}
+
+{% if user.is_authenticated %}
+    {% with wishlists=user.wishlists.all %}
+        {# Select wishlists that contains product #}
+        {% wishlists_containing_product wishlists product as product_wishlists %}
+
+        {% for wishlist in product_wishlists %}
+            <form action="{% url 'customer:wishlists-remove-product' key=wishlist.key product_pk=product.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn-add-to-wishlist" data-loading-text="{% trans 'Removing...' %}">
+                    {% blocktrans with name=wishlist.name %}
+                        Remove from {{ name }} wishlist
+                    {% endblocktrans %}
+                </button>
+            </form>
+        {% endfor %}
+
+       
+        {% if wishlists %}
+            <div class="btn-group btn-wishlist">
+                <a class="btn-add-to-compare dropdown-toggle" data-toggle="dropdown" href="#">{% trans "Add to wish list" %} <span class="caret"></span></a>
+                <ul class="dropdown-menu pull-right">
+                    {% for wishlist in wishlists %}
+                        {% if wishlist not in product_wishlists %}
+                            <li>
+                                    <a href="{% url 'customer:wishlists-add-product' key=wishlist.key product_pk=product.pk %}">
+                                        {% blocktrans with name=wishlist.name %}
+                                            Add to '{{ name }}' wish list
+                                        {% endblocktrans %}
+                                    </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                    <li><a href="{% url 'customer:wishlists-create-with-product' product_pk=product.pk %}">{% trans 'Create a new wishlist' %}</a></li>
+                </ul>
+            </div>
+        {% else %}
+            {# 1 or no existing wishlists - show a simple button #}
+            <form id="add_to_wishlist_form" action="{% url 'customer:wishlists-add-product' product_pk=product.pk %}" method="post" class="btn-wishlist">
+                {% csrf_token %}
+                <button type="submit" class="btn-add-to-wishlist" data-loading-text="{% trans 'Adding...' %}">{% trans "Add to wish list" %}</button>
+            </form>
+        {% endif %}
+    {% endwith %}
+{% else %}
+    <button class="btn-add-to-wishlist" disabled="disabled" title="{% trans 'Please login to add products to a wish list.' %}">{% trans 'Add to wish list' %}</button><br/>
+{% endif %}

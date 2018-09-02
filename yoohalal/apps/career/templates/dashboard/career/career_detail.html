@@ -1,0 +1,33 @@
+{% extends 'dashboard/layout.html' %}
+{% load i18n %}
+{% load thumbnail %}
+
+{% block title %}
+    {% trans "Career" %} '{{ career.title }}' | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+   <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li><a href="{% url 'career-list' %}">{% trans "Careers" %}</a></li>
+        <li class="active">{% trans "Career" %} '{{ career.title }}'</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Career" %} '{{ career.title }}'
+{% endblock %}
+
+{% block dashboard_content %}
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr><th>{% trans "Title" %}</th><td>{{ career.title }}</td></tr>
+            <tr><th>{% trans "Departement" %}</th><td>{{ career.departement }}</td></tr>
+            <tr><th>{% trans "Date Published" %}</th><td>{{ career.date_published }}</td></tr>
+            <tr><th>{% trans "Body" %}</th><td>{{ career.body|safe }}</td></tr>
+            <tr><th>{% trans "Published" %}</th><td>{{ career.published|yesno:_("Yes,No") }}</td></tr>
+        </tbody>
+    </table>
+{% endblock dashboard_content %}

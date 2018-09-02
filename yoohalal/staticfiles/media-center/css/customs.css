@@ -1,0 +1,725 @@
+/* 
+ * Cart Button Product List
+ */
+.product-item-holder.hover .product-item .hover-area .add-cart-button {
+    min-height: 40px;
+}
+
+.product-item-holder.hover .product-item .hover-area .add-cart-button button {
+    z-index: 10;
+    position: relative;
+}
+
+.product-item-holder.hover.size-medium .product-item .add-cart-button button {
+    padding: 5px 10px!important;
+    font-size: 12px;
+}
+
+/*  
+ * Control Bar Product List 
+ */
+.grid-list-products .control-bar {
+    min-height: 58px !important;
+}
+
+/*  
+ * Top Banner
+ */
+#top-banner-and-menu.homepage2 {
+    margin-top: -28px;
+}
+
+/*  
+ * Big Search Input
+ */
+@media (max-width: 767px)  {
+	header .top-search-holder .search-area .search-button {
+    	margin: -3px -3px 0 0;
+    	border-radius: 0 5px 5px 0;
+	}
+
+  .logo > a > img {
+      display: block;
+      margin: 0 auto;
+  }
+}
+
+
+/*  
+ * Checkout total price
+ */
+#checkout-page #total-price {
+    margin: 18px 0 0 0;
+    padding-bottom: 24px;
+    border-bottom: 0;
+}
+
+/*  
+ * All le-button Button
+ */
+.le-button.disabled:hover {
+    background-color: #c6c6c6;
+}
+
+.le-button:visited, .le-button:focus {
+    color: #fff;
+}
+
+.le-button.inverse:visited, .le-button.inverse:focus {
+    color: #3d3d3d;
+}
+
+/*  
+ * icon- Class as Font Awesome Icon
+ */
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: fontawesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+.icon-calendar:before {
+  content: "\f073";
+}
+.icon-calendar-empty:before {
+  content: "\f133";
+}
+.icon-calendar {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf073;');
+}
+.icon-calendar-empty {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf133;');
+}
+.icon-user:before {
+  content: "\f007";
+}
+.icon-user {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf007;');
+}
+.icon-signout:before {
+  content: "\f08b";
+}
+.icon-signout {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf08b;');
+}
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+.icon-list-ul {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0ca;');
+}
+.icon-payment:before {
+  content: "\f0d6";
+}
+.icon-payment {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf0d6;');
+}
+.icon-credit-card:before {
+  content: "\f09d";
+}
+.icon-credit-card {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf09d;');
+}
+.icon-signin:before {
+  content: "\f090";
+}
+.icon-signin {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf090;');
+}
+.icon-remove:before {
+  content: "\f00d";
+}
+.icon-remove {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf00d;');
+}
+.icon-ok:before {
+  content: "\f00c";
+}
+.icon-ok {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf00c;');
+}
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+.icon-exclamation-sign {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf06a;');
+}
+.icon-pencil:before {
+  content: "\f040";
+}
+.icon-pencil {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf040;');
+}
+
+/*  
+ * Cart
+ */
+.basket-title {
+  clear: both;
+  border-bottom: 1px solid #c4c4c4;
+  padding: 0 10px 10px;
+  margin-bottom: 10px;
+}
+
+.basket-title h4 {
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .basket-title .row {
+    display: none;
+  }
+}
+
+.basket-items {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.basket-items img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.basket-items .price_color {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  font-size: 18px;
+  font-size: 16.1px;
+  line-height: 1.4;
+  color: #39b54a;
+  font-weight: bold;
+}
+
+.basket-items .price_color small,
+.basket-items .price_color .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #777777;
+}
+
+.basket-items .price_color small,
+.basket-items .price_color .small {
+  font-size: 75%;
+}
+
+.shipping-method-info {
+  display: block;
+  margin-top: 10px;
+}
+
+.le-quantity {
+    padding: 12px 58px 12px 5px;
+}
+
+.le-quantity .btn-change {
+    position: absolute;
+    height: 100%;
+    padding: 3px 10px;
+    background-color: #f9f9f9;
+    top: 0;
+    right: 0;
+    color: #3d3d3d;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.error-block {
+  color: #b94a48;
+  margin-top: 6px;
+}
+
+/*  
+ * Sidebar title category page
+ */
+.h1.border {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/*  
+ * Google captcha halaman konfirmasi
+ */
+.g-recaptcha {
+  margin-bottom: 15px;
+}
+
+
+/*  
+ * All le-warning Button
+ */
+.le-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    line-height: 20px;
+    border: none;
+    font-size: 15px;
+    text-transform: capitalize;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.le-warning:hover, .le-warning:focus, .le-warning:active, .le-warning.active, .open .dropdown-toggle.le-warning {
+    color: #fff;
+    background-color: #ed9c28;
+    border-color: #d58512;
+}
+
+.le-warning.big {
+    padding: 15px 34px;
+}
+
+
+/*  
+ * Footer
+ */
+#footer .sub-form-row input {
+  width: 75%;
+}
+
+#footer .sub-form-row button {
+  margin: -4px 0 0 -5px;
+}
+
+#footer .link-list-row .contact-info .social-icons {
+    margin: 30px 0 0 0;
+}
+#footer .link-list-row {
+    margin-bottom: 32px;
+}
+
+#footer .link-payment {
+  margin: 20px 0 20px 0;
+}
+
+#footer .link-payment .container {
+  padding-top: 20px;
+}
+
+#footer .link-payment:before {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+#footer .link-payment .payment-title {
+    display: block;
+    float: left;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    padding: 20px 0;
+}
+
+#footer .payment-content {
+  text-align: Left;
+}
+
+#footer .payment-content li {
+  display: inline-block;
+  width: 100px;
+  background-color: #f9f9f9;
+  border-radius: 2px;
+  text-align: center;
+  padding: 0px 5px;
+}
+
+#footer .payment-content li:hover {
+  cursor: pointer;
+}
+
+#footer .payment-content li:hover img {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+}
+
+#footer .payment-content li img {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+}
+
+#footer .link-list-row .footer-logo {
+    margin: 7px 0 10px 0;
+}
+
+/*  
+ * Remove <a> tag on breadcrumb active
+ */
+.breadcrumb-nav-holder .breadcrumb-item.current {
+    color: #39b54a;
+    letter-spacing: -1px;
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 20px 18px;
+    border-right: 1px solid #e0e0e0;
+    position: relative;
+    text-transform: capitalize;
+    border-right: 0;
+}
+
+.breadcrumb-nav-holder.minimal .breadcrumb-item.current {
+    background-color: #fff;
+    padding: 10px 18px;
+}
+
+/*  
+ * Halaman Pembayaran
+ */
+.metode-pembayaran .panel-body h4 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.metode-pembayaran .panel-body h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.metode-pembayaran .panel-body p {
+    font-size: 16px;
+}
+
+.pilihan-pembayaran .box {
+    text-align: center;
+    background: #fff;
+    margin: 10px 10px;
+    color: #5d5d5d;
+    padding: 1px 7px 10px 7px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 18px 0px rgba(179,179,179,0.1);
+    -moz-box-shadow: 0px 0px 18px 0px rgba(179,179,179,0.1);
+    box-shadow: 0px 0px 18px 0px rgba(179,179,179,0.1);
+    height: 155px;
+}
+
+.pilihan-pembayaran .box h5 {
+    font-size: 14px;
+    font-weight: 800 !important;
+}
+
+.pilihan-pembayaran .box p {
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.icon-pembayaran {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-image: url(../img/external_logo.png);
+    margin: 10px auto;
+    display: inline-block;
+}
+
+.icon-pembayaran.muamalat {
+    width: 150px;
+    height: 45px;
+    background-position: -26px -32px;
+}
+
+.icon-pembayaran.mandiri-syariah {
+    width: 120px;
+    height: 45px;
+    background-position: 202px -31px;
+}
+
+.icon-pembayaran.bri-syariah {
+    width: 140px;
+    height: 45px;
+    background-position: 180px -109px;
+}
+
+.icon-pembayaran.bni-syariah {
+    width: 100px;
+    height: 45px;
+    background-position: -24px -111px;
+}
+
+.icon-pembayaran.mega-syariah {
+    width: 60px;
+    height: 45px;
+    background-position: -29px -168px;
+}
+
+.icon-pembayaran.bca-syariah {
+    width: 140px;
+    height: 45px;
+    background-position: 180px -162px;
+}
+
+.icon-pembayaran.cimb-syariah {
+    width: 140px;
+    height: 45px;
+    background-position: 180px -213px;
+}
+
+/*  
+ * Halaman Detail produk
+ */
+.row.add-holder {
+  margin: 24px 0;
+}
+
+#single-product .body-holder .body .availability {
+  margin-left: 0px;
+  padding-top: 2px;
+}
+
+#single-product .body-holder .body .availability label {
+  margin-bottom: 0px;
+}
+
+#single-product .body-holder .body .star-holder {
+  margin-right: 15px;
+}
+
+.availability .instock {
+  color: #59B210;
+  font-weight: 700 !important;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+.availability .unavailable {
+  color: red;
+  font-weight: 700 !important;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+/*
+#single-product .body-holder .body .title {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 7px;
+  margin-bottom: 15px;
+}*/
+
+button.btn-add-to-wishlist{
+     border:0;
+     background:none;
+}
+
+.top-buffer {
+  margin-top:22px;
+}
+
+.buttons-holder > form {
+  display: inline-block;
+}
+
+.btn-wishlist.open .dropdown-toggle {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-add-to-compare:before {
+    content: "\f067";
+}
+
+#single-product .body-holder .social-row {
+  margin: -5px 0 0 0;
+}
+
+.jssocials {
+  font-size: 12px;
+}
+
+.jssocials-share-logo {
+  font-size: 12px !important;
+}
+
+.comment-body  form {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    margin-bottom: 0;
+}
+
+.comment-body p {
+  margin: 0 0 16px;
+}
+
+.star-holder .star {
+  pointer-events: none;
+}
+
+/*
+ * Tabs on page /accounts/notifications/
+ */
+#notifications-tab .tab-content {
+    border: 1px solid #e0e0e0;
+}
+
+#notifications-tab .tab-pane {
+    padding: 35px;
+}
+
+/*
+ * Promo Code Input on Cart
+ */
+.inline-input input {
+    width: 62%!important;
+}
+
+.inline-input .le-button {
+    width: 38%;
+}
+
+/*
+ * Margin checkout page and footer
+ */
+#checkout-page {
+  margin-bottom: 50px;
+}
+
+/*
+ * Perkecil Huruf pada kategory menu
+ */
+#top-megamenu-nav .navbar-nav > li > a {
+  padding: 18px 12px;
+  font-size: 12px;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+/* 
+ * date blog menu 
+ */ 
+  
+.posts .post .date-wrapper .date { 
+  display: table-cell; 
+  vertical-align: middle; 
+  border-radius: 4px; 
+  width: 52px; 
+  height: 71px; 
+  background-color: #39b54a; 
+  line-height: 24px; 
+  color: #FFF;
+}
+
+.block-inline {
+  display: inline-block;
+}
+
+
+/* 
+ * Form Login
+   -----OR---- 
+ */ 
+
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}
+
+
+/*===================================================================================*/
+/*  Authentication Page --Media Center--
+/*===================================================================================*/
+
+.btn-facebook,
+.btn-google,
+.btn-twitter {
+  background-color: #3d5c98;
+  color: #fff;
+  font-size: 14px;
+  line-height: 28px;
+}
+.btn-facebook:hover,
+.btn-google:hover,
+.btn-twitter:hover,
+.btn-facebook:focus,
+.btn-google:focus,
+.btn-twitter:focus,
+.btn-facebook:active,
+.btn-google:active,
+.btn-twitter:active {
+  background-color: #2e4674;
+  color: #FFF;
+}
+.btn-facebook i,
+.btn-google i,
+.btn-twitter i {
+  font-size: 25px;
+  display: inline-block;
+  padding-right: 15px;
+}
+.btn-twitter {
+  background-color: #22aadf;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter:active {
+  background-color: #1a89b4;
+  color: #FFF;
+}
+.social-auth-buttons {
+  padding: 15px 0 25px 0;
+}
+.register-form {
+  padding: 40px 0;
+}
+.list-benefits > li {
+  margin-bottom: 15px;
+  color: #747474;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.btn-google{color:#fff;background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}.btn-google:focus,.btn-google.focus{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-google:hover{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}
+.btn-google:active,.btn-google.active,.open>.dropdown-toggle.btn-google{color:#fff;background-color:#c23321;border-color:rgba(0,0,0,0.2)}.btn-google:active:hover,.btn-google.active:hover,.open>.dropdown-toggle.btn-google:hover,.btn-google:active:focus,.btn-google.active:focus,.open>.dropdown-toggle.btn-google:focus,.btn-google:active.focus,.btn-google.active.focus,.open>.dropdown-toggle.btn-google.focus{color:#fff;background-color:#a32b1c;border-color:rgba(0,0,0,0.2)}
+.btn-google:active,.btn-google.active,.open>.dropdown-toggle.btn-google{background-image:none}
+.btn-google.disabled:hover,.btn-google[disabled]:hover,fieldset[disabled] .btn-google:hover,.btn-google.disabled:focus,.btn-google[disabled]:focus,fieldset[disabled] .btn-google:focus,.btn-google.disabled.focus,.btn-google[disabled].focus,fieldset[disabled] .btn-google.focus{background-color:#dd4b39;border-color:rgba(0,0,0,0.2)}
+.btn-google .badge{color:#dd4b39;background-color:#fff}
+

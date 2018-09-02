@@ -1,0 +1,28 @@
+{% extends 'oscar/checkout/preview.html' %}
+{% load currency_filters %}
+{% load thumbnail %}
+{% load i18n %}
+{% load purchase_info_tags %}
+{% load staticfiles %}
+
+{% block payment_method %}
+    <div class="col-sm-6">
+        <div class="sub-header">
+            <h2>{% trans "Payment" %}</h2>
+        </div>
+        <div class="well well-success">
+        	<a href="{% url 'checkout:payment-details' %}" class="pull-right">
+                <i class="icon-pencil"></i> {% trans "Change" %}
+            </a>
+        	<h3>{% trans "Bank Transfer" %}</h3>
+            {% with bank_account=bank_account_form.bank_account %}
+            <p>{% trans "The bank options you will use:" %} <strong>{{ bank_account.value }}</strong></p>
+            {% endwith %}
+        </div>
+    </div>
+{% endblock payment_method %}
+
+{% block hiddenforms %}
+	{{ bank_account_form.as_p }}
+{% endblock %}
+

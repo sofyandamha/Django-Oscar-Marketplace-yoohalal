@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Thanks" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'career:career-list' %}">{% trans 'Careers' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'career:career-detail' slug=career.slug %}">{{ career.title }}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'career:applicant-form' career_id=obj.career_id %}">{% trans 'Applicant Form' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Thanks' %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {% blocktrans with name=obj.name %}Thank you <strong>{{ name }}</strong>, you have followed the recruitment process at yoohalal, your application has been received. We will contact you soon after we validate your application.{% endblocktrans %}
+    </p>
+{% endblock content %}

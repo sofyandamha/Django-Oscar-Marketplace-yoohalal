@@ -1,0 +1,134 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load bank_account_tags %}
+{% load social_media_link_tags %}
+
+<footer id="footer" class="color-bg">
+	 {% block footer %}
+     {% block content %}
+    <div class="sub-form-row">
+        <div class="container">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 no-padding">
+               <form id="subscribe_form" action="{% url 'subscribe:post_subscribe' %}" method="post" class="form-stacked">
+                {% csrf_token %}
+                <input type="email" name="email" maxlength="254" required="" id="id_email"  placeholder="Alamat Email Anda">
+                <button name="subscribe_submit" type="submit" value="Submit" class="btn le-button btn-lg" data-loading-text="{%trans 'Processing...' %}">{% trans "Subscribe" %}</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+    <div class="link-list-row">
+        <div class="container no-padding">
+            <div class="col-xs-12 col-md-4 ">
+                <div class="contact-info">
+                    <div class="footer-logo">
+                    	<img alt="logo" src="{% static "media-center/img/new_logo_grayscale.png" %}" width="233" height="54"/>
+                    </div>
+
+                    <p>
+                    	Tebet Timur Dalam Raya No.6 Jakarta Selatan 12820
+                    	<br/>
+                    	+6221 2283 9838
+                    </p>
+
+                    <div class="social-icons">
+                        <h3>{% trans "Stay connected" %}</h3>
+                        <ul>
+                            {% get_social_media_links limit=5 as links %}
+                            {% for link in links %}
+                            <li><a href="{{ link.url }}" class="fa fa-{{ link.slug }}"></a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-8 no-margin">
+                <div class="link-widget">
+                    <div class="widget">
+                        <h3>Yoohalal</h3>
+                        <ul>
+							<li>
+								<a href="/about-yoohalal/">{% trans "About Yoohalal" %}</a>
+							</li>
+							<li>
+								<a href="/privacy/">{% trans "Privacy" %}</a>
+							</li>
+							<li>
+                                <a href="/terms/">{% trans "Terms Of Services" %}</a>
+                            </li>
+                            <li>
+                                <a href="/blog/">{% trans "Blog" %}</a>
+                            </li>
+							<li>
+								<a href="/careers/">{% trans "Careers" %}</a>
+							</li>
+						</ul>
+                    </div>
+                </div>
+                <div class="link-widget">
+                    <div class="widget">
+                        <h3>{% trans "Buy" %}</h3>
+                        <ul>
+							<li>
+								<a href="#">{% trans "Buying Help" %}</a>
+							</li>
+							<li>
+								<a href="#">{% trans "Payment" %}</a>
+							</li>
+							<li>
+								<a href="#">{% trans "Yoohalal Guides" %}</a>
+							</li>
+						</ul>
+                    </div>
+                </div>
+                <div class="link-widget">
+                    <div class="widget">
+                        <h3>{% trans "Community" %}</h3>
+                        <ul>
+                        	<li>
+								<a href="#">{% trans "Announcements" %}</a>
+							</li>
+							<li>
+								<a href="#">{% trans "Answer Center" %}</a>
+							</li>
+						</ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="link-payment">
+        <div class="container top-solid-border">
+            <div class="col-xs-6 col-sm-2  payment-title">
+                {% trans "Payment Method" %}
+            </div>
+            <div class="col-xs-6 col-sm-10 payment-content">
+                {% bank_account_list as bank_accounts %}
+                <ul>
+                    {% for item in bank_accounts %}
+                    <li>
+                        {% with 'media-center/img/payments/'|add:item.slug|add:'.png' as image_static %}
+                        <img alt="" src="{% static image_static %}">
+                        {% endwith %}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-12 no-margin">
+                <div class="copyright">
+                    &copy; <a href="{{ homepage_url }}">yoohalal</a> - all rights reserved
+                </div>
+            </div>
+           </div>
+    </div>
+    {% endblock %}
+</footer>

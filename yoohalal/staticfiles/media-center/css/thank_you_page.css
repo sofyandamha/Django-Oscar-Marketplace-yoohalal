@@ -1,0 +1,36 @@
+#thank-you-page h1 {
+	text-transform: none;
+}
+
+#thank-you-page .guide h2 {
+	color: #3d3d3d;
+	font-size: 24px;
+	border-bottom: 1px solid #5c5c5c;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+    text-align: center;
+}
+
+#thank-you-page .guide .small {
+	margin-bottom: 30px;
+}
+
+#thank-you-page .attention h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: inherit;
+}
+
+#thank-you-page .attention p {
+    margin: 0 0 10px;
+}
+
+#thank-you-page .attention .important-text {
+    font-weight: 700;
+    font-style: italic;
+}
+
+#thank-you-page .attention .block-info {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}

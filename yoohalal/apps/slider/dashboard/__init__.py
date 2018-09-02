@@ -1,0 +1,1 @@
+default_app_config = 'apps.slider.dashboard.config.SliderDashboardConfig'

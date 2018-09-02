@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Payment Confirmation' %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Payment Confirmation' %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Payment Confirmation" %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12 payment_confirmation_order_form">
+            <div class="alert alert-info">
+                {% trans "Please enter your order number below." %}
+            </div>
+        </div>
+        <div class="col-sm-6 payment_confirmation_order_form">
+            <form id="payment_confirmation_order_form" action="." method="post" class="form-stacked">
+                {% csrf_token %}
+                {% include "oscar/partials/form_fields.html"  %}
+                
+                <button name="payment_confirmation_order_submit" type="submit" value="Submit" class="btn le-button btn-lg" data-loading-text="{%trans 'Processing...' %}">{% trans 'Submit' %}</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

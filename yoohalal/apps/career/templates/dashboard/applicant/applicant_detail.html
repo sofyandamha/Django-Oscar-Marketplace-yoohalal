@@ -1,0 +1,49 @@
+{% extends 'dashboard/layout.html' %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Applicant" %} '{{ applicant.name }}' | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li>
+            <a href="{% url 'applicant-list' %}">{% trans "Applicants" %}</a>
+        </li>
+        <li class="active">
+            '{{ applicant.name }}'
+        </li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Applicant" %} '{{ applicant.name }}'
+{% endblock %}
+
+{% block dashboard_content %}
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr><th>{% trans "Full Name" %}</th><td>{{ applicant.name }}</td></tr>
+            <tr><th>{% trans "Email" %}</th><td>{{ applicant.email }}</td></tr>
+            <tr><th>{% trans "Phone number" %}</th><td>{{ applicant.phone_number }}</td></tr>
+            <tr><th>{% trans "Career" %}</th><td>{{ applicant.career }}</td></tr>
+            <tr><th>{% trans "Document" %}</th>
+                <td>
+                {% if applicant.document.url %}
+                    {% with document=applicant.document %}
+                        <a href="{{ document.url }}" target="_blank">
+                            {{ applicant.filename }}
+                        </a>
+                    {% endwith %}
+                {% else %}
+                    —
+                {% endif %}
+                </td></tr>
+            <tr><th>{% trans "Date Created" %}</th><td>{{ applicant.date_created }}</td></tr>
+            <tr><th>{% trans "Reference" %}</th><td>{{ applicant.reference }}</td></tr>
+        </tbody>
+    </table>
+{% endblock dashboard_content %}

@@ -1,0 +1,4055 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-11 15:01+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: apps/address/abstract_models.py:28
+msgid "Mr"
+msgstr "Tuan"
+
+#: apps/address/abstract_models.py:29
+msgid "Miss"
+msgstr "Nona"
+
+#: apps/address/abstract_models.py:30
+msgid "Mrs"
+msgstr "Nyonya"
+
+#: apps/address/abstract_models.py:31
+msgid "Ms"
+msgstr "Nn."
+
+#: apps/address/abstract_models.py:32
+msgid "Dr"
+msgstr "Saudara"
+
+#: apps/address/abstract_models.py:221
+msgctxt "Treatment Pronouns for the customer"
+msgid "Title"
+msgstr "Judul"
+
+#: apps/address/abstract_models.py:225
+msgid "Full name"
+msgstr "Nama Lengkap"
+
+#: apps/address/abstract_models.py:227
+#: templates/dashboard/partners/partner_manage.html:41
+msgid "First name"
+msgstr "Nama Depan"
+
+#: apps/address/abstract_models.py:228
+#: templates/dashboard/partners/partner_manage.html:42
+msgid "Last name"
+msgstr "Nama belakang"
+
+#: apps/address/abstract_models.py:232
+msgid "First line of address"
+msgstr "Baris pertama dari alamat"
+
+#: apps/address/abstract_models.py:234
+msgid "Second line of address"
+msgstr "Baris kedua dari alamat"
+
+#: apps/address/abstract_models.py:236
+msgid "Third line of address"
+msgstr "Baris ketiga dari alamat"
+
+#: apps/address/abstract_models.py:237
+msgid "Fourth line of address"
+msgstr "Baris keempat dari alamat"
+
+#: apps/address/abstract_models.py:240
+msgid "Full address"
+msgstr "Alamat lengkap"
+
+#: apps/address/abstract_models.py:241
+msgid "Sub-districts"
+msgstr "Kecamatan"
+
+#: apps/address/abstract_models.py:242
+msgid "City"
+msgstr "Kota"
+
+#: apps/address/abstract_models.py:244
+msgid "State/County"
+msgstr "Provinsi"
+
+#: apps/address/abstract_models.py:246
+msgid "Post/Zip-code"
+msgstr "Kode Pos"
+
+#: apps/address/abstract_models.py:250 apps/career/models.py:35
+msgid "Country"
+msgstr "Negara"
+
+#: apps/address/abstract_models.py:255
+msgid "Search text - used only for searching addresses"
+msgstr "Pencarian kata - hanya gunakan untuk pencarian alamat"
+
+#: apps/address/abstract_models.py:262 templates/checkout/checkout.html:50
+#: templates/customer/address/address_list.html:10
+#: templates/customer/order/order_detail.html:154
+msgid "Address"
+msgstr "Alamat"
+
+#: apps/address/abstract_models.py:263
+#: templates/dashboard/partners/partner_list.html:47
+msgid "Addresses"
+msgstr "Alamat"
+
+#: apps/address/abstract_models.py:290
+#, python-format
+msgid "Addresses in %(country)s require a valid postcode"
+msgstr "Alamat dalam %(country)s membutuhkan kodepos yang valid"
+
+#: apps/address/abstract_models.py:302
+#, python-format
+msgid "The postcode '%(postcode)s' is not valid for %(country)s"
+msgstr "Kodepos '%(postcode)s' tidak valid untuk %(country)s"
+
+#: apps/address/abstract_models.py:421 apps/address/forms.py:16
+#: apps/career/models.py:27
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:31
+#: apps/checkout/forms.py:13 apps/partner/abstract_models.py:82
+#: apps/payment/forms.py:13
+msgid "Phone number"
+msgstr "No. Telepon"
+
+#: apps/address/abstract_models.py:422 apps/confirmation/models.py:18
+msgid "In case we need to call you about your order"
+msgstr "Andaikata kami perlu menghubungi anda mengenai pesanan"
+
+#: apps/address/abstract_models.py:424 apps/confirmation/forms.py:46
+#: apps/confirmation/models.py:19
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:38
+msgid "Note"
+msgstr "Catatan"
+
+#: apps/address/abstract_models.py:425
+msgid "Tell us anything we should know when delivering your order."
+msgstr "Ceritakan apa yang perlu kami ketahui ketika menerima pesanan Anda."
+
+#: apps/address/abstract_models.py:432
+#: templates/checkout/shipping_address.html:16
+#: templates/checkout/shipping_address.html:22
+#: templates/checkout/shipping_address.html:33
+#: templates/checkout/user_address_form.html:20
+#: templates/customer/emails/commtype_order_placed_body.html:352
+msgid "Shipping address"
+msgstr "Alamat pengiriman"
+
+#: apps/address/abstract_models.py:433
+msgid "Shipping addresses"
+msgstr "Alamat pengiriman"
+
+#: apps/address/abstract_models.py:461 apps/partner/abstract_models.py:24
+msgid "User"
+msgstr "Pengguna"
+
+#: apps/address/abstract_models.py:465
+msgid "Default shipping address?"
+msgstr "Alamat pengiriman default?"
+
+#: apps/address/abstract_models.py:469
+msgid "Default billing address?"
+msgstr "Alamat tagihan default?"
+
+#: apps/address/abstract_models.py:475
+msgid "Number of Orders as Shipping Address"
+msgstr "Jumlah order sebagai alamat pengiriman"
+
+#: apps/address/abstract_models.py:479
+msgid "Number of Orders as Billing Address"
+msgstr "Jumlah order sebagai alamat pembayaran"
+
+#: apps/address/abstract_models.py:483
+msgid "Address Hash"
+msgstr "Hash alamat"
+
+#: apps/address/abstract_models.py:485 apps/banktransfer/models.py:10
+#: apps/career/models.py:31
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:45
+#: apps/confirmation/models.py:27 apps/subscribe/models.py:17
+msgid "Date Created"
+msgstr "Tanggal Dibuat"
+
+#: apps/address/abstract_models.py:513
+msgid "User address"
+msgstr "Alamat Pengguna"
+
+#: apps/address/abstract_models.py:514
+msgid "User addresses"
+msgstr "Alamat pengguna"
+
+#: apps/address/abstract_models.py:527
+msgid "This address is already in your address book"
+msgstr "Alamat sudah tertera pada daftar alamat Anda."
+
+#: apps/address/abstract_models.py:541
+msgid "Billing address"
+msgstr "Alamat Penagihan"
+
+#: apps/address/abstract_models.py:542
+msgid "Billing addresses"
+msgstr "Alamat penagihan"
+
+#: apps/banktransfer/dashboard/config.py:8
+msgid "Bank Transfer Dashboard"
+msgstr "Bank Transfer Dashboard"
+
+#: apps/banktransfer/dashboard/forms.py:5 apps/banktransfer/models.py:9
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:31
+#: apps/confirmation/dashboard/forms.py:5 apps/confirmation/forms.py:25
+#: apps/confirmation/models.py:11
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:30
+msgid "Order Number"
+msgstr "No Pesanan"
+
+#: apps/banktransfer/dashboard/tables.py:15 apps/banktransfer/models.py:11
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:35
+#: apps/confirmation/dashboard/tables.py:20 apps/confirmation/models.py:14
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:33
+msgid "Amount"
+msgstr "Total"
+
+#: apps/banktransfer/dashboard/tables.py:19 apps/banktransfer/models.py:16
+msgid "Date Confirmed"
+msgstr "Tanggal Konfirmasi"
+
+#: apps/banktransfer/dashboard/tables.py:24
+#: apps/banktransfer/templates/dashboard/banktransfer/banktransfer_row_actions.html:6
+#: apps/blog/dashboard/tables.py:14 apps/blog/dashboard/tables.py:29
+#: apps/blog/templates/dashboard/category/category_row_actions.html:6
+#: apps/blog/templates/dashboard/post/post_row_actions.html:6
+#: apps/career/dashboard/tables.py:19 apps/career/dashboard/tables.py:36
+#: apps/career/dashboard/tables.py:51
+#: apps/career/templates/dashboard/applicant/applicant_row_actions.html:6
+#: apps/career/templates/dashboard/career/career_row_actions.html:6
+#: apps/career/templates/dashboard/departement/departement_row_actions.html:6
+#: apps/confirmation/dashboard/tables.py:24
+#: apps/confirmation/templates/dashboard/confirmation/confirmation_row_actions.html:6
+#: apps/slider/dashboard/tables.py:20
+#: apps/slider/templates/dashboard/slider/slider_row_actions.html:6
+#: apps/social_media/dashboard/tables.py:16
+#: apps/social_media/templates/dashboard/linktype/linktype_row_actions.html:6
+#: apps/subscribe/dashboard/tables.py:16
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_row_actions.html:6
+#: templates/customer/wishlists/wishlists_detail.html:76
+#: templates/dashboard/partners/partner_list.html:84
+msgid "Actions"
+msgstr "Aksi"
+
+#: apps/banktransfer/dashboard/views.py:27
+msgid "Transactions search results"
+msgstr "Hasil pencarian transaksi"
+
+#: apps/banktransfer/dashboard/views.py:28
+msgid "Transactions"
+msgstr "Transaksi"
+
+#: apps/banktransfer/models.py:12
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:36
+msgid "Currency"
+msgstr "Mata uang"
+
+#: apps/banktransfer/models.py:13
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:34
+msgid "Bank Account"
+msgstr "Akun Bank"
+
+#: apps/banktransfer/models.py:14
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:30
+#: apps/career/models.py:23
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:46
+#: apps/subscribe/models.py:14
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:31
+msgid "Reference"
+msgstr "Referensi"
+
+#: apps/banktransfer/models.py:15
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:37
+msgid "Confirmed"
+msgstr "Terkonfirmasi"
+
+#: apps/banktransfer/models.py:21
+msgid "Bank Transfer Transaction"
+msgstr "Transaksi Bank Transfer"
+
+#: apps/banktransfer/models.py:25
+#: apps/banktransfer/templates/banktransfer/preview.html:17
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:15
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:14
+#: apps/banktransfer/views.py:51 yoohalal/settings.py:269
+msgid "Bank Transfer"
+msgstr "Bank Transfer"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:8
+#: apps/blog/templates/blog/blog_category.html:11
+#: apps/blog/templates/blog/blog_detail.html:11
+#: apps/blog/templates/blog/blog_index.html:11
+#: apps/career/templates/career/applicant_form.html:12
+#: apps/career/templates/career/applicant_thanks.html:11
+#: apps/career/templates/career/career_detail.html:11
+#: apps/career/templates/career/career_index.html:12
+#: apps/confirmation/templates/confirmation/confirmation_form.html:12
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:12
+#: apps/confirmation/templates/confirmation/payment.html:16
+#: apps/confirmation/templates/confirmation/success.html:14
+#: apps/subscribe/templates/subscribe/subscribe_form.html:12
+#: apps/subscribe/templates/subscribe/thanks.html:11
+#: apps/subscribe/templates/subscribe/unsubscribe.html:11
+#: templates/basket/basket.html:12 templates/catalogue/browse.html:20
+#: templates/catalogue/category.html:16 templates/catalogue/detail.html:29
+#: templates/catalogue/reviews/review_detail.html:11
+#: templates/catalogue/reviews/review_list.html:13
+#: templates/checkout/checkout.html:15 templates/checkout/preview.html:7
+#: templates/checkout/shipping_address.html:10
+#: templates/checkout/shipping_methods.html:13
+#: templates/checkout/user_address_form.html:14
+#: templates/customer/after_register.html:11
+#: templates/customer/baseaccountpage.html:14
+#: templates/customer/login_registration.html:11
+#: templates/customer/order/order_list.html:9
+#: templates/customer/wishlists/wishlists_delete.html:7
+#: templates/customer/wishlists/wishlists_delete_product.html:7
+#: templates/customer/wishlists/wishlists_detail.html:9
+#: templates/customer/wishlists/wishlists_form.html:7
+#: templates/flatpages/default.html:20
+#: templates/partner/registration_form.html:12
+#: templates/registration/password_reset_complete.html:9
+#: templates/registration/password_reset_confirm.html:9
+#: templates/registration/password_reset_done.html:9
+#: templates/registration/password_reset_form.html:9
+#: templates/search/results.html:17
+msgid "Home"
+msgstr "Beranda"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:11
+#: templates/checkout/checkout.html:18 templates/checkout/preview.html:10
+#: templates/checkout/shipping_address.html:13
+#: templates/checkout/shipping_methods.html:16
+#: templates/checkout/user_address_form.html:17
+msgid "Checkout Process"
+msgstr "Periksa Kembali"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:14
+#: apps/banktransfer/templates/banktransfer/preview.html:11
+#: apps/confirmation/templates/confirmation/payment.html:10
+#: apps/confirmation/templates/confirmation/payment.html:18
+#: templates/checkout/checkout.html:99 templates/checkout/checkout.html:105
+#: templates/partials/footer.html:79 templates/partials/nav_accounts.html:56
+#: templates/partials/nav_accounts.html:59 yoohalal/settings.py:265
+msgid "Payment"
+msgstr "Pembayaran"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:20
+msgid "Payment details"
+msgstr "Detail Pembayaran"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:27
+msgid "Enter payment details"
+msgstr "Masukan Detail Pembayaran"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:38
+msgid "Bank Transfer payment"
+msgstr "Pilih bank yang akan digunakan:"
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:43
+msgid ""
+"Click on continue button to use Bank Transfer payment . Bank details will be "
+"sent to you once order is validated."
+msgstr ""
+"Transfer ke rekening kami melalui ATM, internet banking, SMS banking, atau "
+"setoran tunai."
+
+#: apps/banktransfer/templates/banktransfer/payment_details.html:50
+#: templates/checkout/shipping_address.html:88
+msgid "Continue"
+msgstr "Lanjutkan"
+
+#: apps/banktransfer/templates/banktransfer/preview.html:15
+#: templates/checkout/checkout.html:47 templates/checkout/checkout.html:78
+#: templates/checkout/checkout.html:103
+msgid "Change"
+msgstr "Ubah"
+
+#: apps/banktransfer/templates/banktransfer/preview.html:19
+msgid "The bank options you will use:"
+msgstr "Pilihan bank yang akan Anda gunakan:"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/banktransfer_row_actions.html:10
+#: apps/blog/templates/dashboard/category/category_row_actions.html:10
+#: apps/blog/templates/dashboard/post/post_row_actions.html:10
+#: apps/career/templates/dashboard/applicant/applicant_row_actions.html:10
+#: apps/career/templates/dashboard/career/career_row_actions.html:10
+#: apps/career/templates/dashboard/departement/departement_row_actions.html:10
+#: apps/confirmation/templates/dashboard/confirmation/confirmation_row_actions.html:10
+#: apps/slider/templates/dashboard/slider/slider_row_actions.html:10
+#: apps/social_media/templates/dashboard/linktype/linktype_row_actions.html:10
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_row_actions.html:10
+#: templates/customer/notifications/list.html:41
+#: templates/customer/wishlists/wishlists_list.html:19
+msgid "View"
+msgstr "Lihat"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:6
+msgid "Bank Transfer transaction"
+msgstr "Transaksi via Bank Transfer"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:12
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:12
+#: apps/blog/templates/dashboard/category/category_delete.html:12
+#: apps/blog/templates/dashboard/category/category_detail.html:11
+#: apps/blog/templates/dashboard/category/category_form.html:12
+#: apps/blog/templates/dashboard/category/category_list.html:12
+#: apps/blog/templates/dashboard/post/post_delete.html:12
+#: apps/blog/templates/dashboard/post/post_detail.html:12
+#: apps/blog/templates/dashboard/post/post_form.html:12
+#: apps/blog/templates/dashboard/post/post_list.html:12
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:12
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:11
+#: apps/career/templates/dashboard/applicant/applicant_list.html:12
+#: apps/career/templates/dashboard/career/career_delete.html:12
+#: apps/career/templates/dashboard/career/career_detail.html:12
+#: apps/career/templates/dashboard/career/career_form.html:12
+#: apps/career/templates/dashboard/career/career_list.html:12
+#: apps/career/templates/dashboard/departement/departement_delete.html:12
+#: apps/career/templates/dashboard/departement/departement_detail.html:11
+#: apps/career/templates/dashboard/departement/departement_form.html:12
+#: apps/career/templates/dashboard/departement/departement_list.html:12
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:12
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:12
+#: apps/slider/templates/dashboard/slider/slider_delete.html:12
+#: apps/slider/templates/dashboard/slider/slider_detail.html:12
+#: apps/slider/templates/dashboard/slider/slider_form.html:12
+#: apps/slider/templates/dashboard/slider/slider_list.html:12
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:11
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:11
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:12
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:12
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:11
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:12
+#: templates/dashboard/catalogue/product_list.html:17
+#: templates/dashboard/catalogue/product_update.html:17
+#: templates/dashboard/partners/partner_list.html:12
+#: templates/dashboard/partners/partner_manage.html:13
+#: templates/partials/nav_accounts.html:53
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:24
+#, python-format
+msgid "Transaction %(reference)s"
+msgstr "Transaksi %(reference)s"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:32
+msgid "Date"
+msgstr "Tanggal"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:33
+#: templates/checkout/shipping_methods.html:42
+msgid "Method"
+msgstr "Metode"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:37
+#: apps/blog/templates/dashboard/post/post_detail.html:46
+#: apps/career/templates/dashboard/career/career_detail.html:30
+#: apps/slider/templates/dashboard/slider/slider_detail.html:41
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:27
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:30
+#: templates/dashboard/partners/partner_list.html:65
+msgid "Yes,No"
+msgstr "Ya,Tidak"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_detail.html:38
+msgid "Date confirmed"
+msgstr "Tanggal Konfirmasi"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:6
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:19
+msgid "Bank Transfer transactions"
+msgstr "Transaksi via Bank Transfer"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:24
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:35
+#: apps/blog/templates/dashboard/category/category_list.html:27
+#: apps/blog/templates/dashboard/category/category_list.html:38
+#: apps/blog/templates/dashboard/post/post_list.html:27
+#: apps/blog/templates/dashboard/post/post_list.html:38
+#: apps/career/templates/dashboard/applicant/applicant_list.html:25
+#: apps/career/templates/dashboard/applicant/applicant_list.html:36
+#: apps/career/templates/dashboard/career/career_list.html:27
+#: apps/career/templates/dashboard/career/career_list.html:38
+#: apps/career/templates/dashboard/departement/departement_list.html:27
+#: apps/career/templates/dashboard/departement/departement_list.html:38
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:24
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:35
+#: apps/slider/templates/dashboard/slider/slider_list.html:27
+#: apps/slider/templates/dashboard/slider/slider_list.html:38
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:27
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:38
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:25
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:36
+#: templates/dashboard/catalogue/product_list.html:62
+#: templates/dashboard/partners/partner_list.html:29
+#: templates/search/results.html:19
+msgid "Search"
+msgstr "Cari"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:35
+#: apps/blog/templates/dashboard/category/category_list.html:38
+#: apps/blog/templates/dashboard/post/post_list.html:38
+#: apps/career/templates/dashboard/applicant/applicant_list.html:36
+#: apps/career/templates/dashboard/career/career_list.html:38
+#: apps/career/templates/dashboard/departement/departement_list.html:38
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:35
+#: apps/slider/templates/dashboard/slider/slider_list.html:38
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:38
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:36
+#: templates/dashboard/catalogue/product_list.html:62
+#: templates/dashboard/partners/partner_list.html:29
+msgid "Searching..."
+msgstr "Mencari..."
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:36
+#: apps/blog/templates/dashboard/category/category_list.html:39
+#: apps/blog/templates/dashboard/post/post_list.html:39
+#: apps/career/templates/dashboard/applicant/applicant_list.html:37
+#: apps/career/templates/dashboard/career/career_list.html:39
+#: apps/career/templates/dashboard/departement/departement_list.html:39
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:36
+#: apps/slider/templates/dashboard/slider/slider_list.html:39
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:39
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:37
+#: templates/customer/order/order_list.html:28
+#: templates/dashboard/partners/partner_list.html:31
+msgid "Reset"
+msgstr "Reset"
+
+#: apps/banktransfer/templates/dashboard/banktransfer/transaction_list.html:48
+msgid "No transactions have been made yet."
+msgstr "Belum ada transaksi yang dilakukan."
+
+#: apps/banktransfer/views.py:37
+msgid "Invalid submission"
+msgstr "Data yang dikirim tidak sesuai"
+
+#: apps/blog/dashboard/config.py:8
+msgid "Blog Dashboard"
+msgstr "Blog Dashboard"
+
+#: apps/blog/dashboard/config.py:13
+msgid "Category Dashboard"
+msgstr "Kategori Dashboard"
+
+#: apps/blog/dashboard/forms.py:6 apps/blog/models.py:42 apps/blog/models.py:67
+#: apps/blog/models.py:80
+#: apps/blog/templates/dashboard/category/category_delete.html:6
+#: apps/blog/templates/dashboard/category/category_delete.html:15
+#: apps/blog/templates/dashboard/category/category_detail.html:5
+#: apps/blog/templates/dashboard/category/category_detail.html:14
+#: apps/blog/templates/dashboard/category/category_detail.html:19
+#: apps/blog/templates/dashboard/category/category_detail.html:25
+#: apps/blog/templates/dashboard/category/category_form.html:6
+#: apps/blog/templates/dashboard/category/category_form.html:16
+#: apps/blog/templates/dashboard/category/category_form.html:24
+#: apps/blog/templates/dashboard/post/post_detail.html:28
+#: apps/dashboard/catalogue/forms.py:83 apps/promotions/models.py:13
+#: templates/dashboard/catalogue/product_update.html:124
+#: yoohalal/settings.py:290
+msgid "Category"
+msgstr "Kategori"
+
+#: apps/blog/dashboard/forms.py:10 apps/blog/models.py:73
+#: apps/blog/templates/dashboard/post/post_detail.html:26
+#: apps/career/dashboard/forms.py:17 apps/career/models.py:93
+#: apps/career/templates/dashboard/career/career_detail.html:26
+#: templates/dashboard/catalogue/product_update.html:260
+msgid "Title"
+msgstr "Judul"
+
+#: apps/blog/dashboard/views.py:24
+msgid "Post created successfully"
+msgstr "Posting berhasil dibuat"
+
+#: apps/blog/dashboard/views.py:29
+msgid "Create Post"
+msgstr "Buat Posting"
+
+#: apps/blog/dashboard/views.py:39
+msgid "Category created successfully"
+msgstr "Kategori berhasil dibuat"
+
+#: apps/blog/dashboard/views.py:44
+msgid "Create Category"
+msgstr "Buat Kategori"
+
+#: apps/blog/dashboard/views.py:57
+msgid "Post updated successfully"
+msgstr "Posting berhasil diperbarui"
+
+#: apps/blog/dashboard/views.py:73
+msgid "Category updated successfully"
+msgstr "Kategori berhasil diperbarui"
+
+#: apps/blog/dashboard/views.py:92
+msgid "Post deleted"
+msgstr "Posting dihapus"
+
+#: apps/blog/dashboard/views.py:102
+msgid "Category deleted"
+msgstr "Kategori dihapus"
+
+#: apps/blog/dashboard/views.py:123
+msgid "Posts search results"
+msgstr "Hasil pencarian posting"
+
+#: apps/blog/dashboard/views.py:124 apps/blog/models.py:157
+#: apps/blog/templates/dashboard/post/post_delete.html:14
+#: apps/blog/templates/dashboard/post/post_detail.html:14
+#: apps/blog/templates/dashboard/post/post_form.html:14
+#: apps/blog/templates/dashboard/post/post_list.html:6
+#: apps/blog/templates/dashboard/post/post_list.html:14
+#: apps/blog/templates/dashboard/post/post_list.html:21
+#: yoohalal/settings.py:285
+msgid "Posts"
+msgstr "Posting"
+
+#: apps/blog/dashboard/views.py:159
+msgid "Categories search results"
+msgstr "Hasil pencarian kategori"
+
+#: apps/blog/dashboard/views.py:160 apps/blog/models.py:68
+#: apps/blog/templates/blog/blog_category.html:74
+#: apps/blog/templates/blog/blog_detail.html:47
+#: apps/blog/templates/blog/blog_index.html:71
+#: apps/blog/templates/dashboard/category/category_delete.html:14
+#: apps/blog/templates/dashboard/category/category_detail.html:13
+#: apps/blog/templates/dashboard/category/category_form.html:14
+#: apps/blog/templates/dashboard/category/category_list.html:6
+#: apps/blog/templates/dashboard/category/category_list.html:14
+#: apps/blog/templates/dashboard/category/category_list.html:21
+#: templates/catalogue/browse.html:32
+#: templates/dashboard/catalogue/product_update.html:73
+#: templates/partials/nav_vertical.html:12
+msgid "Categories"
+msgstr "Kategori"
+
+#: apps/blog/forms.py:12 apps/blog/models.py:75
+#: apps/blog/templates/dashboard/post/post_detail.html:30
+#: apps/career/forms.py:21 apps/career/models.py:95
+#: apps/career/templates/dashboard/career/career_detail.html:29
+#: templates/customer/email/email_detail.html:23
+#: templates/customer/notifications/detail.html:28
+msgid "Body"
+msgstr "Konten"
+
+#: apps/blog/forms.py:15 apps/blog/models.py:77
+#: apps/blog/templates/dashboard/post/post_detail.html:29
+#: apps/career/forms.py:24 apps/career/models.py:96
+#: apps/career/templates/dashboard/career/career_detail.html:28
+msgid "Date Published"
+msgstr "Tanggal Diterbitkan"
+
+#: apps/blog/models.py:36
+msgid "Tag"
+msgstr "Kata Kunci"
+
+#: apps/blog/models.py:37
+msgid "Tags"
+msgstr "Kata Kunci"
+
+#: apps/blog/models.py:74
+#: apps/blog/templates/dashboard/post/post_detail.html:31
+#: apps/slider/dashboard/tables.py:16 apps/slider/models.py:12
+#: apps/slider/templates/dashboard/slider/slider_detail.html:26
+msgid "Image"
+msgstr "Gambar"
+
+#: apps/blog/models.py:76
+#: apps/blog/templates/dashboard/post/post_detail.html:27
+msgid "Author"
+msgstr "Penulis"
+
+#: apps/blog/models.py:79
+#: apps/blog/templates/dashboard/post/post_detail.html:46
+#: apps/career/models.py:97
+#: apps/career/templates/dashboard/career/career_detail.html:30
+msgid "Published"
+msgstr "Terbitkan"
+
+#: apps/blog/models.py:156
+#: apps/blog/templates/dashboard/post/post_delete.html:6
+#: apps/blog/templates/dashboard/post/post_delete.html:15
+#: apps/blog/templates/dashboard/post/post_detail.html:6
+#: apps/blog/templates/dashboard/post/post_detail.html:15
+#: apps/blog/templates/dashboard/post/post_detail.html:20
+#: apps/blog/templates/dashboard/post/post_form.html:6
+#: apps/blog/templates/dashboard/post/post_form.html:16
+#: apps/blog/templates/dashboard/post/post_form.html:24
+msgid "Post"
+msgstr "Posting"
+
+#: apps/blog/templates/blog/blog_category.html:14
+#: apps/blog/templates/blog/blog_detail.html:14
+#: apps/blog/templates/blog/blog_index.html:13 apps/blog/views.py:20
+#: templates/partials/footer.html:63 yoohalal/settings.py:281
+msgid "Blog"
+msgstr "Blog"
+
+#: apps/blog/templates/blog/blog_category.html:39
+#: apps/blog/templates/blog/blog_detail.html:34
+#: apps/blog/templates/blog/blog_index.html:36
+msgid "Posted By :"
+msgstr "Oleh :"
+
+#: apps/blog/templates/blog/blog_category.html:43
+#: apps/blog/templates/blog/blog_index.html:40
+msgid "Read More"
+msgstr "Selanjutnya"
+
+#: apps/blog/templates/blog/blog_category.html:49
+#: apps/blog/templates/blog/blog_index.html:46
+msgid "No posts are available."
+msgstr "Tidak ada posting yang tersedia."
+
+#: apps/blog/templates/blog/blog_category.html:56
+#: apps/blog/templates/blog/blog_index.html:53
+#: templates/partials/pagination.html:10
+msgid "previous"
+msgstr "sebelumnya"
+
+#: apps/blog/templates/blog/blog_category.html:64
+#: apps/blog/templates/blog/blog_index.html:61
+#: templates/partials/pagination.html:23
+msgid "next"
+msgstr "berikutnya"
+
+#: apps/blog/templates/dashboard/category/category_delete.html:20
+msgid "Delete category"
+msgstr "Hapus kategori"
+
+#: apps/blog/templates/dashboard/category/category_delete.html:26
+msgid "Are you sure you want to delete this category?"
+msgstr "Yakin ingin menghapus kategori ini?"
+
+#: apps/blog/templates/dashboard/category/category_delete.html:32
+#: apps/blog/templates/dashboard/post/post_delete.html:40
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:33
+#: apps/career/templates/dashboard/career/career_delete.html:33
+#: apps/career/templates/dashboard/departement/departement_delete.html:32
+#: apps/slider/templates/dashboard/slider/slider_delete.html:41
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:27
+#: templates/customer/address/address_delete.html:20
+#: templates/customer/notifications/list.html:55
+#: templates/customer/wishlists/wishlists_delete.html:32
+msgid "Deleting..."
+msgstr "Menghapus..."
+
+#: apps/blog/templates/dashboard/category/category_delete.html:32
+#: apps/blog/templates/dashboard/category/category_row_actions.html:12
+#: apps/blog/templates/dashboard/post/post_delete.html:40
+#: apps/blog/templates/dashboard/post/post_row_actions.html:12
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:33
+#: apps/career/templates/dashboard/applicant/applicant_row_actions.html:11
+#: apps/career/templates/dashboard/career/career_delete.html:33
+#: apps/career/templates/dashboard/career/career_row_actions.html:12
+#: apps/career/templates/dashboard/departement/departement_delete.html:32
+#: apps/career/templates/dashboard/departement/departement_row_actions.html:12
+#: apps/slider/templates/dashboard/slider/slider_delete.html:41
+#: apps/slider/templates/dashboard/slider/slider_row_actions.html:12
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:27
+#: apps/social_media/templates/dashboard/linktype/linktype_row_actions.html:12
+#: templates/checkout/shipping_address.html:65
+#: templates/customer/address/address_delete.html:20
+#: templates/customer/address/address_list.html:37
+#: templates/customer/notifications/list.html:45
+#: templates/customer/notifications/list.html:55
+#: templates/customer/wishlists/wishlists_delete.html:32
+#: templates/customer/wishlists/wishlists_list.html:31
+#: templates/dashboard/catalogue/product_update.html:275
+msgid "Delete"
+msgstr "Hapus"
+
+#: apps/blog/templates/dashboard/category/category_delete.html:32
+#: apps/blog/templates/dashboard/category/category_form.html:33
+#: apps/blog/templates/dashboard/category/category_form.html:36
+#: apps/blog/templates/dashboard/post/post_delete.html:40
+#: apps/blog/templates/dashboard/post/post_form.html:33
+#: apps/blog/templates/dashboard/post/post_form.html:36
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:33
+#: apps/career/templates/dashboard/career/career_delete.html:33
+#: apps/career/templates/dashboard/career/career_form.html:33
+#: apps/career/templates/dashboard/career/career_form.html:36
+#: apps/career/templates/dashboard/departement/departement_delete.html:32
+#: apps/career/templates/dashboard/departement/departement_form.html:33
+#: apps/career/templates/dashboard/departement/departement_form.html:36
+#: apps/slider/templates/dashboard/slider/slider_delete.html:41
+#: apps/slider/templates/dashboard/slider/slider_form.html:33
+#: apps/slider/templates/dashboard/slider/slider_form.html:36
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:27
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:33
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:36
+#: apps/subscribe/templates/subscribe/subscribe_form.html:32
+#: templates/catalogue/reviews/review_form.html:48
+#: templates/customer/address/address_delete.html:20
+#: templates/customer/wishlists/wishlists_delete.html:32
+#: templates/customer/wishlists/wishlists_delete_product.html:32
+#: templates/customer/wishlists/wishlists_form.html:41
+#: templates/dashboard/catalogue/product_update.html:329
+#: templates/partner/registration_form.html:42
+msgid "or"
+msgstr "atau"
+
+#: apps/blog/templates/dashboard/category/category_delete.html:33
+#: apps/blog/templates/dashboard/category/category_form.html:37
+#: apps/blog/templates/dashboard/post/post_delete.html:41
+#: apps/blog/templates/dashboard/post/post_form.html:37
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:34
+#: apps/career/templates/dashboard/career/career_delete.html:34
+#: apps/career/templates/dashboard/career/career_form.html:37
+#: apps/career/templates/dashboard/departement/departement_delete.html:33
+#: apps/career/templates/dashboard/departement/departement_form.html:37
+#: apps/slider/templates/dashboard/slider/slider_delete.html:42
+#: apps/slider/templates/dashboard/slider/slider_form.html:37
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:28
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:37
+#: apps/subscribe/templates/subscribe/subscribe_form.html:32
+#: templates/catalogue/reviews/review_form.html:49
+#: templates/checkout/user_address_form.html:47
+#: templates/customer/address/address_delete.html:20
+#: templates/customer/wishlists/wishlists_delete.html:32
+#: templates/customer/wishlists/wishlists_delete_product.html:32
+#: templates/customer/wishlists/wishlists_form.html:41
+#: templates/partials/form.html:12 templates/partner/registration_form.html:42
+msgid "cancel"
+msgstr "batal"
+
+#: apps/blog/templates/dashboard/category/category_form.html:24
+#: apps/blog/templates/dashboard/category/category_list.html:20
+msgid "Create new category"
+msgstr "Buat kategori baru"
+
+#: apps/blog/templates/dashboard/category/category_form.html:33
+#: apps/blog/templates/dashboard/post/post_form.html:33
+#: apps/career/templates/dashboard/career/career_form.html:33
+#: apps/career/templates/dashboard/departement/departement_form.html:33
+#: apps/slider/templates/dashboard/slider/slider_form.html:33
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:33
+#: templates/catalogue/reviews/review_form.html:47
+#: templates/checkout/shipping_address.html:55
+#: templates/checkout/shipping_address.html:57
+#: templates/checkout/user_address_form.html:46
+#: templates/customer/wishlists/wishlists_form.html:40
+#: templates/dashboard/catalogue/product_update.html:331
+#: templates/dashboard/catalogue/product_update.html:335
+#: templates/dashboard/catalogue/product_update.html:338
+#: templates/partials/form.html:11
+msgid "Saving..."
+msgstr "Menyimpan..."
+
+#: apps/blog/templates/dashboard/category/category_form.html:33
+#: apps/blog/templates/dashboard/post/post_form.html:33
+#: apps/career/templates/dashboard/career/career_form.html:33
+#: apps/career/templates/dashboard/departement/departement_form.html:33
+#: apps/slider/templates/dashboard/slider/slider_form.html:33
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:33
+#: templates/checkout/user_address_form.html:46
+#: templates/customer/wishlists/wishlists_form.html:40
+#: templates/dashboard/catalogue/product_update.html:339
+#: templates/partials/form.html:11
+msgid "Save"
+msgstr "Simpan"
+
+#: apps/blog/templates/dashboard/category/category_form.html:35
+msgid "Save and edit category"
+msgstr "Simpan dan edit kategori"
+
+#: apps/blog/templates/dashboard/category/category_list.html:51
+msgid "No category have been made yet."
+msgstr "Belum ada kategori yang dibuat."
+
+#: apps/blog/templates/dashboard/category/category_row_actions.html:11
+#: apps/blog/templates/dashboard/post/post_row_actions.html:11
+#: apps/career/templates/dashboard/career/career_row_actions.html:11
+#: apps/career/templates/dashboard/departement/departement_row_actions.html:11
+#: apps/slider/templates/dashboard/slider/slider_row_actions.html:11
+#: apps/social_media/templates/dashboard/linktype/linktype_row_actions.html:11
+#: templates/customer/address/address_list.html:30
+#: templates/dashboard/catalogue/product_update.html:272
+msgid "Edit"
+msgstr "Ubah"
+
+#: apps/blog/templates/dashboard/post/post_delete.html:20
+msgid "Delete Post"
+msgstr "Hapus Posting"
+
+#: apps/blog/templates/dashboard/post/post_delete.html:26
+msgid "Are you sure you want to delete this post?"
+msgstr "Anda yakin ingin menghapus posting ini?"
+
+#: apps/blog/templates/dashboard/post/post_form.html:24
+#: apps/blog/templates/dashboard/post/post_list.html:20
+msgid "Create new post"
+msgstr "Buat posting baru"
+
+#: apps/blog/templates/dashboard/post/post_form.html:35
+msgid "Save and edit post"
+msgstr "Simpan dan edit posting"
+
+#: apps/blog/templates/dashboard/post/post_list.html:51
+msgid "No post have been made yet."
+msgstr "Belum ada posting yang dibuat."
+
+#: apps/career/dashboard/config.py:8
+msgid "Career Dashboard"
+msgstr "Karier Dashboard"
+
+#: apps/career/dashboard/forms.py:7 apps/career/models.py:26
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:30
+#: apps/subscribe/dashboard/forms.py:6
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:29
+#: templates/checkout/checkout.html:62
+#: templates/dashboard/partners/partner_manage.html:40
+msgid "Email"
+msgstr "Email"
+
+#: apps/career/dashboard/forms.py:9
+msgctxt "Applicant's name"
+msgid "Name"
+msgstr "Nama pelamar"
+
+#: apps/career/dashboard/forms.py:13 apps/career/models.py:56
+#: apps/career/models.py:99
+#: apps/career/templates/dashboard/career/career_detail.html:27
+#: apps/career/templates/dashboard/departement/departement_delete.html:6
+#: apps/career/templates/dashboard/departement/departement_delete.html:15
+#: apps/career/templates/dashboard/departement/departement_detail.html:5
+#: apps/career/templates/dashboard/departement/departement_detail.html:14
+#: apps/career/templates/dashboard/departement/departement_detail.html:19
+#: apps/career/templates/dashboard/departement/departement_detail.html:25
+#: apps/career/templates/dashboard/departement/departement_form.html:6
+#: apps/career/templates/dashboard/departement/departement_form.html:16
+#: apps/career/templates/dashboard/departement/departement_form.html:24
+#: yoohalal/settings.py:306
+msgid "Departement"
+msgstr "Departemen"
+
+#: apps/career/dashboard/tables.py:14 apps/career/models.py:29
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:33
+msgid "Document"
+msgstr "Berkas"
+
+#: apps/career/dashboard/views.py:30
+msgid "Career created successfully"
+msgstr "Karir berhasil dibuat"
+
+#: apps/career/dashboard/views.py:35
+#: apps/career/templates/dashboard/career/career_form.html:24
+#: apps/career/templates/dashboard/career/career_list.html:20
+msgid "Create new career"
+msgstr "Buat karir baru"
+
+#: apps/career/dashboard/views.py:45
+msgid "Career updated successfully"
+msgstr "Karir berhasil diperbarui"
+
+#: apps/career/dashboard/views.py:61
+msgid "Career deleted"
+msgstr "karir dihapus"
+
+#: apps/career/dashboard/views.py:79
+msgid "Careers search results"
+msgstr "Hasil pencarian karir"
+
+#: apps/career/dashboard/views.py:80 apps/career/models.py:126
+#: apps/career/templates/career/applicant_form.html:15
+#: apps/career/templates/career/applicant_thanks.html:14
+#: apps/career/templates/career/career_detail.html:14
+#: apps/career/templates/career/career_index.html:6
+#: apps/career/templates/career/career_index.html:14
+#: apps/career/templates/career/career_index.html:19
+#: apps/career/templates/career/career_index.html:24
+#: apps/career/templates/dashboard/career/career_delete.html:14
+#: apps/career/templates/dashboard/career/career_detail.html:14
+#: apps/career/templates/dashboard/career/career_list.html:6
+#: apps/career/templates/dashboard/career/career_list.html:14
+#: apps/career/templates/dashboard/career/career_list.html:21
+#: templates/partials/footer.html:66
+msgid "Careers"
+msgstr "Karir"
+
+#: apps/career/dashboard/views.py:118
+msgid "Departement created successfully"
+msgstr "Departemen berhasil dibuat"
+
+#: apps/career/dashboard/views.py:123
+#: apps/career/templates/dashboard/departement/departement_form.html:24
+#: apps/career/templates/dashboard/departement/departement_list.html:20
+msgid "Create new departement"
+msgstr "Buat departemen baru"
+
+#: apps/career/dashboard/views.py:133
+msgid "Departement updated successfully"
+msgstr "Departemen berhasil diperbarui"
+
+#: apps/career/dashboard/views.py:149
+msgid "Departement deleted"
+msgstr "Departemen dihapus"
+
+#: apps/career/dashboard/views.py:167
+msgid "Departements search results"
+msgstr "Hasil pencarian departemen"
+
+#: apps/career/dashboard/views.py:168
+#: apps/career/templates/dashboard/departement/departement_delete.html:14
+#: apps/career/templates/dashboard/departement/departement_detail.html:13
+#: apps/career/templates/dashboard/departement/departement_form.html:14
+#: apps/career/templates/dashboard/departement/departement_list.html:6
+#: apps/career/templates/dashboard/departement/departement_list.html:14
+#: apps/career/templates/dashboard/departement/departement_list.html:21
+msgid "Departements"
+msgstr "Departemen"
+
+#: apps/career/dashboard/views.py:205
+#, python-format
+msgid "%(main_filter)s %(email_filter)s %(name_filter)s"
+msgstr "%(main_filter)s %(email_filter)s %(name_filter)s"
+
+#: apps/career/dashboard/views.py:228
+msgid "All applicants"
+msgstr "Semua pelamar"
+
+#: apps/career/dashboard/views.py:242
+#, python-format
+msgid " with email matching '%s'"
+msgstr " dengan pencocokan email '%s'"
+
+#: apps/career/dashboard/views.py:250
+#, python-format
+msgid " with name matching '%s'"
+msgstr " dengan nama yang cocok '%s'"
+
+#: apps/career/dashboard/views.py:266
+msgid "Applicant deleted"
+msgstr "Hapus pelamar"
+
+#: apps/career/forms.py:63
+msgid "Email already exists"
+msgstr "Email sudah tersedia"
+
+#: apps/career/forms.py:70 apps/confirmation/forms.py:105
+#, python-format
+msgid ""
+"Please keep filesize under \"%(max_size)s\". Current filesize "
+"\"%(current_size)s\""
+msgstr ""
+"Simpan file dibawah \"%(max_size)s\". Ukuran file saat ini\"%(current_size)s"
+"\""
+
+#: apps/career/models.py:25
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:29
+msgid "Full Name"
+msgstr "Nama Lengkap"
+
+#: apps/career/models.py:39 apps/career/models.py:125
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:32
+#: apps/career/templates/dashboard/career/career_delete.html:6
+#: apps/career/templates/dashboard/career/career_delete.html:15
+#: apps/career/templates/dashboard/career/career_detail.html:6
+#: apps/career/templates/dashboard/career/career_detail.html:15
+#: apps/career/templates/dashboard/career/career_detail.html:20
+#: apps/career/templates/dashboard/career/career_form.html:6
+#: apps/career/templates/dashboard/career/career_form.html:14
+#: apps/career/templates/dashboard/career/career_form.html:16
+#: apps/career/templates/dashboard/career/career_form.html:24
+#: apps/career/views.py:80 yoohalal/settings.py:297 yoohalal/settings.py:301
+msgid "Career"
+msgstr "Karir"
+
+#: apps/career/models.py:44
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:6
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:15
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:5
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:23
+#: yoohalal/settings.py:311
+msgid "Applicant"
+msgstr "Pelamar"
+
+#: apps/career/models.py:45
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:14
+#: apps/career/templates/dashboard/applicant/applicant_detail.html:14
+#: apps/career/templates/dashboard/applicant/applicant_list.html:6
+#: apps/career/templates/dashboard/applicant/applicant_list.html:14
+#: apps/career/templates/dashboard/applicant/applicant_list.html:19
+msgid "Applicants"
+msgstr "Pelamar"
+
+#: apps/career/models.py:82
+msgid "Department"
+msgstr "Departemen"
+
+#: apps/career/models.py:83
+msgid "Departments"
+msgstr "Departemen"
+
+#: apps/career/templates/career/applicant_form.html:6
+#: apps/career/templates/career/applicant_form.html:20
+#: apps/career/templates/career/applicant_form.html:25
+#: apps/career/templates/career/applicant_thanks.html:20
+msgid "Applicant Form"
+msgstr "Formulir Pelamar"
+
+#: apps/career/templates/career/applicant_form.html:29
+msgid "Please complete the job application form below:"
+msgstr "Silahkan lengkapi form lamaran kerja di bawah ini:"
+
+#: apps/career/templates/career/applicant_form.html:36
+#: apps/confirmation/templates/confirmation/confirmation_form.html:37
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:34
+#: apps/subscribe/templates/subscribe/subscribe_form.html:30
+#: templates/partials/footer.html:15
+#: templates/partner/registration_form.html:40
+msgid "Processing..."
+msgstr "Memproses..."
+
+#: apps/career/templates/career/applicant_form.html:36
+#: apps/confirmation/templates/confirmation/confirmation_form.html:37
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:34
+#: apps/subscribe/templates/subscribe/subscribe_form.html:30
+#: templates/partner/registration_form.html:40
+msgid "Submit"
+msgstr "Kirim"
+
+#: apps/career/templates/career/applicant_thanks.html:5
+#: apps/career/templates/career/applicant_thanks.html:22
+#: apps/subscribe/templates/subscribe/thanks.html:5
+#: apps/subscribe/templates/subscribe/thanks.html:16
+msgid "Thanks"
+msgstr "Terima kasih"
+
+#: apps/career/templates/career/applicant_thanks.html:28
+#, python-format
+msgid ""
+"Thank you <strong>%(name)s</strong>, you have followed the recruitment "
+"process at yoohalal, your application has been received. We will contact you "
+"soon after we validate your application."
+msgstr ""
+"Terima kasih <strong>%(name)s</strong>, Anda telah mengikuti proses "
+"rekrutmen di yoohalal, aplikasi anda sudah kami terima. Kami akan segera "
+"menghubungi anda setelah kami memvalidasi aplikasi Anda."
+
+#: apps/career/templates/career/career_detail.html:34
+msgid "Apply job"
+msgstr "Lamar"
+
+#: apps/career/templates/career/career_index.html:25
+msgid ""
+"Good human resources become one of the important pillars of a startup. "
+"Because with good resources will form a solid team and from a solid team "
+"will produce a good product. We open up opportunities for the best "
+"candidates to fill several positions:"
+msgstr ""
+"Sumber daya manusia yang baik menjadi salah satu pilar penting sebuah "
+"startup. Karena dengan sumber daya yang baik akan terbentuk team yang solid "
+"dan dari team yang solid akan menghasilkan produk yang baik. Kami membuka "
+"kesempatan untuk kandidat terbaik mengisi beberapa posisi:"
+
+#: apps/career/templates/career/career_index.html:35
+msgid "See job"
+msgstr "Lihat lowongan"
+
+#: apps/career/templates/career/career_index.html:42
+msgid "No career are available."
+msgstr "Tidak ada karir yang tersedia."
+
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:20
+msgid "Delete Applicant"
+msgstr "Hapus Pelamar"
+
+#: apps/career/templates/dashboard/applicant/applicant_delete.html:26
+msgid "Are you sure you want to delete this applicant?"
+msgstr "Anda yakin ingin menghapus pelamar ini?"
+
+#: apps/career/templates/dashboard/applicant/applicant_list.html:49
+msgid "No applicants have been made yet."
+msgstr "Tidak ada pelamar yang telah dibuat."
+
+#: apps/career/templates/dashboard/career/career_delete.html:20
+msgid "Delete Career"
+msgstr "Hapus Karir"
+
+#: apps/career/templates/dashboard/career/career_delete.html:26
+msgid "Are you sure you want to delete this career?"
+msgstr "Anda yakin ingin menghapus karir ini?"
+
+#: apps/career/templates/dashboard/career/career_form.html:35
+msgid "Save and edit career"
+msgstr "Simpan dan edit karir"
+
+#: apps/career/templates/dashboard/career/career_list.html:51
+msgid "No career have been made yet."
+msgstr "Belum ada karir yang dibuat."
+
+#: apps/career/templates/dashboard/departement/departement_delete.html:20
+msgid "Delete departement"
+msgstr "Hapus departemen"
+
+#: apps/career/templates/dashboard/departement/departement_delete.html:26
+msgid "Are you sure you want to delete this departement?"
+msgstr "Yakin ingin menghapus departemen ini?"
+
+#: apps/career/templates/dashboard/departement/departement_form.html:35
+msgid "Save and edit departement"
+msgstr "Simpan dan edit departemen"
+
+#: apps/career/templates/dashboard/departement/departement_list.html:51
+msgid "No departement have been made yet."
+msgstr "Belum ada departemen yang dibuat."
+
+#: apps/catalogue/models.py:23 apps/confirmation/models.py:29
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:37
+#: templates/customer/order/order_list.html:43
+msgid "Status"
+msgstr "Status"
+
+#: apps/confirmation/dashboard/config.py:8
+msgid "Confirmation Dashboard"
+msgstr "Dashboard Konfirmasi"
+
+#: apps/confirmation/dashboard/tables.py:15 apps/confirmation/models.py:21
+msgid "Proof Of Payment"
+msgstr "Bukti Pembayaran"
+
+#: apps/confirmation/dashboard/views.py:33
+msgid "Confirmation search results"
+msgstr "Hasil pencarian konfirmasi"
+
+#: apps/confirmation/dashboard/views.py:34
+msgid "Confirmation"
+msgstr "Konfirmasi"
+
+#: apps/confirmation/forms.py:31 apps/confirmation/forms.py:91
+#, python-format
+msgid "Order number \"%(order_number)s\" is not found"
+msgstr "Nomor pesanan \"%(order_number)s\" tidak ditemukan"
+
+#: apps/confirmation/forms.py:36 apps/confirmation/forms.py:96
+#, python-format
+msgid "Confirmation with order number \"%(order_number)s\" has been accepted"
+msgstr "Konfirmasi dengan nomor pesanan \"%(order_number)s\" telah diterima"
+
+#: apps/confirmation/forms.py:43 apps/confirmation/models.py:13
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:32
+msgid "Destination Bank"
+msgstr "Bank Tujuan"
+
+#: apps/confirmation/forms.py:44 apps/confirmation/models.py:12
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:31
+msgid "Transfer Date"
+msgstr "Tanggal Transfer"
+
+#: apps/confirmation/models.py:15
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:34
+msgid "Account Owner Name"
+msgstr "Nama pemilik akun"
+
+#: apps/confirmation/models.py:16
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:35
+msgid "Customer Email"
+msgstr "Email pelanggan"
+
+#: apps/confirmation/models.py:17
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:36
+msgid "Customer Phone"
+msgstr "Telepon Pelanggan"
+
+#: apps/confirmation/models.py:36
+msgid "Confirmation Payment"
+msgstr "Konfirmasi Pembayaran"
+
+#: apps/confirmation/templates/confirmation/confirmation_form.html:6
+#: apps/confirmation/templates/confirmation/confirmation_form.html:14
+#: apps/confirmation/templates/confirmation/confirmation_form.html:19
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:6
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:14
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:19
+#: apps/confirmation/templates/confirmation/success.html:16
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:6
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:24
+msgid "Payment Confirmation"
+msgstr "Konfirmasi Pembayaran"
+
+#: apps/confirmation/templates/confirmation/confirmation_form.html:26
+msgid "Important!"
+msgstr "Penting!"
+
+#: apps/confirmation/templates/confirmation/confirmation_form.html:26
+msgid ""
+"Please use this form only after you make payment. Fill data correctly to "
+"make it easier for us to verify your confirmation."
+msgstr ""
+"Harap gunakan formulir ini hanya setelah Anda melakukan pembayaran. Isi data "
+"dengan benar untuk mempermudah kami memverifikasi konfirmasi Anda."
+
+#: apps/confirmation/templates/confirmation/confirmation_form.html:38
+#: templates/dashboard/catalogue/product_update.html:327
+msgid "Cancel"
+msgstr "Batal"
+
+#: apps/confirmation/templates/confirmation/confirmation_order_form.html:26
+msgid "Please enter your order number below."
+msgstr "Silahkan masukkan nomor pesanan anda di bawah ini."
+
+#: apps/confirmation/templates/confirmation/payment.html:28
+msgid "Bank transfer"
+msgstr "Bank transfer"
+
+#: apps/confirmation/templates/confirmation/payment.html:30
+msgid ""
+"Transfer via available bank. Do not forget the confirmation after payment is "
+"sent."
+msgstr ""
+"Transfer melalui bank yang tersedia. Jangan lupa konfirmasi setelah "
+"pembayaran dikirim."
+
+#: apps/confirmation/templates/confirmation/payment.html:50
+msgid "Payment confirmation"
+msgstr "Konfirmasi pembayaran"
+
+#: apps/confirmation/templates/confirmation/success.html:8
+#: apps/confirmation/templates/confirmation/success.html:17
+msgid "Success"
+msgstr "Sukses"
+
+#: apps/confirmation/templates/confirmation/success.html:23
+#, python-format
+msgid ""
+"\n"
+"            Thank you for submiting confirmation for order number <strong>#"
+"%(number)s</strong>. We will validate your confirmation as soon.\n"
+"        "
+msgstr ""
+"\n"
+"            Terima kasih telah mengajukan konfirmasi untuk nomor pesanan "
+"<strong>#%(number)s</strong>. Kami akan memvalidasi konfirmasi Anda segera.\n"
+"        "
+
+#: apps/confirmation/templates/dashboard/confirmation/confirmation_row_actions.html:11
+msgid "Accept Confirmation"
+msgstr "Terima Konfirmasi"
+
+#: apps/confirmation/templates/dashboard/confirmation/confirmation_row_actions.html:12
+msgid "Reject Confirmation"
+msgstr "Tolak Konfirmasi"
+
+#: apps/confirmation/templates/dashboard/confirmation/data_detail.html:15
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:6
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:14
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:19
+#: yoohalal/settings.py:274
+msgid "Payment Confirmations"
+msgstr "Konfirmasi Pembayaran"
+
+#: apps/confirmation/templates/dashboard/confirmation/data_list.html:48
+msgid "No data have been made yet."
+msgstr "Belum ada data yang dibuat."
+
+#: apps/customer/views.py:35
+msgid "Thank you for your email confirmation. Now you can login your account."
+msgstr ""
+"Terima kasih atas konfirmasi email anda. Sekarang anda bisa login "
+"menggunakan akun anda."
+
+#: apps/customer/views.py:38
+msgid "Activation link is invalid!"
+msgstr "Tautan aktivasi tidak valid!"
+
+#: apps/dashboard/catalogue/forms.py:64
+msgid "weight in grams"
+msgstr "berat dalam satuan gram"
+
+#: apps/dashboard/catalogue/forms.py:80 templates/catalogue/detail.html:170
+msgid "Product Type"
+msgstr "Tipe Produk"
+
+#: apps/dashboard/catalogue/forms.py:86 apps/partner/abstract_models.py:88
+msgid "Partner"
+msgstr "Mitra"
+
+#: apps/dashboard/catalogue/formsets.py:72
+msgid ""
+"At least one stock record must be set to a partner that you're associated "
+"with."
+msgstr "Harus ada minmial satu catatan stok yang terkait dengan partner."
+
+#: apps/dashboard/catalogue/views.py:32
+msgid "Product search results"
+msgstr "Hasil pencarian produk"
+
+#: apps/dashboard/catalogue/views.py:33
+#: templates/dashboard/catalogue/product_list.html:11
+#: templates/dashboard/catalogue/product_list.html:19
+#: templates/dashboard/catalogue/product_list.html:25
+#: templates/dashboard/catalogue/product_update.html:11
+#: templates/dashboard/catalogue/product_update.html:20
+msgid "Products"
+msgstr "Produk"
+
+#: apps/dashboard/partners/forms.py:18 apps/slider/dashboard/forms.py:9
+#: templates/catalogue/partials/review.html:44
+msgid "Yes"
+msgstr "Ya"
+
+#: apps/dashboard/partners/forms.py:19 apps/slider/dashboard/forms.py:10
+#: templates/catalogue/partials/review.html:49
+msgid "No"
+msgstr "Tidak"
+
+#: apps/dashboard/partners/forms.py:23 apps/dashboard/partners/forms.py:79
+#: apps/partner/abstract_models.py:27
+#: templates/dashboard/partners/partner_list.html:46
+msgid "Is Active?"
+msgstr "Aktif?"
+
+#: apps/dashboard/partners/forms.py:78 apps/partner/abstract_models.py:17
+#: apps/partner/forms.py:18
+msgctxt "Partner's name"
+msgid "Name"
+msgstr "Nama"
+
+#: apps/dashboard/partners/views.py:49
+#, python-format
+msgid "Partner '%s' was updated successfully."
+msgstr "Mitra '%s' berhasil diperbarui."
+
+#: apps/dashboard/partners/views.py:114
+msgid "Create user"
+msgstr "Buat Pengguna"
+
+#: apps/dashboard/partners/views.py:125
+#, python-format
+msgid "User '%s' was created successfully."
+msgstr "Pengguna '%s' berhasil dibuat."
+
+#: apps/dashboard/partners/views.py:144
+#, python-format
+msgid "User '%(name)s' has been linked with '%(partner_name)s'"
+msgstr "Pengguna '%(name)s' telah dikaitkan dengan '%(partner_name)s'"
+
+#: apps/dashboard/partners/views.py:151
+#, python-format
+msgid "User '%(name)s' was linked to '%(partner_name)s'"
+msgstr "Pengguna '%(name)s' telah dikaitkan dengan '%(partner_name)s'"
+
+#: apps/dashboard/partners/views.py:156
+#, python-format
+msgid "User '%(name)s' is already linked to '%(partner_name)s'"
+msgstr "Pengguna '%(name)s' sudah dikaitkan dengan '%(partner_name)s'"
+
+#: apps/dashboard/partners/views.py:214
+#, python-format
+msgid "User '%(name)s' is not linked to '%(partner_name)s'"
+msgstr "Pengguna '%(name)s' tidak lagi dikaitkan dengan '%(partner_name)s'"
+
+#: apps/dashboard/partners/views.py:231
+#, python-format
+msgid "Edit user '%s'"
+msgstr "Ubah Pengguna '%s'"
+
+#: apps/dashboard/partners/views.py:237
+#, python-format
+msgid "User '%s' was updated successfully."
+msgstr "Pengguna '%s' berhasil diperbarui."
+
+#: apps/dashboard/promotions/forms.py:12
+msgid "Promotion type"
+msgstr "Jenis promosi"
+
+#: apps/partner/abstract_models.py:15
+msgid "Code"
+msgstr "Kode"
+
+#: apps/partner/abstract_models.py:68
+msgid "Fulfillment partner"
+msgstr "Kebutuhan mitra"
+
+#: apps/partner/abstract_models.py:69
+msgid "Fulfillment partners"
+msgstr "Kebutuhan mitra"
+
+#: apps/partner/abstract_models.py:93
+msgid "Partner address"
+msgstr "Alamat mitra"
+
+#: apps/partner/abstract_models.py:94
+msgid "Partner addresses"
+msgstr "Alamat mitra"
+
+#: apps/partner/models.py:17
+msgid "Old Price"
+msgstr "Harga Lama"
+
+#: apps/partner/views.py:39
+msgid "If you are a staff please use dashboard."
+msgstr "Jika Anda seorang staf silahkan gunakan dashboard."
+
+#: apps/promotions/models.py:15
+msgid "Number of Products"
+msgstr "Jumlah produk"
+
+#: apps/promotions/models.py:28
+msgid "Category product list"
+msgstr "Daftar produk per kategori"
+
+#: apps/promotions/models.py:29
+msgid "Category product lists"
+msgstr "Daftar produk per kategori"
+
+#: apps/slider/dashboard/config.py:8
+msgid "Slider Dashboard"
+msgstr "Slider Dashboard"
+
+#: apps/slider/dashboard/forms.py:14 apps/slider/models.py:14
+#: apps/slider/templates/dashboard/slider/slider_detail.html:42
+msgid "Slider Number"
+msgstr "Nomor Slider"
+
+#: apps/slider/dashboard/forms.py:15 apps/slider/models.py:13
+#: apps/slider/templates/dashboard/slider/slider_detail.html:41
+#: apps/social_media/models.py:11
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:27
+msgid "Is Visible"
+msgstr "Terlihat"
+
+#: apps/slider/dashboard/views.py:51
+msgid "Sliders search results"
+msgstr "Hasil pencarian slider"
+
+#: apps/slider/dashboard/views.py:52
+#: apps/slider/templates/dashboard/slider/slider_delete.html:14
+#: apps/slider/templates/dashboard/slider/slider_detail.html:14
+#: apps/slider/templates/dashboard/slider/slider_form.html:14
+#: apps/slider/templates/dashboard/slider/slider_list.html:6
+#: apps/slider/templates/dashboard/slider/slider_list.html:14
+#: apps/slider/templates/dashboard/slider/slider_list.html:21
+msgid "Sliders"
+msgstr "Slider"
+
+#: apps/slider/dashboard/views.py:80
+msgid "Slider status successfully changed"
+msgstr "Slider status berhasil diubah"
+
+#: apps/slider/dashboard/views.py:96
+msgid "Slider created successfully"
+msgstr "Slider berhasil dibuat"
+
+#: apps/slider/dashboard/views.py:101
+msgid "Create slider"
+msgstr "Buat slider"
+
+#: apps/slider/dashboard/views.py:111
+msgid "Slider updated successfully"
+msgstr "Slider berhasil diperbarui"
+
+#: apps/slider/dashboard/views.py:127
+msgid "Slider deleted"
+msgstr "Slider dihapus"
+
+#: apps/slider/models.py:15
+#: apps/slider/templates/dashboard/slider/slider_detail.html:43
+msgid "Html Caption"
+msgstr "Keterangan (Html)"
+
+#: apps/slider/models.py:18
+msgid "slider"
+msgstr "slider"
+
+#: apps/slider/models.py:19
+msgid "sliders"
+msgstr "slider"
+
+#: apps/slider/templates/dashboard/slider/slider_delete.html:6
+#: apps/slider/templates/dashboard/slider/slider_delete.html:15
+#: apps/slider/templates/dashboard/slider/slider_detail.html:6
+#: apps/slider/templates/dashboard/slider/slider_detail.html:15
+#: apps/slider/templates/dashboard/slider/slider_detail.html:20
+#: apps/slider/templates/dashboard/slider/slider_form.html:6
+#: apps/slider/templates/dashboard/slider/slider_form.html:16
+#: apps/slider/templates/dashboard/slider/slider_form.html:24
+#: yoohalal/settings.py:322
+msgid "Slider"
+msgstr "Slider"
+
+#: apps/slider/templates/dashboard/slider/slider_delete.html:20
+msgid "Delete Slider"
+msgstr "Hapus Slider"
+
+#: apps/slider/templates/dashboard/slider/slider_delete.html:26
+msgid "Are you sure you want to delete this slider?"
+msgstr "Yakin ingin menghapus alamat ini?"
+
+#: apps/slider/templates/dashboard/slider/slider_form.html:24
+#: apps/slider/templates/dashboard/slider/slider_list.html:20
+msgid "Create new slider"
+msgstr "Buat slider baru"
+
+#: apps/slider/templates/dashboard/slider/slider_form.html:35
+msgid "Save and edit sliders"
+msgstr "Simpan dan edit slider"
+
+#: apps/slider/templates/dashboard/slider/slider_list.html:51
+msgid "No slider have been made yet."
+msgstr "Belum ada slider yang dibuat."
+
+#: apps/slider/templates/dashboard/slider/table.html:8
+#: apps/social_media/templates/dashboard/linktype/table.html:8
+msgid "With selected links:"
+msgstr "Dengan item yang dipilih:"
+
+#: apps/slider/templates/dashboard/slider/table.html:10
+#: apps/social_media/templates/dashboard/linktype/table.html:10
+msgid "Make visible"
+msgstr "Terlihat"
+
+#: apps/slider/templates/dashboard/slider/table.html:13
+#: apps/social_media/templates/dashboard/linktype/table.html:13
+msgid "Make invisible"
+msgstr "Tidak terlihat"
+
+#: apps/slider/templates/dashboard/slider/table.html:15
+#: apps/social_media/templates/dashboard/linktype/table.html:15
+#: apps/subscribe/templates/dashboard/subscribe/table.html:15
+msgid "Go!"
+msgstr "Go!"
+
+#: apps/slider/utils.py:35
+msgid "Thumbnail"
+msgstr "Thumbnail"
+
+#: apps/social_media/dashboard/config.py:8
+msgid "Social Media Dashboard"
+msgstr "Media Sosial Dashboard"
+
+#: apps/social_media/dashboard/forms.py:6 apps/social_media/models.py:8
+#: templates/customer/wishlists/wishlists_list.html:9
+#: templates/dashboard/partners/partner_list.html:44
+msgid "Name"
+msgstr "Nama"
+
+#: apps/social_media/dashboard/views.py:51
+msgid "Social media search results"
+msgstr "Hasil pencarian sosial media"
+
+#: apps/social_media/dashboard/views.py:52
+msgid "Social media"
+msgstr "Media sosial"
+
+#: apps/social_media/dashboard/views.py:78
+msgid "Link status successfully changed"
+msgstr "Status link berhasil diubah"
+
+#: apps/social_media/dashboard/views.py:94
+msgid "Social media created successfully"
+msgstr "Media sosial berhasil dibuat"
+
+#: apps/social_media/dashboard/views.py:99
+msgid "Create social media"
+msgstr "Buat media sosial"
+
+#: apps/social_media/dashboard/views.py:108
+msgid "Social media updated successfully"
+msgstr "Media sosial berhasil diperbarui"
+
+#: apps/social_media/dashboard/views.py:123
+msgid "Social media deleted"
+msgstr "Media sosial dihapus"
+
+#: apps/social_media/models.py:9
+msgid "Slug"
+msgstr "Slug"
+
+#: apps/social_media/models.py:10
+msgid "Url"
+msgstr "Url"
+
+#: apps/social_media/models.py:12
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:28
+msgid "Position Number"
+msgstr "Nomor urut"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:5
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:13
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:14
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:5
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:13
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:14
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:19
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:6
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:14
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:16
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:24
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:6
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:14
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:21
+#: yoohalal/settings.py:327
+msgid "Social Media"
+msgstr "Media Sosial"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:19
+msgid "Delete Social Media"
+msgstr "Hapus Media Sosial"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_delete.html:25
+msgid "Are you sure you want to delete this social media?"
+msgstr "Apakah anda yakin ingin menghapus media sosial ini?"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:25
+msgid "Name "
+msgstr "Nama"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_detail.html:26
+msgid "URL"
+msgstr "URL"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:24
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:20
+msgid "Create new social media"
+msgstr "Buat media sosial baru"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_form.html:35
+msgid "Save and edit social media"
+msgstr "Simpan dan edit media sosial"
+
+#: apps/social_media/templates/dashboard/linktype/linktype_list.html:51
+msgid "No social media have been made yet."
+msgstr "Belum ada media sosial yang dibuat."
+
+#: apps/subscribe/dashboard/config.py:8
+msgid "Subscribe Dashboard"
+msgstr "Subscribe Dashboard"
+
+#: apps/subscribe/dashboard/views.py:50
+msgid "Subscribes search results"
+msgstr "Hasil pencarian langganan"
+
+#: apps/subscribe/dashboard/views.py:51
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:14
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:6
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:14
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:19
+msgid "Subscribes"
+msgstr "Langganan"
+
+#: apps/subscribe/dashboard/views.py:78
+msgid "Subscriber status successfully changed"
+msgstr "Status pelanggan berhasil diubah"
+
+#: apps/subscribe/models.py:15
+msgid "Email Address"
+msgstr "Alamat Email"
+
+#: apps/subscribe/models.py:16
+msgid "is active"
+msgstr "aktif"
+
+#: apps/subscribe/models.py:22
+msgid "subscribe"
+msgstr "berlangganan"
+
+#: apps/subscribe/models.py:23
+msgid "subscribes"
+msgstr "berlangganan"
+
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:5
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:17
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:23
+#: apps/subscribe/templates/subscribe/subscribe_form.html:6
+#: apps/subscribe/templates/subscribe/subscribe_form.html:14
+#: apps/subscribe/templates/subscribe/subscribe_form.html:19
+#: apps/subscribe/templates/subscribe/thanks.html:14
+#: apps/subscribe/templates/subscribe/unsubscribe.html:14
+#: templates/partials/footer.html:15 yoohalal/settings.py:332
+msgid "Subscribe"
+msgstr "Langganan"
+
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_detail.html:30
+msgid "Is Active"
+msgstr "Aktif"
+
+#: apps/subscribe/templates/dashboard/subscribe/subscribe_list.html:49
+msgid "No subscribes have been made yet."
+msgstr "Belum ada pelanggan yang terdaftar."
+
+#: apps/subscribe/templates/dashboard/subscribe/table.html:8
+msgid "With selected subcribers:"
+msgstr "Dengan item yang dipilih:"
+
+#: apps/subscribe/templates/dashboard/subscribe/table.html:10
+msgid "Make active"
+msgstr "Aktifkan"
+
+#: apps/subscribe/templates/dashboard/subscribe/table.html:13
+msgid "Make inactive"
+msgstr "Nonaktifkan"
+
+#: apps/subscribe/templates/subscribe/subscribe_form.html:23
+msgid "Subscribe to our newsletter"
+msgstr "Berlangganan newsletter kami"
+
+#: apps/subscribe/templates/subscribe/subscribe_form.html:37
+msgid ""
+"\n"
+"                By subscribing to the yoohalal newsletter you have read and "
+"understand <a href='#'>yoohalal.com's privacy policy</a>.\n"
+"                "
+msgstr ""
+"\n"
+"                Dengan berlangganan newsletter Yoohalal berarti Anda telah "
+"membaca dan memahami <a href='#'>kebijakan privasi yohalal.com</a>.\n"
+"                "
+
+#: apps/subscribe/templates/subscribe/thanks.html:22
+#, python-format
+msgid ""
+"\n"
+"            Thank you <strong>%(email)s</strong> for subscribing, Your "
+"subscription has been confirmed.\n"
+"        "
+msgstr ""
+"\n"
+"            Terima Kasih <strong>%(email)s</strong> telah berlanggan, "
+"Permintaan Anda telah dikonfirmasi.\n"
+"        "
+
+#: apps/subscribe/templates/subscribe/unsubscribe.html:5
+#: apps/subscribe/templates/subscribe/unsubscribe.html:16
+msgid "Unsubscribe"
+msgstr "Berhenti berlangganan"
+
+#: apps/subscribe/templates/subscribe/unsubscribe.html:22
+msgid ""
+"You has been unsubscribe from the yoohalal newsletter. You will no longer "
+"receive information about our exclusive offers and special offers."
+msgstr ""
+"Anda telah berhenti berlangganan newsletter yoohalal. Anda tidak akan lagi "
+"menerima informasi tentang penawaran eksklusif dan penawaran khusus kami."
+
+#: templates/basket/basket.html:6 templates/basket/basket.html:14
+#: templates/basket/basket.html:22
+#: templates/basket/partials/basket_totals.html:143
+#: templates/partials/mini_basket.html:20
+msgid "Basket"
+msgstr "Keranjang"
+
+#: templates/basket/messages/addition.html:4
+#, python-format
+msgid ""
+"\n"
+"    <strong>%(title)s</strong> has been added to your basket.\n"
+"    "
+msgstr ""
+"\n"
+"    <strong>%(title)s</strong> telah ditambahkan ke keranjang Anda.\n"
+"    "
+
+#: templates/basket/messages/addition.html:8
+#, python-format
+msgid ""
+"\n"
+"    <strong>%(quantity)s</strong> copies of <strong>%(title)s</strong>\n"
+"    have been added to your basket.\n"
+"    "
+msgstr ""
+"\n"
+"    <strong>%(quantity)s</strong> salinan dari <strong>%(title)s</strong>\n"
+"    telah ditambahkan ke keranjang Anda.\n"
+"    "
+
+#: templates/basket/messages/line_restored.html:3
+#, python-format
+msgid ""
+"\n"
+"<strong>%(title)s</strong> has been moved back to your basket.\n"
+msgstr ""
+"\n"
+"<strong>%(title)s</strong> telah dipindahkan kembali ke keranjang Anda.\n"
+
+#: templates/basket/messages/line_saved.html:3
+#, python-format
+msgid ""
+"\n"
+"<strong>%(title)s</strong> has been saved for later\n"
+msgstr ""
+"\n"
+"<strong>%(title)s</strong> telah diarsipkan\n"
+
+#: templates/basket/messages/new_total.html:6
+msgid "Your basket is now empty"
+msgstr "Keranjang Anda sekarang kosong"
+
+#: templates/basket/messages/new_total.html:9
+#: templates/basket/messages/new_total.html:13
+#, python-format
+msgid ""
+"\n"
+"            Your basket total is now <strong>%(total)s</strong>\n"
+"            "
+msgstr ""
+"\n"
+"            Total keranjang Anda sekarang <strong>%(total)s</strong>\n"
+"            "
+
+#: templates/basket/messages/new_total.html:22
+#: templates/basket/partials/basket_quick.html:36
+msgid "View basket"
+msgstr "Lihat"
+
+#: templates/basket/messages/new_total.html:23
+msgid "Checkout now"
+msgstr "Bayar"
+
+#: templates/basket/messages/offer_gained.html:3
+#, python-format
+msgid ""
+"\n"
+"Your basket now qualifies for the \n"
+"<strong>%(name)s</strong> offer.\n"
+msgstr ""
+"\n"
+"Keranjang Anda sekarang memenuhi syarat untuk \n"
+"penawaran <strong>%(name)s</strong>.\n"
+
+#: templates/basket/messages/offer_lost.html:3
+#, python-format
+msgid ""
+"\n"
+"Your basket no longer qualifies for the\n"
+"<strong>%(name)s</strong> offer.\n"
+msgstr ""
+"\n"
+"Keranjang Anda tidak lagi memenuhi syarat untuk\n"
+"penawaran <strong>%(name)s</strong>.\n"
+
+#: templates/basket/partials/basket_content.html:8
+msgid "Important messages about items in your basket"
+msgstr "Pesan penting tentang item dalam keranjang Anda"
+
+#: templates/basket/partials/basket_content.html:16
+msgid "You could be missing out on offers!"
+msgstr "Anda akan kehilangan penawaran!"
+
+#: templates/basket/partials/basket_content.html:18
+#, python-format
+msgid ""
+"\n"
+"                <div class=\"warning\">%(message)s to qualify for the <a "
+"href=\"%(url)s\">%(offer_name)s</a> special offer</div>\n"
+"            "
+msgstr ""
+"\n"
+"                <div class=\"warning\">%(message)s untuk memenuhi syarat "
+"untuk <a href=\"%(url)s\">%(offer_name)s</a> penawaran khusus</div>\n"
+"            "
+
+#: templates/basket/partials/basket_content.html:56
+msgid "Save for later"
+msgstr "Arsipkan"
+
+#: templates/basket/partials/basket_content.html:64
+#: templates/customer/wishlists/wishlists_detail.html:100
+msgid "Updating..."
+msgstr "Perbarui..."
+
+#: templates/basket/partials/basket_content.html:64
+msgid "Update"
+msgstr "Ubah"
+
+#: templates/basket/partials/basket_content.html:103
+msgid "Shopping Cart"
+msgstr "Keranjang Belanja"
+
+#: templates/basket/partials/basket_content.html:112
+msgid "Promo Code"
+msgstr "Kode Promo"
+
+#: templates/basket/partials/basket_content.html:118
+#: templates/catalogue/partials/add_to_basket_form.html:13
+#: templates/catalogue/partials/add_to_basket_form_compact.html:12
+#: templates/catalogue/partials/add_to_wishlist.html:43
+#: templates/dashboard/catalogue/product_update.html:253
+msgid "Adding..."
+msgstr "Menambahkan..."
+
+#: templates/basket/partials/basket_content.html:118
+msgid "Apply"
+msgstr "Terapkan"
+
+#: templates/basket/partials/basket_content.html:134
+#: templates/basket/partials/basket_quick.html:49
+msgid "Your basket is empty."
+msgstr "Keranjang Anda masih kosong."
+
+#: templates/basket/partials/basket_content.html:135
+#: templates/checkout/thank_you.html:91
+msgid "Continue shopping"
+msgstr "Lanjutkan Belanja"
+
+#: templates/basket/partials/basket_content.html:147
+msgid "Items to buy later"
+msgstr "Arsip Keranjang"
+
+#: templates/basket/partials/basket_content.html:150
+msgid "Items"
+msgstr "Item"
+
+#: templates/basket/partials/basket_content.html:151
+msgid "Price"
+msgstr "Harga"
+
+#: templates/basket/partials/basket_content.html:189
+msgid "Move to basket"
+msgstr "Pindahkan"
+
+#: templates/basket/partials/basket_content.html:189
+#: templates/basket/partials/basket_totals.html:44
+#: templates/customer/wishlists/wishlists_delete_product.html:32
+#: templates/customer/wishlists/wishlists_detail.html:82
+msgid "Remove"
+msgstr "Hapus"
+
+#: templates/basket/partials/basket_quick.html:39
+msgid "Checkout"
+msgstr "Bayar"
+
+#: templates/basket/partials/basket_totals.html:13
+msgid "Basket total (before discounts)"
+msgstr "Total keranjang (sebelum diskon)"
+
+#: templates/basket/partials/basket_totals.html:25
+#: templates/basket/partials/basket_totals.html:121
+#: templates/customer/order/order_detail.html:74
+#: templates/customer/order/order_detail.html:107
+msgid "Discount"
+msgstr "Diskon"
+
+#: templates/basket/partials/basket_totals.html:35
+msgid "Vouchers"
+msgstr "Voucher"
+
+#: templates/basket/partials/basket_totals.html:58
+msgid "Basket total (after discounts)"
+msgstr "Total keranjang (setelah diskon)"
+
+#: templates/basket/partials/basket_totals.html:70
+#: templates/customer/emails/commtype_order_placed_body.html:422
+#: templates/customer/order/order_detail.html:91
+msgid "Basket total"
+msgstr "Total keranjang"
+
+#: templates/basket/partials/basket_totals.html:85
+#: templates/basket/partials/basket_totals.html:149
+#: templates/checkout/checkout.html:41
+#: templates/customer/emails/commtype_order_placed_body.html:425
+msgid "Shipping"
+msgstr "Pengiriman"
+
+#: templates/basket/partials/basket_totals.html:87
+msgid "Alternative shipping methods can be chosen during checkout"
+msgstr "Metode pengiriman alternatif bisa dipilih saat lanjut ke pembayaran"
+
+#: templates/basket/partials/basket_totals.html:107
+#: templates/checkout/checkout.html:81
+#: templates/checkout/shipping_methods.html:26
+#: templates/checkout/shipping_methods.html:33
+msgid "Shipping method"
+msgstr "Metode pengiriman"
+
+#: templates/basket/partials/basket_totals.html:110
+msgid "Shipping total (before discounts)"
+msgstr "Total pengiriman (sebelum diskon)"
+
+#: templates/basket/partials/basket_totals.html:125
+msgid "Shipping total (after discounts)"
+msgstr "Total pengiriman (setelah diskon)"
+
+#: templates/basket/partials/basket_totals.html:140
+#: templates/catalogue/detail.html:182
+msgid "Tax"
+msgstr "Pajax"
+
+#: templates/basket/partials/basket_totals.html:164
+msgid "Post order actions"
+msgstr "Tindakan pesanan"
+
+#: templates/basket/partials/basket_totals.html:164
+msgid "These will be applied once your order is placed."
+msgstr "Ini akan diterapkan begitu pesanan Anda lanjut ke pembayaran."
+
+#: templates/basket/partials/basket_totals.html:180
+#: templates/customer/order/order_detail.html:127
+msgid "Order total"
+msgstr "Total pesanan"
+
+#: templates/basket/partials/basket_totals.html:191
+msgid "Taxes will be added during checkout."
+msgstr "Pajak akan ditambahkan saat lanjut ke pembayaran."
+
+#: templates/basket/partials/basket_totals.html:198
+msgid "Proceed to checkout"
+msgstr "Lanjut ke pembayaran"
+
+#: templates/catalogue/browse.html:38 templates/catalogue/browse.html:40
+#: templates/partials/nav_vertical.html:16
+msgid "All products"
+msgstr "Semua Produk"
+
+#: templates/catalogue/browse.html:64
+msgid "Refine by"
+msgstr "Perbaiki dengan"
+
+#: templates/catalogue/browse.html:116
+#, python-format
+msgid ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> result - showing <span>%(start)s</span> to <span>%(end)s</span>.\n"
+"                                                "
+msgid_plural ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> results - showing <span>%(start)s</span> to <span>%(end)s</span>.\n"
+"                                                "
+msgstr[0] ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> hasil - dari <span>%(start)s</span> sampai <span>%(end)s</span>.\n"
+"                                                "
+msgstr[1] ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> hasil - dari <span>%(start)s</span> sampai <span>%(end)s</span>.\n"
+"                                                "
+
+#: templates/catalogue/browse.html:122
+#, python-format
+msgid ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> result.\n"
+"                                                "
+msgid_plural ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> results.\n"
+"                                                "
+msgstr[0] ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> hasil.\n"
+"                                                "
+msgstr[1] ""
+"\n"
+"                                                    <span>%(num_results)s</"
+"span> hasil.\n"
+"                                                "
+
+#: templates/catalogue/browse.html:129
+msgid "<span>0</span> results."
+msgstr "<span>0</span> hasil."
+
+#: templates/catalogue/browse.html:140
+#: templates/dashboard/catalogue/product_list.html:90
+msgid "No products found."
+msgstr "Produk tidak ditemukan."
+
+#: templates/catalogue/detail.html:77
+msgid "Availability:"
+msgstr "Stok:"
+
+#: templates/catalogue/detail.html:103
+#: templates/catalogue/partials/stock_record.html:16
+msgid "Free"
+msgstr "Gratis"
+
+#: templates/catalogue/detail.html:134
+msgid "Product Description"
+msgstr "Deskripsi Produk"
+
+#: templates/catalogue/detail.html:135
+msgid "Product Information"
+msgstr "Informasi Produk"
+
+#: templates/catalogue/detail.html:139
+msgid "Customer Reviews"
+msgstr "Ulasan Pelanggan"
+
+#: templates/catalogue/detail.html:148
+msgid "Recommended items"
+msgstr "Rekomendasi"
+
+#: templates/catalogue/detail.html:166
+msgid "UPC"
+msgstr "UPC"
+
+#: templates/catalogue/detail.html:175
+msgid "Price (excl. tax)"
+msgstr "Harga (tidak termasuk pajak)"
+
+#: templates/catalogue/detail.html:179
+msgid "Price (incl. tax)"
+msgstr "Harga (termasuk pajak)"
+
+#: templates/catalogue/detail.html:186
+msgid "Availability"
+msgstr "Ketersediaan"
+
+#: templates/catalogue/detail.html:205
+msgid "Number of reviews"
+msgstr "Jumlah ulasan"
+
+#: templates/catalogue/detail.html:219
+#, python-format
+msgid ""
+"This product does not have any reviews yet -\n"
+"                                        <a href=\"%(add_review_url)s#reviews"
+"\">be the first to write one</a>.\n"
+"                                    "
+msgstr ""
+"Produk ini belum memiliki ulasan -\n"
+"                                        <a href=\"%(add_review_url)s#reviews"
+"\">jadilah yang pertama menulisnya</a>.\n"
+"                                    "
+
+#: templates/catalogue/detail.html:223
+msgid "This product does not have any reviews yet"
+msgstr "Produk ini belum memiliki ulasan"
+
+#: templates/catalogue/detail.html:242
+#: templates/catalogue/reviews/partials/review_stars.html:11
+#: templates/catalogue/reviews/review_product.html:24
+#: templates/customer/order/order_detail.html:36
+msgid "Write a review"
+msgstr "Tulis review"
+
+#: templates/catalogue/partials/add_to_basket_form.html:13
+msgid "Add to basket"
+msgstr "Beli"
+
+#: templates/catalogue/partials/add_to_basket_form.html:17
+msgid "You have an active stock alert for this product."
+msgstr "Anda memiliki peringatan stok aktif untuk produk ini."
+
+#: templates/catalogue/partials/add_to_basket_form.html:21
+msgid "You can get an email alert when this product is back in stock."
+msgstr ""
+"Anda bisa mendapatkan peringatan email saat produk ini kembali tersedia."
+
+#: templates/catalogue/partials/add_to_basket_form.html:23
+#: templates/catalogue/partials/review.html:44
+#: templates/catalogue/partials/review.html:49
+#: templates/checkout/preview.html:49
+#: templates/checkout/shipping_methods.html:76
+#: templates/dashboard/catalogue/product_list.html:37
+#: templates/partials/nav_accounts.html:20
+msgid "Submitting..."
+msgstr "Memproses..."
+
+#: templates/catalogue/partials/add_to_basket_form.html:23
+msgid "Notify me"
+msgstr "Beritahu saya"
+
+#: templates/catalogue/partials/add_to_basket_form_compact.html:12
+#: templates/catalogue/partials/add_to_basket_form_compact.html:15
+msgid "Add to cart"
+msgstr "Beli"
+
+#: templates/catalogue/partials/add_to_wishlist.html:12
+#: templates/customer/wishlists/wishlists_delete_product.html:32
+msgid "Removing..."
+msgstr "Menghapus..."
+
+#: templates/catalogue/partials/add_to_wishlist.html:13
+#, python-format
+msgid ""
+"\n"
+"                        Remove from %(name)s wishlist\n"
+"                    "
+msgstr ""
+"\n"
+"                        Hapus dari '%(name)s' wishlist\n"
+"                    "
+
+#: templates/catalogue/partials/add_to_wishlist.html:23
+#: templates/catalogue/partials/add_to_wishlist.html:43
+#: templates/catalogue/partials/add_to_wishlist.html:48
+msgid "Add to wish list"
+msgstr "Tambah ke wishlist"
+
+#: templates/catalogue/partials/add_to_wishlist.html:29
+#, python-format
+msgid ""
+"\n"
+"                                            Add to '%(name)s' wish list\n"
+"                                        "
+msgstr ""
+"\n"
+"                                            Tambahkan ke '%(name)s' "
+"wishlist\n"
+"                                        "
+
+#: templates/catalogue/partials/add_to_wishlist.html:36
+msgid "Create a new wishlist"
+msgstr "Buat wishlist baru"
+
+#: templates/catalogue/partials/add_to_wishlist.html:48
+msgid "Please login to add products to a wish list."
+msgstr "Silahkan login untuk menambahkan produk ke wishlist"
+
+#: templates/catalogue/partials/review.html:18
+msgid ""
+"\n"
+"                        You\n"
+"                        "
+msgstr ""
+"\n"
+"                        Anda\n"
+"                        "
+
+#: templates/catalogue/partials/review.html:22
+#, python-format
+msgid ""
+"\n"
+"                           %(name)s\n"
+"                        "
+msgstr ""
+"\n"
+"                           %(name)s\n"
+"                        "
+
+#: templates/catalogue/partials/review.html:40
+msgid "Is this review helpful?"
+msgstr "Apakah ulasan ini bermanfaat?"
+
+#: templates/catalogue/partials/review.html:56
+#, python-format
+msgid ""
+"\n"
+"                <strong>%(num_up_votes)s</strong> of %(num_votes)s customer "
+"found this useful\n"
+"                "
+msgid_plural ""
+"\n"
+"                <strong>%(num_up_votes)s</strong> of %(num_votes)s customers "
+"found this useful\n"
+"                "
+msgstr[0] ""
+"\n"
+"                <strong>%(num_up_votes)s</strong> dari %(num_votes)s "
+"pelanggan mengatakan ulasan ini bermanfaat\n"
+"                "
+msgstr[1] ""
+"\n"
+"                <strong>%(num_up_votes)s</strong> dari %(num_votes)s "
+"pelanggan mengatakan ulasan ini bermanfaat\n"
+"                "
+
+#: templates/catalogue/partials/review.html:62
+msgid "This review has no votes."
+msgstr "Ulasan ini tidak memiliki vote."
+
+#: templates/catalogue/reviews/review_detail.html:5
+#: templates/catalogue/reviews/review_detail.html:23
+msgid "Reviews"
+msgstr "Ulasan"
+
+#: templates/catalogue/reviews/review_detail.html:31
+#: templates/catalogue/reviews/review_list.html:30
+msgid "Customer reviews"
+msgstr "Ulasan pelanggan"
+
+#: templates/catalogue/reviews/review_form.html:8
+msgid "Leave a product review"
+msgstr "Tuliskan ulasan produk"
+
+#: templates/catalogue/reviews/review_form.html:47
+msgid "Save review"
+msgstr "Simpan Ulasan"
+
+#: templates/catalogue/reviews/review_list.html:7
+#: templates/catalogue/reviews/review_list.html:25
+msgid "All reviews"
+msgstr "Semua Ulasan"
+
+#: templates/catalogue/reviews/review_list.html:46
+#: templates/partials/nav_accounts.html:20
+msgid "Go"
+msgstr "Go"
+
+#: templates/catalogue/reviews/review_list.html:63
+msgid "This product does not have any reviews yet."
+msgstr "Produk ini belum memiliki ulasan."
+
+#: templates/checkout/checkout.html:9 templates/checkout/checkout.html:21
+msgid "Summary"
+msgstr "Ringkasan"
+
+#: templates/checkout/checkout.html:58
+msgid "Contact"
+msgstr "Kontak"
+
+#: templates/checkout/checkout.html:60
+msgid "Phone"
+msgstr "Tlp"
+
+#: templates/checkout/checkout.html:68
+msgid "Instructions"
+msgstr "Instruksi"
+
+#: templates/checkout/checkout.html:106
+msgid "Payment details to go here"
+msgstr "Rincian pembayaran"
+
+#: templates/checkout/checkout.html:116
+msgid "Edit order contents"
+msgstr "Ubah Pesanan"
+
+#: templates/checkout/checkout.html:120
+msgid "Order contents"
+msgstr "Pesanan"
+
+#: templates/checkout/checkout.html:124
+#: templates/customer/emails/commtype_order_placed_body.html:380
+msgid "Item"
+msgstr "Item"
+
+#: templates/checkout/checkout.html:125
+#: templates/customer/wishlists/wishlists_detail.html:32
+msgid "Quantity"
+msgstr "Jumlah"
+
+#: templates/checkout/checkout.html:126
+#: templates/customer/emails/commtype_order_placed_body.html:386
+msgid "Total"
+msgstr "Total"
+
+#: templates/checkout/checkout.html:169
+msgid "Totals"
+msgstr "Total"
+
+#: templates/checkout/preview.html:13 templates/checkout/preview.html:19
+msgid "Order preview"
+msgstr "Tinjau pesanan"
+
+#: templates/checkout/preview.html:27
+msgid "Preview order"
+msgstr "Tinjau pesanan"
+
+#: templates/checkout/preview.html:49
+msgid "Place order"
+msgstr "Pesan Sekarang"
+
+#: templates/checkout/shipping_address.html:36
+msgid "An address from your address book?"
+msgstr "Alamat dari buku alamat Anda?"
+
+#: templates/checkout/shipping_address.html:55
+msgid "Ship to your default shipping address"
+msgstr "Kirim ke default alamat pengiriman Anda"
+
+#: templates/checkout/shipping_address.html:57
+msgid "Ship to this address"
+msgstr "Kirim ke Alamat ini"
+
+#: templates/checkout/shipping_address.html:60
+#: templates/checkout/user_address_form.html:5
+#: templates/checkout/user_address_form.html:23
+#: templates/checkout/user_address_form.html:37
+msgid "Edit address"
+msgstr "Edit alamat"
+
+#: templates/checkout/shipping_address.html:78
+msgid "Or a new address?"
+msgstr "Atau alamat baru?"
+
+#: templates/checkout/shipping_address.html:88
+msgid "Continuing..."
+msgstr "Melanjutkan..."
+
+#: templates/checkout/shipping_address.html:89
+msgid "return to basket"
+msgstr "kembali ke keranjang"
+
+#: templates/checkout/shipping_methods.html:19
+#: templates/customer/order/order_detail.html:145
+msgid "Shipping Method"
+msgstr "Metode Pengiriman"
+
+#: templates/checkout/shipping_methods.html:43
+msgid "Cost"
+msgstr "Biaya"
+
+#: templates/checkout/shipping_methods.html:57
+#, python-format
+msgid ""
+"\n"
+"                                This includes a discount of <strong>"
+"%(amount)s</strong> as\n"
+"                                your basket qualifies for the <strong>"
+"%(name)s</strong> offer.\n"
+"                            "
+msgstr ""
+"\n"
+"                                Total ini termasuk diskon <strong>"
+"%(amount)s</strong> as\n"
+"                                keranjang Anda memenuhi syarat untuk "
+"medapatkanpenawaran <strong>%(name)s</strong>.\n"
+"                            "
+
+#: templates/checkout/shipping_methods.html:76
+msgid "Select option"
+msgstr "Pilih"
+
+#: templates/checkout/thank_you.html:9 templates/checkout/thank_you.html:19
+#, python-format
+msgid ""
+"\n"
+"        Order %(number)s: confirmation\n"
+"    "
+msgstr ""
+"\n"
+"        Pesanan %(number)s: konfirmasi\n"
+"    "
+
+#: templates/checkout/thank_you.html:27
+msgid "Thank you for shopping at yoohalal.com"
+msgstr "Terima kasih telah berbelanja di yoohalal.com"
+
+#: templates/checkout/thank_you.html:28
+#, python-format
+msgid ""
+"We have to process your order and send a confirmation email. For order "
+"number <strong>#%(number)s</strong>."
+msgstr ""
+"Kami telah memproses pesanan Anda dan mengirimkan email konfirmasi. untuk "
+"nomer pesanan <strong>#%(number)s</strong>."
+
+#: templates/checkout/thank_you.html:33
+msgid "Payment Instructions"
+msgstr "Instruksi Pembayaran"
+
+#: templates/checkout/thank_you.html:36
+msgid ""
+"Make a payment to the destination bank you have selected by transfer through "
+"ATM, mobile banking or internet banking"
+msgstr ""
+"Lakukan pembayaran ke bank tujuan yang telah anda pilih dengan transfer "
+"melalui ATM, mobile banking atau internet banking"
+
+#: templates/checkout/thank_you.html:41
+msgid "Data Bank"
+msgstr "Data Bank"
+
+#: templates/checkout/thank_you.html:50
+#, python-format
+msgid ""
+"\n"
+"                    Transfer money in accordance with the nominal total "
+"spend of your transactions listed<br/>\n"
+"                    Total: <strong>%(total)s</strong>\n"
+"                "
+msgstr ""
+"\n"
+"                    Transfer uang sesuai dengan nominal total belanja yang "
+"tertera<br/>\n"
+"                    Total: <strong>%(total)s</strong>\n"
+"                "
+
+#: templates/checkout/thank_you.html:57
+#, python-format
+msgid ""
+"\n"
+"                    Fill in the note with your order number<br/>\n"
+"                    Order Number: <strong>#%(number)s</strong>\n"
+"                "
+msgstr ""
+"\n"
+"                    Isikan catatan dengan nomor pesanan Anda<br/>\n"
+"                    Nomor Pesanan: <strong>#%(number)s</strong>\n"
+"                "
+
+#: templates/checkout/thank_you.html:66
+msgid ""
+"Keep a proof of payment for your transaction proof on the payment "
+"confirmation page"
+msgstr ""
+"Simpan bukti pembayaran untuk bukti transaksi Anda pada halaman konfirmasi "
+"pembayaran"
+
+#: templates/checkout/thank_you.html:72
+msgid "Don't forget to confirm"
+msgstr "Jangan Lupa Konfirmasi"
+
+#: templates/checkout/thank_you.html:73
+msgid ""
+"Do a transfer within 1x10 hours. If in that time you do not transfer funds "
+"then we will cancel the transaction."
+msgstr ""
+"Lakukan transfer dalam waktu 1x10 jam. Jika dalam waktu tersebut Anda tidak "
+"melakukan transfer dana maka transaksi akan kami batalkan."
+
+#: templates/checkout/thank_you.html:78
+#, python-format
+msgid ""
+"Confirm your payment on the payment confirmation page<br/>\n"
+"                    <a target=\"_blank\" href=\"%(the_url)s\">here</a> <- "
+"link to the confirmation page"
+msgstr ""
+"Konfirmasi pembayaran Anda pada halaman konfirmasi pembayaran<br/>\n"
+"                    <a target=\"_blank\" href=\"%(the_url)s\">disini</a> <- "
+"link ke halaman konfirmasi"
+
+#: templates/checkout/thank_you.html:85
+msgid "Unconfirmed payments will not be processed!"
+msgstr "Pembayaran yang belum dikonfirmasi tidak akan diproses!"
+
+#: templates/checkout/thank_you.html:90
+msgid "Print this page"
+msgstr "Cetak halaman ini"
+
+#: templates/customer/address/address_delete.html:8
+#: templates/customer/address/address_form.html:8
+msgid "Address book"
+msgstr "Buku alamat"
+
+#: templates/customer/address/address_delete.html:15
+msgid "Are you sure you want to delete this address?"
+msgstr "Yakin ingin menghapus alamat ini?"
+
+#: templates/customer/address/address_list.html:17
+msgid "Default shipping address"
+msgstr "Default alamat pengiriman"
+
+#: templates/customer/address/address_list.html:20
+msgid "Default billing address"
+msgstr "Default alamat pembayaran"
+
+#: templates/customer/address/address_list.html:44
+msgid "Set as default shipping address"
+msgstr "Jadikan sebagai default alamat pengiriman"
+
+#: templates/customer/address/address_list.html:51
+msgid "Set as default billing address"
+msgstr "Jadikan sebagai default alamat pembayaran"
+
+#: templates/customer/address/address_list.html:65
+msgid "There are no addresses in your address book."
+msgstr "Tidak ada alamat yang tersimpan di buku alamat Anda"
+
+#: templates/customer/address/address_list.html:68
+msgid "Add a new address"
+msgstr "Tambah alamat baru"
+
+#: templates/customer/after_register.html:5
+#: templates/customer/after_register.html:14
+msgid "Confirm Email"
+msgstr "Konfirmasi Email"
+
+#: templates/customer/after_register.html:13
+#: templates/customer/login_registration.html:33
+#: templates/customer/login_registration.html:36
+msgid "Register"
+msgstr "Daftar"
+
+#: templates/customer/after_register.html:20
+#, python-format
+msgid ""
+"\n"
+"        Hi <strong>%(email)s</strong>, Please check your email to confirm "
+"your registration.\n"
+"        "
+msgstr ""
+"\n"
+"        Hai <strong>%(email)s</strong>, mohon periksa email Anda untuk "
+"mengonfirmasi pendaftaran Anda.\n"
+"        "
+
+#: templates/customer/baseaccountpage.html:6
+#: templates/customer/baseaccountpage.html:17
+#: templates/customer/order/order_list.html:12
+#: templates/customer/wishlists/wishlists_delete.html:10
+#: templates/customer/wishlists/wishlists_delete_product.html:10
+#: templates/customer/wishlists/wishlists_detail.html:12
+#: templates/customer/wishlists/wishlists_form.html:10
+#: templates/partials/nav_accounts.html:45
+#: templates/partials/nav_accounts.html:49
+msgid "Account"
+msgstr "Akun"
+
+#: templates/customer/baseaccountpage.html:30
+msgid "Profile"
+msgstr "Profil"
+
+#: templates/customer/baseaccountpage.html:33
+msgid "Order History"
+msgstr "Riwayat pesanan"
+
+#: templates/customer/baseaccountpage.html:36
+msgid "Address Book"
+msgstr "Buku alamat"
+
+#: templates/customer/baseaccountpage.html:39
+#: templates/customer/email/email_detail.html:8
+msgid "Email History"
+msgstr "Riwayat Email"
+
+#: templates/customer/baseaccountpage.html:42
+msgid "Product Alerts"
+msgstr "Peringatan produk"
+
+#: templates/customer/baseaccountpage.html:45
+#: templates/customer/notifications/detail.html:6
+msgid "Notifications"
+msgstr "Pemberitahuan"
+
+#: templates/customer/baseaccountpage.html:48
+#: templates/customer/wishlists/wishlists_delete.html:13
+#: templates/customer/wishlists/wishlists_delete_product.html:13
+#: templates/customer/wishlists/wishlists_detail.html:15
+#: templates/customer/wishlists/wishlists_form.html:13
+msgid "Wish Lists"
+msgstr "Wishlist"
+
+#: templates/customer/email/email_detail.html:15
+#: templates/customer/email/email_list.html:10
+#: templates/customer/notifications/detail.html:19
+msgid "Date sent"
+msgstr "Tanggal terkirim"
+
+#: templates/customer/email/email_detail.html:19
+#: templates/customer/email/email_list.html:9
+#: templates/customer/notifications/detail.html:24
+msgid "Subject"
+msgstr "Judul"
+
+#: templates/customer/email/email_list.html:26
+msgid "No emails found"
+msgstr "Tidak ada email yang ditemukan"
+
+#: templates/customer/emails/base.html:5 templates/customer/emails/base.txt:3
+msgid "Warm regards"
+msgstr "Partner Anda"
+
+#: templates/customer/emails/base.html:6 templates/customer/emails/base.txt:4
+#: templates/customer/emails/commtype_accept_confirmation_body.html:286
+#: templates/customer/emails/commtype_confirmation_body.html:286
+#: templates/customer/emails/commtype_email_changed_body.html:298
+#: templates/customer/emails/commtype_get_new_confirmation_body.html:286
+#: templates/customer/emails/commtype_order_placed_body.html:459
+#: templates/customer/emails/commtype_partner_register_body.html:286
+#: templates/customer/emails/commtype_password_changed_body.html:298
+#: templates/customer/emails/commtype_password_reset_body.html:295
+#: templates/customer/emails/commtype_registration_body.html:291
+#: templates/customer/emails/commtype_reject_confirmation_body.html:286
+#: templates/customer/emails/commtype_subscribe_body.html:292
+#, python-format
+msgid " %(name)s "
+msgstr " %(name)s "
+
+#: templates/customer/emails/commtype_accept_confirmation_body.html:8
+#: templates/customer/emails/commtype_accept_confirmation_subject.txt:1
+msgid "Orders with Bank Transfer Succeed"
+msgstr "Pesanan dengan Transfer Bank berhasil"
+
+#: templates/customer/emails/commtype_accept_confirmation_body.html:270
+#: templates/customer/emails/commtype_accept_confirmation_body.txt:1
+msgid ""
+"Thank you for completing the transaction in Yoohalal, Payment using Bank "
+"Transfer is successful. Your order has us forward to the Seller."
+msgstr ""
+"Terimakasih telah menyelesaikan transaksi di Yoohalal, Pembayaran "
+"menggunakan BankTransfer berhasil, pesanan Anda telah kami sampaikan ke "
+"Penjual."
+
+#: templates/customer/emails/commtype_confirmation_body.html:8
+#: templates/customer/emails/commtype_confirmation_subject.txt:1
+msgid "You have been fill confirmation form"
+msgstr "Anda sudah mengisi form konfirmasi"
+
+#: templates/customer/emails/commtype_confirmation_body.html:270
+#: templates/customer/emails/commtype_confirmation_body.txt:1
+#, python-format
+msgid ""
+"We have received order confirmation with order number %(number)s from you. "
+"We will validate your confirmation soon."
+msgstr ""
+"Kami sudah menerima konfirmasi pesanan dengan nomor urut %(number)s dari "
+"Anda. Kami akan segera memvalidasi konfirmasi Anda."
+
+#: templates/customer/emails/commtype_email_changed_body.html:9
+#, python-format
+msgid "Your email address has changed at %(site_name)s"
+msgstr "Alamat email Anda di %(site_name)s telah berubah"
+
+#: templates/customer/emails/commtype_email_changed_body.html:272
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t\tYou're receiving this email because your email address has "
+"been changed to <strong>%(email)s</strong>.\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\t\tAnda menerima email ini karena alamat email Anda telah diubah "
+"menjadi <strong>%(email)s</strong>.\n"
+"\t\t\t\t\t\t\t"
+
+#: templates/customer/emails/commtype_email_changed_body.html:279
+#: templates/customer/emails/commtype_email_changed_body.txt:6
+msgid ""
+"If it wasn't you who changed it, please reset your password immediately and "
+"correct your email address:"
+msgstr ""
+"Jika bukan Anda yang mengubahnya, segera setel ulang kata sandi Anda dan "
+"perbaiki alamat email Anda:"
+
+#: templates/customer/emails/commtype_email_changed_body.html:281
+#: templates/customer/emails/commtype_email_changed_body.txt:9
+msgid "If it was you who changed the email address, you can ignore this email."
+msgstr ""
+"Jika Anda yang mengganti alamat emailnya, Anda bisa mengabaikan email ini."
+
+#: templates/customer/emails/commtype_email_changed_body.txt:4
+#, python-format
+msgid ""
+"You're receiving this email because your email address has been changed to "
+"%(email)s."
+msgstr ""
+"Anda menerima e-mail ini karena alamat e-mail Anda telah diubah menjadi "
+"%(email)s."
+
+#: templates/customer/emails/commtype_email_changed_subject.txt:1
+#, python-format
+msgid "Your email address has changed at %(site_name)s."
+msgstr "Alamat email Anda di %(site_name)s telah berubah."
+
+#: templates/customer/emails/commtype_get_new_confirmation_body.html:8
+#: templates/customer/emails/commtype_get_new_confirmation_subject.txt:1
+msgid "Customer sends confirmation"
+msgstr "Pelanggan mengirimkan konfirmasi"
+
+#: templates/customer/emails/commtype_get_new_confirmation_body.html:270
+#, python-format
+msgid ""
+"You have a request to validate the confirmation for the order with the order "
+"number <strong>%(number)s</strong> sent by <strong>%(email)s</strong>"
+msgstr ""
+"Anda memiliki permintaan untuk memvalidasi konfirmasi pesanan dengan pesanan "
+"nomor <strong>%(number)s</strong> dikirim oleh <strong>%(email)s</strong>"
+
+#: templates/customer/emails/commtype_get_new_confirmation_body.txt:1
+#, python-format
+msgid ""
+"You have a request to validate the confirmation for the order with the order "
+"number %(number)s sent by %(email)s"
+msgstr ""
+"Anda memiliki permintaan untuk memvalidasi konfirmasi pesanan dengan pesanan "
+"nomor %(number)s yang dikirim oleh %(email)s"
+
+#: templates/customer/emails/commtype_order_placed_body.html:9
+msgid "Confirm order"
+msgstr "Konfirmasi pesanan"
+
+#: templates/customer/emails/commtype_order_placed_body.html:323
+msgid "Your order has been received"
+msgstr "Pesanan Anda telah diterima"
+
+#: templates/customer/emails/commtype_order_placed_body.html:328
+#, python-format
+msgid ""
+"We are pleased to confirm your order %(order_number)s has been received and "
+"will be processed shortly."
+msgstr ""
+"Kami mengkonfirmasi pesanan Anda %(order_number)s telah diterima dan akan "
+"segera diproses."
+
+#: templates/customer/emails/commtype_order_placed_body.html:336
+msgid "View Order"
+msgstr "Tampilan Pemesanan"
+
+#: templates/customer/emails/commtype_order_placed_body.html:383
+#: templates/customer/order/order_detail.html:19
+msgid "Qty"
+msgstr "Qty"
+
+#: templates/customer/emails/commtype_order_placed_body.html:428
+msgid "Order Total"
+msgstr "Total Pesanan"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:1
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"We are pleased to confirm your order %(order_number)s has been received and\n"
+"will be processed shortly."
+msgstr ""
+"Assalamualaikum,\n"
+"\n"
+"Kami mengkonfirmasi pesanan Anda %(order_number)s telah diterima dan\n"
+"akan segera diproses."
+
+#: templates/customer/emails/commtype_order_placed_body.txt:6
+msgid "Your order contains:"
+msgstr "Berikut pesanan Anda:"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:8
+msgid "quantity:"
+msgstr "quantitas"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:8
+msgid "price:"
+msgstr "harga"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:10
+msgid "Basket total:"
+msgstr "Total keranjang:"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:11
+msgid "Shipping:"
+msgstr "Pengiriman:"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:12
+msgid "Order Total:"
+msgstr "Total Pesanan:"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:14
+msgid "Shipping address:"
+msgstr "Alamat Pengiriman:"
+
+#: templates/customer/emails/commtype_order_placed_body.txt:20
+#, python-format
+msgid ""
+"You can view the status of this order at the below URL:\n"
+"%(status_url)s"
+msgstr ""
+"Anda dapat melihat status pesanan ini di URL di bawah ini:\n"
+"%(status_url)s"
+
+#: templates/customer/emails/commtype_order_placed_subject.txt:1
+#, python-format
+msgid "Confirmation of order %(number)s"
+msgstr "Konfirmasi pesanan %(number)s"
+
+#: templates/customer/emails/commtype_partner_register_body.html:8
+#: templates/customer/emails/commtype_partner_register_subject.txt:1
+msgid "Request to be a partner"
+msgstr "Permintaan untuk menjadi partner"
+
+#: templates/customer/emails/commtype_partner_register_body.html:270
+#, python-format
+msgid ""
+"You get a request to be a partner of the user by email %(email)s with the "
+"partner name <strong>%(name)s</strong>"
+msgstr ""
+"Anda mendapatkan permintaan untuk menjadi mitra pengguna melalui email "
+"%(email)s dengan nama partner <strong>%(name)s</strong>"
+
+#: templates/customer/emails/commtype_partner_register_body.txt:1
+#, python-format
+msgid ""
+"You get a request to be a partner of the user by email %(email)s with the "
+"partner name %(name)s"
+msgstr ""
+"Anda mendapatkan permintaan untuk menjadi mitra pengguna melalui email "
+"%(email)s dengan nama partner %(name)s"
+
+#: templates/customer/emails/commtype_password_changed_body.html:9
+#: templates/customer/emails/commtype_password_reset_body.html:9
+#, python-format
+msgid "Resetting your password at %(site_name)s"
+msgstr "Menyetel ulang kata sandi Anda %(site_name)s"
+
+#: templates/customer/emails/commtype_password_changed_body.html:272
+#, python-format
+msgid ""
+"\n"
+"\t\t\t\t\t\t\tYou're receiving this e-mail because your password has been "
+"changed at %(name)s.\n"
+"\t\t\t\t\t\t\t"
+msgstr ""
+"\n"
+"\t\t\t\t\t\t\tAnda menerima e-mail ini karena kata sandi Anda telah diubah "
+"pada %(name)s.\n"
+"\t\t\t\t\t\t\t"
+
+#: templates/customer/emails/commtype_password_changed_body.html:279
+#: templates/customer/emails/commtype_password_changed_body.txt:8
+msgid ""
+"If it wasn't you who changed it, please reset your password immediately:"
+msgstr "Jika bukan Anda yang mengubahnya, segera setel ulang kata sandi Anda:"
+
+#: templates/customer/emails/commtype_password_changed_body.html:281
+#: templates/customer/emails/commtype_password_changed_body.txt:11
+msgid "Otherwise, you can ignore this email."
+msgstr "Jika tidak, Anda bisa mengabaikan email ini."
+
+#: templates/customer/emails/commtype_password_changed_body.txt:4
+#, python-format
+msgid ""
+"\n"
+"You're receiving this email because your password has been changed at "
+"%(name)s.\n"
+msgstr ""
+"\n"
+"Anda menerima email ini karena kata sandi Anda telah diubah di %(name)s.\n"
+
+#: templates/customer/emails/commtype_password_changed_subject.txt:1
+#, python-format
+msgid "Your password changed at %(site_name)s."
+msgstr "Kata sandi Anda di %(site_name)s telah berubah."
+
+#: templates/customer/emails/commtype_password_reset_body.html:272
+#: templates/customer/emails/commtype_password_reset_body.txt:5
+#, python-format
+msgid ""
+"You're receiving this e-mail because you requested a password reset for your "
+"user account at %(name)s."
+msgstr ""
+"Anda menerima e-mail ini karena Anda meminta penyetelan ulang kata sandi "
+"untuk akun pengguna %(name)s."
+
+#: templates/customer/emails/commtype_password_reset_body.html:277
+#: templates/customer/emails/commtype_password_reset_body.txt:7
+msgid "Please go to the following page and choose a new password:"
+msgstr "Silakan masuk ke halaman berikut dan pilih kata sandi baru:"
+
+#: templates/customer/emails/commtype_password_reset_subject.txt:1
+#, python-format
+msgid "Resetting your password at %(site_name)s."
+msgstr "Menyetel ulang kata sandi Anda di %(site_name)s."
+
+#: templates/customer/emails/commtype_product_alert_body.txt:1
+#, python-format
+msgid "Dear %(name)s,"
+msgstr "Kepada %(name)s,"
+
+#: templates/customer/emails/commtype_product_alert_body.txt:1
+msgid "Hello,"
+msgstr "Assalamualaikum,"
+
+#: templates/customer/emails/commtype_product_alert_body.txt:2
+#, python-format
+msgid ""
+"\n"
+"We are happy to inform you that our product '%(title)s' is back in stock:\n"
+"http://%(site)s%(path)s\n"
+msgstr ""
+"\n"
+"Kami memberitahukan bahwa produk kami '%(title)s' telah tersedia kembali:\n"
+"http://%(site)s%(path)s\n"
+
+#: templates/customer/emails/commtype_product_alert_body.txt:5
+msgid ""
+"\n"
+"Beware that the amount of items in stock is limited. Be quick or someone "
+"might get there first.\n"
+msgstr ""
+"\n"
+"Hati-hati jumlah barang dalam stok terbatas. Cepat atau seseorang "
+"mendapatkanya lebih dulu.\n"
+
+#: templates/customer/emails/commtype_product_alert_body.txt:7
+#, python-format
+msgid ""
+"\n"
+"With this email we have disabled your alert automatically and you will not\n"
+"receive any further email regarding this product.\n"
+"\n"
+"Thanks for your interest,\n"
+"The %(site_name)s Team\n"
+msgstr ""
+"\n"
+"Dengan email ini kami telah menonaktifkan lansiran Anda secara otomatis dan "
+"Anda tidak akan\n"
+"menerima email lebih lanjut mengenai produk ini.\n"
+"\n"
+"Terima kasih atas minat Anda,\n"
+"%(site_name)s Tim\n"
+
+#: templates/customer/emails/commtype_product_alert_confirmation_body.txt:1
+#, python-format
+msgid ""
+"Hello,\n"
+"\n"
+"Somebody (hopefully you) has requested an email alert when\n"
+"'%(title)s' is back in stock.  Please click the following link\n"
+"to confirm:\n"
+"http://%(domain)s%(confirm_path)s\n"
+"\n"
+"You can cancel this alert at any time by clicking the following link:\n"
+"http://%(domain)s%(cancel_path)s\n"
+"\n"
+"Thanks for your interest,\n"
+"The %(site)s Team\n"
+msgstr ""
+"Assalamualaikum,\n"
+"\n"
+"Seseorang (semoga Anda) telah meminta peringatan email saat\n"
+"'%(title)s' kembali tersedia. Silahkan klik link berikut\n"
+"untuk konfirmasi:\n"
+"http://%(domain)s%(confirm_path)s\n"
+"\n"
+"Anda dapat membatalkan lansiran ini kapan saja dengan mengeklik tautan "
+"berikut:\n"
+"http://%(domain)s%(cancel_path)s\n"
+"\n"
+"Terima kasih atas minat Anda,\n"
+"%(site)s Tim\n"
+
+#: templates/customer/emails/commtype_product_alert_confirmation_subject.txt:1
+msgid "Confirmation required for stock alert"
+msgstr "Konfirmasi diperlukan untuk waspada stok"
+
+#: templates/customer/emails/commtype_product_alert_subject.txt:1
+#, python-format
+msgid "%(title)s is back in stock"
+msgstr "%(title)s kembali tersedia"
+
+#: templates/customer/emails/commtype_registration_body.html:8
+#: templates/customer/emails/commtype_registration_subject.txt:1
+msgid "Welcome to yoohalal.com"
+msgstr "Selamat datang di yoohalal.com"
+
+#: templates/customer/emails/commtype_registration_body.html:271
+#, python-format
+msgid ""
+"\n"
+"            <strong>Hi %(email)s,</strong>\n"
+"            Please click on the link to confirm your registration,\n"
+"            https://%(domain)s%(confirmation_url)s\n"
+"            "
+msgstr ""
+"\n"
+"            <strong>Hai %(email)s,</strong>\n"
+"            Silahkan klik pada link untuk mengkonfirmasi pendaftaran anda,\n"
+"            https://%(domain)s%(confirmation_url)s\n"
+"            "
+
+#: templates/customer/emails/commtype_registration_body.txt:5
+#, python-format
+msgid ""
+"\n"
+"Hi %(email)s,\n"
+"Please click on the link to confirm your registration,\n"
+"https://%(domain)s%(confirmation_url)s\n"
+msgstr ""
+"\n"
+"Hai %(email)s,\n"
+"Silahkan klik pada link untuk mengkonfirmasi pendaftaran anda,\n"
+"https://%(domain)s%(confirmation_url)s\n"
+
+#: templates/customer/emails/commtype_reject_confirmation_body.html:8
+#: templates/customer/emails/commtype_reject_confirmation_subject.txt:1
+msgid "We apologize, your confirmation data is rejected"
+msgstr "Mohon maaf, data konfirmasi anda ditolak"
+
+#: templates/customer/emails/commtype_reject_confirmation_body.html:270
+#: templates/customer/emails/commtype_reject_confirmation_body.txt:1
+msgid ""
+"We apologize, your confirmation data is rejected. Please correct your data "
+"by refilling confirmation form or contact our customer service immediately."
+msgstr ""
+"Kami mohon maaf, data konfirmasi anda ditolak, perbaiki data andadengan "
+"mengisi formulir konfirmasi atau langsung menghubungi layanan pelanggan kami."
+
+#: templates/customer/emails/commtype_subscribe_body.html:8
+msgid "Thank you for subscribe"
+msgstr "Terima kasih telah berlangganan"
+
+#: templates/customer/emails/commtype_subscribe_body.html:270
+#: templates/customer/emails/commtype_subscribe_body.txt:6
+msgid "Thank you for subscribing, Your subscription has been confirmed."
+msgstr "Terima kasih telah berlangganan, permintaan Anda telah dikonfirmasi."
+
+#: templates/customer/emails/commtype_subscribe_body.html:275
+#: templates/customer/emails/commtype_subscribe_body.txt:8
+msgid ""
+"If you want unsubscribe our newsletter, please go to the following page:"
+msgstr ""
+"Jika Anda ingin berhenti berlangganan newsletter kami, silakan kunjungi "
+"halaman berikut:"
+
+#: templates/customer/emails/commtype_subscribe_subject.txt:1
+msgid "Thank you for subscribe."
+msgstr "Terima kasih telah berlangganan."
+
+#: templates/customer/history/recently_viewed_products.html:14
+msgid "Products you recently viewed"
+msgstr "Terakhir dilihat"
+
+#: templates/customer/login_registration.html:5
+#: templates/customer/login_registration.html:13
+#: templates/partials/nav_accounts.html:58
+msgid "Login or register"
+msgstr "Masuk atau mendaftar"
+
+#: templates/customer/login_registration.html:24
+#: templates/customer/login_registration.html:28
+msgid "Log In"
+msgstr "Masuk"
+
+#: templates/customer/login_registration.html:27
+msgid "I've forgotten my password"
+msgstr "Saya lupa kata sandi saya"
+
+#: templates/customer/login_registration.html:28
+msgid "Logging in..."
+msgstr "Masuk"
+
+#: templates/customer/login_registration.html:36
+msgid "Registering..."
+msgstr "Mendaftar..."
+
+#: templates/customer/notifications/detail.html:14
+msgid "Sender"
+msgstr "Pengirim"
+
+#: templates/customer/notifications/detail.html:33
+msgid "Message"
+msgstr "Pesan"
+
+#: templates/customer/notifications/detail.html:38
+msgid "Return to notifications inbox"
+msgstr "Kembali ke kotak masuk notifikasi"
+
+#: templates/customer/notifications/list.html:9
+msgid "Inbox"
+msgstr "Kotak Masuk"
+
+#: templates/customer/notifications/list.html:10
+msgctxt "noun"
+msgid "Archive"
+msgstr "Arsip"
+
+#: templates/customer/notifications/list.html:43
+#: templates/customer/notifications/list.html:53
+msgctxt "verb"
+msgid "Archive"
+msgstr "Arsip"
+
+#: templates/customer/notifications/list.html:51
+msgid "With selected items:"
+msgstr "Dengan item yang dipilih:"
+
+#: templates/customer/notifications/list.html:53
+msgid "Archiving..."
+msgstr "Pengarsipan..."
+
+#: templates/customer/notifications/list.html:61
+msgid "There are no notifications to display."
+msgstr "Tidak ada pemberitahuan untuk ditampilkan"
+
+#: templates/customer/order/order_detail.html:9
+#: templates/customer/order/order_list.html:14
+msgid "Order history"
+msgstr "Riwayat pesanan"
+
+#: templates/customer/order/order_detail.html:17
+#: templates/customer/wishlists/wishlists_detail.html:31
+msgid "Product"
+msgstr "Produk"
+
+#: templates/customer/order/order_detail.html:18
+msgid "Dispatch date"
+msgstr "Tanggal pengiriman"
+
+#: templates/customer/order/order_detail.html:20
+msgid "Line price excl. tax"
+msgstr "Harga belum pajak"
+
+#: templates/customer/order/order_detail.html:21
+msgid "Line price incl. tax"
+msgstr "Harga termasuk pajak"
+
+#: templates/customer/order/order_detail.html:54
+#: templates/customer/order/order_detail.html:139
+msgid "Re-ordering..."
+msgstr "Memesan kembali..."
+
+#: templates/customer/order/order_detail.html:54
+msgid "Re-order"
+msgstr "Pesan Kembali"
+
+#: templates/customer/order/order_detail.html:57
+#: templates/customer/wishlists/wishlists_detail.html:54
+msgid "Not available anymore"
+msgstr "Belum tersedia"
+
+#: templates/customer/order/order_detail.html:68
+msgid "Basket total (excl. discounts)"
+msgstr "Total keranjang (sebelum diskon)"
+
+#: templates/customer/order/order_detail.html:86
+msgid "Basket total (inc. discounts)"
+msgstr "Total keranjang (setelah diskon)"
+
+#: templates/customer/order/order_detail.html:101
+msgid "Shipping total (excl. discounts)"
+msgstr "Total pengiriman (sebelum diskon)"
+
+#: templates/customer/order/order_detail.html:114
+msgid "Shipping total (inc. discounts)"
+msgstr "Total pengiriman (setelah diskon)"
+
+#: templates/customer/order/order_detail.html:119
+msgid "Shipping total"
+msgstr "Total pengiriman"
+
+#: templates/customer/order/order_detail.html:139
+msgid "Re-order all items"
+msgstr "Pesan kembali semua item"
+
+#: templates/customer/order/order_detail.html:150
+msgid "Shipping Address"
+msgstr "Alamat Pengiriman"
+
+#: templates/customer/order/order_detail.html:155
+msgid "Contact Number"
+msgstr "Nomor Kontak"
+
+#: templates/customer/order/order_detail.html:156
+msgid "Shipping Notes"
+msgstr "Catatan Pengiriman"
+
+#: templates/customer/order/order_list.html:22
+msgid "Filter"
+msgstr "Cari"
+
+#: templates/customer/order/order_list.html:27
+msgid "Filtering..."
+msgstr "Mencari..."
+
+#: templates/customer/order/order_list.html:27
+msgid "Filter results"
+msgstr "Hasil Pencarian"
+
+#: templates/customer/order/order_list.html:39
+msgid "Order number"
+msgstr "Nomor Pesanan"
+
+#: templates/customer/order/order_list.html:40
+msgid "Num items"
+msgstr "Jumlah Item"
+
+#: templates/customer/order/order_list.html:41
+msgid "Total inc tax"
+msgstr "Total termasuk pajak"
+
+#: templates/customer/order/order_list.html:42
+msgid "Date submitted"
+msgstr "Tanggal Pemesanan"
+
+#: templates/customer/order/order_list.html:58
+msgid "No orders match your search."
+msgstr "Pencarian Anda tidak ditemukan."
+
+#: templates/customer/order/order_list.html:60
+msgid "You haven't placed any orders."
+msgstr "Anda belum memesan apapun"
+
+#: templates/customer/wishlists/wishlists_delete.html:18
+msgid "Delete?"
+msgstr "Hapus?"
+
+#: templates/customer/wishlists/wishlists_delete.html:26
+#, python-format
+msgid ""
+"\n"
+"                Are you sure you want to delete %(name)s?\n"
+"            "
+msgstr ""
+"\n"
+"                Apakah Anda yakin ingin menghapus %(name)s?\n"
+"            "
+
+#: templates/customer/wishlists/wishlists_delete_product.html:18
+msgid "Remove product"
+msgstr "Hapus produk"
+
+#: templates/customer/wishlists/wishlists_delete_product.html:26
+#, python-format
+msgid ""
+"\n"
+"                Are you sure you want to delete %(product_name)s from wish "
+"list %(wishlist_name)s?\n"
+"            "
+msgstr ""
+"\n"
+"                Apakah Anda yakin akan menghapus %(product_name)s dari wish "
+"list %(wishlist_name)s?\n"
+"            "
+
+#: templates/customer/wishlists/wishlists_detail.html:33
+#: templates/customer/wishlists/wishlists_list.html:11
+msgid "Action"
+msgstr "Aksi"
+
+#: templates/customer/wishlists/wishlists_detail.html:70
+msgid "View product"
+msgstr "Lihat Produk"
+
+#: templates/customer/wishlists/wishlists_detail.html:86
+#, python-format
+msgid ""
+"\n"
+"                                                            Move to "
+"'%(name)s' wish list\n"
+"                                                        "
+msgstr ""
+"\n"
+"                                                            Pindahkan ke "
+"'%(name)s' wish list\n"
+"                                                        "
+
+#: templates/customer/wishlists/wishlists_detail.html:100
+msgid "Update quantities"
+msgstr "Perbarui jumlah"
+
+#: templates/customer/wishlists/wishlists_detail.html:109
+msgid "Your wish list is empty."
+msgstr "Wish list Anda masih kosong."
+
+#: templates/customer/wishlists/wishlists_form.html:19
+msgid "Create"
+msgstr "Tambah"
+
+#: templates/customer/wishlists/wishlists_form.html:29
+msgid "What should your new wish list be called?"
+msgstr "Apa nama wishlist Anda ?"
+
+#: templates/customer/wishlists/wishlists_form.html:34
+#, python-format
+msgid ""
+"\n"
+"                    After your wishlist is created, <strong>%(title)s</"
+"strong> will be added.\n"
+"                "
+msgstr ""
+"\n"
+"                    Setelah wishlist Anda dibuat, <strong>%(title)s</strong> "
+"akan ditambahkan.\n"
+"                "
+
+#: templates/customer/wishlists/wishlists_list.html:10
+msgid "Number of products"
+msgstr "Jumlah produk"
+
+#: templates/customer/wishlists/wishlists_list.html:26
+msgid "Wish list settings"
+msgstr "Pengaturan wish list"
+
+#: templates/customer/wishlists/wishlists_list.html:44
+msgid "You don't have any wish lists yet."
+msgstr "Kamu belum memiliki wish list"
+
+#: templates/customer/wishlists/wishlists_list.html:49
+msgid "Create a new wish list"
+msgstr "Buat wishlist baru"
+
+#: templates/dashboard/catalogue/product_list.html:32
+msgid "Create new product"
+msgstr "Buat produk baru"
+
+#: templates/dashboard/catalogue/product_list.html:37
+msgid "New Product"
+msgstr "Produk baru"
+
+#: templates/dashboard/catalogue/product_list.html:44
+msgid "Search Products"
+msgstr "Cari Produk"
+
+#: templates/dashboard/catalogue/product_update.html:44
+#, python-format
+msgid ""
+"\n"
+"                            You are currently editing a product variant of\n"
+"                            <a href=\"%(parent_url)s\">%(title)s</a>.\n"
+"                        "
+msgstr ""
+"\n"
+"                            Anda saat ini mengubah variasi produk dari\n"
+"                            <a href=\"%(parent_url)s\">%(title)s</a>.\n"
+"                        "
+
+#: templates/dashboard/catalogue/product_update.html:59
+msgid "Sections"
+msgstr "Bagian"
+
+#: templates/dashboard/catalogue/product_update.html:71
+#: templates/dashboard/catalogue/product_update.html:101
+msgid "Product details"
+msgstr "Detail produk"
+
+#: templates/dashboard/catalogue/product_update.html:76
+#: templates/dashboard/catalogue/product_update.html:144
+#: templates/dashboard/catalogue/product_update.html:261
+msgid "Attributes"
+msgstr "Atribut"
+
+#: templates/dashboard/catalogue/product_update.html:79
+msgid "Images"
+msgstr "Gambar"
+
+#: templates/dashboard/catalogue/product_update.html:82
+#: templates/dashboard/catalogue/product_update.html:186
+msgid "Stock and pricing"
+msgstr "Stok dan kalkulasi harga"
+
+#: templates/dashboard/catalogue/product_update.html:85
+#: templates/dashboard/catalogue/product_update.html:252
+msgid "Variants"
+msgstr "Variasi"
+
+#: templates/dashboard/catalogue/product_update.html:88
+msgid "Upselling"
+msgstr "Penjualan"
+
+#: templates/dashboard/catalogue/product_update.html:146
+msgid "Product Type:"
+msgstr "Tipe Produk:"
+
+#: templates/dashboard/catalogue/product_update.html:167
+msgid "Upload, change or remove images"
+msgstr "Mengunggah, mengubah atau menghapus gambar"
+
+#: templates/dashboard/catalogue/product_update.html:255
+msgid "Add variant"
+msgstr "Tambahkan variasi"
+
+#: templates/dashboard/catalogue/product_update.html:262
+msgid "Stock records"
+msgstr "Rekaman Stok"
+
+#: templates/dashboard/catalogue/product_update.html:284
+msgid "This product does not have any variants."
+msgstr "Produk ini tidak mempunyai variasi lain"
+
+#: templates/dashboard/catalogue/product_update.html:286
+msgid "One can't add variants to this product at this point."
+msgstr "satu tidak dapat menambah variasi ke produk ini pada titik ini"
+
+#: templates/dashboard/catalogue/product_update.html:288
+msgid "This is likely because this product still has stock records."
+msgstr "Ini mungkin karena produk ini masih memiliki rekaman stok."
+
+#: templates/dashboard/catalogue/product_update.html:304
+msgid "Recommended products"
+msgstr "Produk yang direkomendasikan"
+
+#: templates/dashboard/catalogue/product_update.html:332
+msgid "Save and add another variant"
+msgstr "Simpan dan tambahkan variasi lain"
+
+#: templates/dashboard/catalogue/product_update.html:336
+msgid "Save and continue editing"
+msgstr "Simpan dan lanjutkan mengubah"
+
+#: templates/dashboard/catalogue/product_update.html:343
+msgid "View on site"
+msgstr "Tampilkan disitus"
+
+#: templates/dashboard/partners/partner_list.html:6
+#: templates/dashboard/partners/partner_list.html:14
+#: templates/dashboard/partners/partner_list.html:21
+#: templates/dashboard/partners/partner_manage.html:7
+#: templates/dashboard/partners/partner_manage.html:16
+msgid "Partners"
+msgstr "Mitra"
+
+#: templates/dashboard/partners/partner_list.html:20
+msgid "Create new partner"
+msgstr "Buat mitra baru"
+
+#: templates/dashboard/partners/partner_list.html:45
+#: templates/dashboard/partners/partner_manage.html:35
+msgid "Owner"
+msgstr "Pemilik"
+
+#: templates/dashboard/partners/partner_list.html:57
+msgid "Edit the user's details"
+msgstr "Ubah detail pengguna"
+
+#: templates/dashboard/partners/partner_list.html:61
+msgid "No user associated."
+msgstr "Tidak ada pengguna yang terkait."
+
+#: templates/dashboard/partners/partner_list.html:76
+msgid "No address associated."
+msgstr "Tidak ada alamat yang terkait"
+
+#: templates/dashboard/partners/partner_list.html:88
+msgid "Manage partner and users"
+msgstr "Kelola mitra dan pengguna"
+
+#: templates/dashboard/partners/partner_list.html:89
+msgid "Delete partner"
+msgstr "Hapus mitra"
+
+#: templates/dashboard/partners/partner_list.html:90
+#: templates/dashboard/partners/partner_manage.html:64
+msgid "Link an existing user"
+msgstr "Tautkan pengguna yang ada"
+
+#: templates/dashboard/partners/partner_list.html:91
+#: templates/dashboard/partners/partner_manage.html:63
+msgid "Link a new user"
+msgstr "Tautkan pengguna baru"
+
+#: templates/dashboard/partners/partner_list.html:99
+msgid "No partners found."
+msgstr "Tidak ditemukan mitra."
+
+#: templates/dashboard/partners/partner_manage.html:54
+msgid "Unlinking..."
+msgstr "Batalkan tautan..."
+
+#: templates/dashboard/partners/partner_manage.html:54
+msgid "Unlink user"
+msgstr "Batalkan tautan pengguna"
+
+#: templates/dashboard/partners/partner_manage.html:61
+msgid "No user linked."
+msgstr "Tidak ada pengguna yang tertaut."
+
+#: templates/flatpages/default.html:11
+msgid "Edit this page"
+msgstr "Edit halaman ini"
+
+#: templates/partials/footer.html:37
+msgid "Stay connected"
+msgstr "Temukan Kami"
+
+#: templates/partials/footer.html:54
+msgid "About Yoohalal"
+msgstr "Tentang Yoohalal"
+
+#: templates/partials/footer.html:57
+msgid "Privacy"
+msgstr "Kebijakan Privasi"
+
+#: templates/partials/footer.html:60
+msgid "Terms Of Services"
+msgstr "Aturan Penggunaan"
+
+#: templates/partials/footer.html:73
+msgid "Buy"
+msgstr "Pembeli"
+
+#: templates/partials/footer.html:76
+msgid "Buying Help"
+msgstr "Cara Belanja"
+
+#: templates/partials/footer.html:82
+msgid "Yoohalal Guides"
+msgstr "Tips Berbelanja"
+
+#: templates/partials/footer.html:89
+msgid "Community"
+msgstr "Anggota"
+
+#: templates/partials/footer.html:92
+msgid "Announcements"
+msgstr "Berita & Pengumuman"
+
+#: templates/partials/footer.html:95
+msgid "Answer Center"
+msgstr "Tanya Jawab"
+
+#: templates/partials/footer.html:107
+msgid "Payment Method"
+msgstr "Metode Pembayaran"
+
+#: templates/partials/form_fields.html:5
+#: templates/partials/payment_fields.html:5
+msgid "Oops! We found some errors"
+msgstr "Ups! Kami menemukan beberapa kesalahan"
+
+#: templates/partials/form_fields.html:5
+#: templates/partials/payment_fields.html:5
+msgid "please check the error messages below and try again"
+msgstr "Silahkan cek pesan kesalahan di bawah ini dan coba lagi"
+
+#: templates/partials/image_input_widget.html:7
+#: templates/partials/image_input_widget.html:10
+msgid "thumbnail"
+msgstr "thumbnail"
+
+#: templates/partials/image_input_widget.html:12
+msgid "Unrecognized image type!"
+msgstr "Jenis gambar tidak dikenal!"
+
+#: templates/partials/image_input_widget.html:13
+msgid "Upload Image"
+msgstr "Upload gambar"
+
+#: templates/partials/nav_accounts.html:30
+#: templates/partner/registration_form.html:6
+#: templates/partner/registration_form.html:14
+#: templates/partner/registration_form.html:19
+msgid "Create your own store"
+msgstr "Buat tokomu sendiri"
+
+#: templates/partials/nav_accounts.html:55
+msgid "Logout"
+msgstr "Keluar"
+
+#: templates/partials/nav_vertical.html:42
+msgid "Offers"
+msgstr "Penawaran"
+
+#: templates/partials/pagination.html:15
+#, python-format
+msgid ""
+"\n"
+"            <a href> Page %(page_num)s of %(total_pages)s</a>\n"
+"        "
+msgstr ""
+"\n"
+"            <a href> Hal %(page_num)s dari %(total_pages)s</a>\n"
+"        "
+
+#: templates/partner/registration_form.html:27
+#, python-format
+msgid ""
+"\n"
+"                        Assalamualaikum, %(name)s\n"
+"                    "
+msgstr ""
+"\n"
+"                        Assalamualaikum, %(name)s\n"
+"                        "
+
+#: templates/partner/registration_form.html:32
+msgid "Welcome to YooHalal, Let's Open a Store Now!"
+msgstr "Selamat Datang di YooHalal, Ayo Buka Toko Sekarang!"
+
+#: templates/partner/registration_form.html:51
+msgid "You do not have access to view this page."
+msgstr "Anda tidak memiliki akses untuk melihat halaman ini."
+
+#: templates/partner/registration_success.html:8
+msgid "Partner Registration Success"
+msgstr "Sukses Pendaftaran Mitra"
+
+#: templates/partner/registration_success.html:18
+#, python-format
+msgid ""
+"\n"
+"\t            Thank you <strong>%(name)s</strong>, you have filled the "
+"registration form to become our partner. We will validate your information "
+"and contact you as soon.\n"
+"\t        "
+msgstr ""
+"\n"
+"\t            Terima kasih <strong>%(name)s</strong>, Anda telah mengisi "
+"formulir pendaftaran untuk menjadi mitra kami Kami akan memvalidasi "
+"informasi anda dan segera menghubungi Anda.\n"
+"\t        "
+
+#: templates/registration/password_reset_complete.html:4
+#: templates/registration/password_reset_complete.html:18
+msgid "Password reset complete"
+msgstr "Penyetelan ulang kata sandi selesai"
+
+#: templates/registration/password_reset_complete.html:12
+#: templates/registration/password_reset_confirm.html:12
+#: templates/registration/password_reset_done.html:12
+#: templates/registration/password_reset_form.html:4
+#: templates/registration/password_reset_form.html:11
+#: templates/registration/password_reset_form.html:15
+msgid "Password reset"
+msgstr "Setel ulang kata sandi"
+
+#: templates/registration/password_reset_complete.html:14
+msgid "Complete"
+msgstr "Selesai"
+
+#: templates/registration/password_reset_complete.html:21
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+"Kata sandi Anda telah diterapkan. Anda bisa melanjutkan dan login sekarang."
+
+#: templates/registration/password_reset_complete.html:22
+msgid "Log in"
+msgstr "Masuk"
+
+#: templates/registration/password_reset_confirm.html:4
+#: templates/registration/password_reset_confirm.html:14
+#: templates/registration/password_reset_confirm.html:18
+msgid "Enter a new password"
+msgstr "Masukan kata sandi yang baru"
+
+#: templates/registration/password_reset_confirm.html:22
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+"Mohon masukkan kata sandi baru Anda dua kali agar kami dapat memverifikasi "
+"bahwa Anda mengetikkannya dengan benar."
+
+#: templates/registration/password_reset_confirm.html:27
+msgid "Changing..."
+msgstr "Merubah..."
+
+#: templates/registration/password_reset_confirm.html:27
+msgid "Change my password"
+msgstr "Ubah kata sandi saya"
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset unsuccessful"
+msgstr "Penyetelan ulang kata sandi tidak berhasil"
+
+#: templates/registration/password_reset_confirm.html:32
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+"Tautan reset password tidak valid, mungkin karena sudah digunakan. Silakan "
+"minta reset password baru."
+
+#: templates/registration/password_reset_done.html:4
+msgid "Password reset email sent"
+msgstr "Email reset password terkirim"
+
+#: templates/registration/password_reset_done.html:14
+#: templates/registration/password_reset_done.html:18
+msgid "Email sent"
+msgstr "Email terkirim"
+
+#: templates/registration/password_reset_done.html:22
+msgid ""
+"\n"
+"        We've e-mailed you instructions for resetting your password. You "
+"should be receiving it shortly.\n"
+"    "
+msgstr ""
+"\n"
+"        Kami telah mengirimi Anda e-mail untuk menyetel ulang kata sandi "
+"Anda. Anda akan menerimanya segera.\n"
+"    "
+
+#: templates/registration/password_reset_done.html:27
+msgid ""
+"\n"
+"        If you don't receive an email, please make sure you've entered the "
+"address you registered with, and check\n"
+"        your spam folder.\n"
+"    "
+msgstr ""
+"\n"
+"        Jika Anda tidak menerima email, pastikan Anda telah memasukkan "
+"alamat email yang Anda daftarkan, dan periksa\n"
+"        folder spam Anda.\n"
+"    "
+
+#: templates/registration/password_reset_form.html:21
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+"Lupa kata sandi Anda? Masukkan alamat e-mail Anda di bawah ini, dan kami "
+"akan mengirim e-mail instruksi untuk setting yang baru."
+
+#: templates/registration/password_reset_form.html:24
+msgid "Sending..."
+msgstr "Mengirim..."
+
+#: templates/registration/password_reset_form.html:24
+msgid "Send reset email"
+msgstr "Kirim ulang email"
+
+#: templates/search/results.html:25
+msgid "Refine your search"
+msgstr "Perbaiki pencarian Anda"
+
+#: templates/search/results.html:37
+#, python-format
+msgid ""
+"\n"
+"        Products matching \"%(q)s\"\n"
+"    "
+msgstr ""
+"\n"
+"        Produk yang sesuai \"%(q)s\"\n"
+"    "
+
+#: templates/search/results.html:47
+msgid "Found <strong>0</strong> results."
+msgstr "Ditemukan <span>0</span> hasil."
+
+#: templates/search/results.html:50
+#, python-format
+msgid ""
+"\n"
+"                    Did you mean <a href=\"%(search_url)s?q=%(suggestion)s\">"
+"\"%(suggestion)s\"</a>?\n"
+"                "
+msgstr ""
+"\n"
+"                    Mungkin maksud Anda <a href=\"%(search_url)s?q="
+"%(suggestion)s\">\"%(suggestion)s\"</a>?\n"
+"                "
+
+#: templates/search/results.html:63
+#, python-format
+msgid ""
+"\n"
+"                            Products matching \"%(q)s\"\n"
+"                        "
+msgstr ""
+"\n"
+"                            Produk yang sesuai \"%(q)s\"\n"
+"                        "
+
+#: templates/search/results.html:99
+#, python-format
+msgid ""
+"\n"
+"                                                    Found <span>"
+"%(num_results)s</span> results, showing <span>%(start)s</span> to <span>"
+"%(end)s</span>.\n"
+"                                                "
+msgstr ""
+"\n"
+"                                                    Ditemukan <span>"
+"%(num_results)s</span> hasil, menampilkan <span>%(start)s</span> dari <span>"
+"%(end)s</span>.\n"
+"                                                "
+
+#: templates/search/results.html:103
+#, python-format
+msgid ""
+"\n"
+"                                                    Found <span>"
+"%(num_results)s</span> result.\n"
+"                                                "
+msgid_plural ""
+"\n"
+"                                                    Found <span>"
+"%(num_results)s</span> results.\n"
+"                                                "
+msgstr[0] ""
+"\n"
+"                                                    Ditemukan <span>"
+"%(num_results)s</span> hasil.\n"
+"                                                "
+msgstr[1] ""
+"\n"
+"                                                    Ditemukan <span>"
+"%(num_results)s</span> hasil.\n"
+"                                                "
+
+#: templates/shipping/express.html:4
+#, python-format
+msgid ""
+"\n"
+"This is express shipping. Should reach you within 48 hours.\n"
+"<p>\n"
+"    It costs %(cost)s per item.\n"
+"</p>\n"
+msgstr ""
+"\n"
+"<p>Harga %(cost)s per kilogram.</p>\n"
+
+#: templates/shipping/reguler.html:4
+#, python-format
+msgid ""
+"\n"
+"This is Reguler shipping.\n"
+"<p>\n"
+"    It costs %(cost)s per item.\n"
+"</p>\n"
+msgstr ""
+"\n"
+"<p>Harga %(cost)s per kilogram.</p>\n"
+
+#: yoohalal/settings.py:180
+msgid "Bahasa Indonesia"
+msgstr "Bahasa"
+
+#: yoohalal/settings.py:318
+msgid "Settings"
+msgstr "Pengaturan"
+
+#: yoohalal/settings.py:372
+msgid "Draft"
+msgstr "Konsep"
+
+#: yoohalal/settings.py:373
+msgid "Review"
+msgstr "Diulas"
+
+#: yoohalal/settings.py:374
+msgid "Publish"
+msgstr "Terbitkan"
+
+#: yoohalal/settings.py:375
+msgid "Unpublish"
+msgstr "Tidak Terbitkan"
+
+#: yoohalal/settings.py:376
+msgid "Banned"
+msgstr "Dilarang"
+
+#: yoohalal/settings.py:381
+msgid "Pending"
+msgstr "Pending"
+
+#: yoohalal/settings.py:382
+msgid "Reject"
+msgstr "Tolak"
+
+#: yoohalal/settings.py:383
+msgid "Accept"
+msgstr "Terima"
+
+
+
+#: templates/checkout/gateway.html:65
+#: templates/customer/login_registraton.html:34
+msgid "OR"
+msgstr "Atau"
+
+#: templates/customer/login_registraton.html:37
+#: templates/checkout/gateway.html:71
+msgid "Sign in Facebook"
+msgstr "Masuk dengan Facebook"
+
+#: templates/customer/login_registraton.html:35
+#: templates/checkout/gateway.html:70
+msgid "Sign in Google"
+msgstr "Masuk dengan Google"
+
+#: templates/customer/login_registraton.html:48
+msgid "Sign up Facebook"
+msgstr "Daftar dengan Facebook"
+
+#: templates/customer/login_registraton.html:50
+msgid "Sign up Google"
+msgstr "Daftar dengan Google"

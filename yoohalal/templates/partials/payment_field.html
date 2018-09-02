@@ -1,0 +1,18 @@
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+    {% comment %}
+        Make the field widget type available to templates so we can mark-up
+        checkboxes differently to other widgets.
+    {% endcomment %}
+    {% annotate_form_field field %}
+
+    {% block control_group %}
+        {% block controls %}
+            {% render_field field %}
+        {% endblock %}
+    {% endblock %}
+{% endif %}

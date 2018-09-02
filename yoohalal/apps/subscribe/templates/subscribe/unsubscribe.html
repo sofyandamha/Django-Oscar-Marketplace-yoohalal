@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Unsubscribe" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'subscribe:subscribe-form' %}">{% trans 'Subscribe' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Unsubscribe' %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {% trans 'You has been unsubscribe from the yoohalal newsletter. You will no longer receive information about our exclusive offers and special offers.' %}
+    </p>
+{% endblock content %}

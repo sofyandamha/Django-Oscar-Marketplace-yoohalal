@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% load promotion_tags %}
+
+{% comment %}
+Keep the same header and footer as the standard layout template but override the 
+main content area to split it into a sidebar and a content block
+{% endcomment %}
+{% block content_wrapper %}
+
+<section>
+    <div class="container inner-bottom-sm">
+        <div class="col-xs-12 col-sm-3 no-margin sidebar narrow">
+            {# Render promotions at the top of the left-hand sidebar #}
+            <div id="promotions_left">
+                {% for promotion in promotions_left %}
+                    {% render_promotion promotion %}
+                {% endfor %}
+            </div>
+            {% block column_left %}{% endblock %}
+        </div>
+        <div class="col-xs-12 col-sm-9 no-margin wide sidebar">
+            
+            {% include "partials/alert_messages.html" %}
+
+            {% block content %}{% endblock %}
+
+            <div id="promotions">
+                {% for promotion in promotions_page %}
+                    {% render_promotion promotion %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

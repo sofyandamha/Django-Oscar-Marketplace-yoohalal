@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktrans with name=partner.name email=sender %}You get a request to be a partner of the user by email {{ email }} with the partner name {{ name }}{% endblocktrans %}

@@ -1,0 +1,1 @@
+{% load i18n %}{% trans 'We apologize, your confirmation data is rejected. Please correct your data by refilling confirmation form or contact our customer service immediately.' %}

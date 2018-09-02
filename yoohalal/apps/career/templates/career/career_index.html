@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Careers' %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Careers' %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Careers" %}
+{% endblock %}
+
+{% block content %}
+    {% if careers %}
+    <h1>{% trans "Careers" %}</h1>
+    <p>{% trans 'Good human resources become one of the important pillars of a startup. Because with good resources will form a solid team and from a solid team will produce a good product. We open up opportunities for the best candidates to fill several positions:' %}</p>
+    <hr>
+    <div class="row">
+        {% for row in careers %} 
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-block">
+                    <h2 class="card-title">{{ row.title }}</h2>
+                    <p class="card-text">{{ row.body|striptags|truncatewords:11 }}</p>
+                    <span style="font-weight: bold;">~ {{ row.departement }}</span><br><br>
+                    <a href="{%  url 'career:career-detail' slug=row.slug %}" class="le-button small">{% trans 'See job' %}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+        <p>{% trans 'No career are available.' %}</p>
+    {% endif %}
+{% endblock content %}

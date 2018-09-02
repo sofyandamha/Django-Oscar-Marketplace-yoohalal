@@ -1,0 +1,65 @@
+{% extends "checkout/checkout.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'checkout:index' %}">{% trans "Checkout Process" %}</a>
+        </li>
+        <li class="breadcrumb-item current">
+            {% trans "Payment" %}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block title %}
+    {% trans "Payment details" %} | {{ block.super }}
+{% endblock %}
+
+{% block checkout_nav %}
+    {% include 'checkout/nav.html' with step=3 %}
+{% endblock %}
+
+{% block checkout_title %}{% trans "Enter payment details" %}{% endblock %}
+
+{% block order_contents %}{% endblock %}
+{% block shipping_address %}{% endblock %}
+{% block shipping_method %}{% endblock %}
+{% block payment_method %}{% endblock %}
+
+{% block payment_details %}
+    {% block payment_details_content %}
+        <div class="well">
+            <div class="sub-header">
+                <h4>{% trans "Bank Transfer payment" %}</h4>
+            </div>
+            <form action="{% url 'checkout:preview' %}" class="form-stacked" method="post">
+                {% csrf_token %}
+                <p>
+                    {% trans "Click on continue button to use Bank Transfer payment . Bank details will be sent to you once order is validated."%}
+                </p>
+
+                {% include "partials/payment_fields.html" with form=bank_account_form %}
+
+                <div style="overflow:auto">
+                    <div class="pull-right">
+                        <button type="submit" class="btn btn-large le-button">{% trans "Continue" %}</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endblock payment_details_content %}
+{% endblock payment_details %}
+
+{# Hide mini-basket so we don't have two baskets to keep in sync #}
+{% block mini_basket %}{% endblock %}
+
+{% block extrastyles %}
+    <link rel="stylesheet" type="text/css" href="{% static "media-center/css/bank_account_form.css" %}" />
+{% endblock %}
+
+

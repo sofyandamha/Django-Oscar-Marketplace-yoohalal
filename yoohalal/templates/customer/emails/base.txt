@@ -1,0 +1,4 @@
+{% load i18n %}{% block header %}{% endblock %}{% block body %}{% endblock %}{% block footer %}
+
+{% trans "Warm regards" %}
+{% blocktrans with name=site.name %} {{ name }} {% endblocktrans %}{% endblock %}

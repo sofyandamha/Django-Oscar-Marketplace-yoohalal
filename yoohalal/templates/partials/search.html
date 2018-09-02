@@ -1,0 +1,19 @@
+{% load i18n %}
+{% load widget_tweaks %}
+
+<div class="contact-row">
+    <div class="phone inline">
+        <i class="fa fa-phone"></i> +6221 2283 9838
+    </div>
+    <div class="contact inline">
+        {% if EMAIL_HOST_USER %}<i class="fa fa-envelope"></i>  {{EMAIL_HOST_USER}} {% endif %}
+    </div>
+</div>
+<div class="search-area">
+    <form method="get" action="{% url 'search:search' %}" id="big-search-area">
+        <div class="control-group">
+           {% render_field search_form.q class="search-field" placeholder="Cari" %}
+           <a type="submit" onclick="document.getElementById('big-search-area').submit()" class="search-button"></a>
+        </div>
+    </form>
+</div>

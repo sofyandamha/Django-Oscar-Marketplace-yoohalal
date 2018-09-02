@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Payment Confirmation' %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Payment Confirmation' %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Payment Confirmation" %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12 payment_confirmation_form">
+            <div class="alert alert-info">
+                <strong>{% trans "Important!" %}</strong> {% trans "Please use this form only after you make payment. Fill data correctly to make it easier for us to verify your confirmation." %}
+            </div>
+        </div>
+        <div class="col-sm-6 payment_confirmation_form">
+            <form id="payment_confirmation_form" action="." method="post" class="form-stacked" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% include "oscar/partials/form_fields.html"  %}
+
+                <script src='https://www.google.com/recaptcha/api.js'></script>
+                <div class="g-recaptcha" data-sitekey="6LfKLjQUAAAAAHVYt19BbyKzDxFzzZJ9sqTNJjSL"></div>
+                
+                <button name="payment_confirmation_submit" type="submit" value="Submit" class="btn le-button btn-lg" data-loading-text="{%trans 'Processing...' %}">{% trans 'Submit' %}</button>
+                <a class="le-warning btn btn-lg" href="{% url 'confirmation:confirmation-order' %}">{% trans "Cancel" %}</a>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,63 @@
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% with all_images=product.images.all %}
+    {# use length rather then count as the images get queried anyways #}
+
+    {% if all_images|length > 1 %}
+        <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
+            <div class="product-item-holder size-big single-product-gallery small-gallery">
+                <div id="owl-single-product">
+                    {% for image in all_images %}
+                    <div class="single-product-gallery-item" id="slide{{ forloop.counter }}">
+                        {% thumbnail image.original "433x325" upscale=False as thumb %}
+                        <a data-rel="prettyphoto" href="{{ thumb.url }}">
+                            <img class="img-responsive" alt="{{ product.get_title }}" src="{{ thumb.url }}" />
+                        </a>
+                        {% endthumbnail %}
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <div class="single-product-gallery-thumbs gallery-thumbs">
+                    <div id="owl-single-product-thumbnails">
+                        {% for image in all_images %}
+                        {% thumbnail image.original "67x60" crop="center" as thumb %}
+                        <a class="horizontal-thumb {% if forloop.first %}active{% endif %}" data-target="#owl-single-product" data-slide="{{ forloop.counter0 }}" href="#slide{{ forloop.counter }}">
+                            <img width="67" alt="{{ product.get_title }}" src="{{ thumb.url }}" />
+                        </a>
+                        {% endthumbnail %}
+                        {% endfor %}
+                    </div><!-- /#owl-single-product-thumbnails -->
+
+                    <div class="nav-holder left hidden-xs">
+                        <a class="prev-btn slider-prev" data-target="#owl-single-product-thumbnails" href="#prev"></a>
+                    </div><!-- /.nav-holder -->
+                    
+                    <div class="nav-holder right hidden-xs">
+                        <a class="next-btn slider-next" data-target="#owl-single-product-thumbnails" href="#next"></a>
+                    </div><!-- /.nav-holder -->
+                </div><!-- /.gallery-thumbs -->
+            </div>
+        </div>
+    {% else %}
+
+        {# Only one image to show #}
+        <div class="no-margin col-xs-12 col-sm-6 col-md-5 gallery-holder">
+            <div class="product-item-holder size-big single-product-gallery small-gallery">
+                <div id="owl-single-product">
+                    <div class="single-product-gallery-item" id="slide{{ forloop.counter }}">
+                        {% with image=product.primary_image %}
+                            {% thumbnail image.original "440x400" upscale=False as thumb %}
+                            <a data-rel="prettyphoto" href="{{ thumb.url }}">
+                                <img class="img-responsive" alt="{{ product.get_title }}" src="{{ thumb.url }}" />
+                            </a>
+                            {% endthumbnail %}
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endwith %}

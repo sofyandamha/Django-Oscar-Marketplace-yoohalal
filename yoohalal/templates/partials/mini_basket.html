@@ -1,0 +1,34 @@
+{% load currency_filters %}
+{% load i18n %}
+{% load staticfiles %}
+
+<div class="top-cart-holder dropdown animate-dropdown">
+    <div class="basket">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <div class="basket-item-count">
+                <span class="count">
+                    {% if request.basket.num_lines %}
+                        {{ request.basket.num_lines }}
+                    {% else %}
+                        {{ 0 }}
+                    {% endif %}
+                </span>
+                <img src="{% static "media-center/img/icon-cart.png" %}" alt="" />
+            </div>
+
+            <div class="total-price-basket"> 
+                <span class="lbl">{% trans "Basket" %}</span>
+                <span class="total-price">
+                    {% if request.basket.is_tax_known %}
+                        {{ request.basket.total_incl_tax|currency:request.basket.currency }}
+                    {% else %}
+                        {{ request.basket.total_excl_tax|currency:request.basket.currency }}
+                    {% endif %}
+                </span>
+            </div>
+        </a>
+        
+        {% include "basket/partials/basket_quick.html" %}
+
+    </div><!-- /.basket -->
+</div><!-- /.top-cart-holder -->

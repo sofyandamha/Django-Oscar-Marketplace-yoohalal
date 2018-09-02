@@ -1,0 +1,46 @@
+{% extends 'dashboard/layout.html' %}
+{% load i18n %}
+{% load thumbnail %}
+
+{% block title %}
+    {% trans "Slider" %} '{{ txn.image.name }}' | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+   <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li><a href="{% url 'slider-list' %}">{% trans "Sliders" %}</a></li>
+        <li class="active">{% trans "Slider" %} '{{ txn.image.name }}'</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Slider" %} '{{ txn.image.name }}'
+{% endblock %}
+
+{% block dashboard_content %}
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr><th>{% trans "Image" %}</th>
+                <td>
+                {% if txn.image.url %}
+                    {% with image=txn.image %}
+                        {% thumbnail image "300x300" upscale=False as thumb %}
+                        <a href="{{ image.url }}" target="_blank">
+                            <img src="{{ thumb.url }}" alt="{{ txn.image.name }}" >
+                        </a>
+                        {% endthumbnail %}
+                    {% endwith %}
+                {% else %}
+                    —
+                {% endif %}
+                </td>
+            </tr>
+            <tr><th>{% trans "Is Visible" %}</th><td>{{ txn.is_visible|yesno:_("Yes,No") }}</td></tr>
+            <tr><th>{% trans "Slider Number" %}</th><td>{{ txn.slider_number }}</td></tr>
+            <tr><th>{% trans "Html Caption" %}</th><td>{{ txn.html_caption|safe }}</td></tr>
+        </tbody>
+    </table>
+{% endblock dashboard_content %}

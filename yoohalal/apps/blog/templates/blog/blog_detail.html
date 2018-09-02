@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {{ title }} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'blog:blog-list' %}">{% trans 'Blog' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{{ title }}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    {% if post %}
+        <section id="blog-single">
+            <div class="container">
+                <div class="posts col-md-9">
+                    <div class="post-entry">
+                        <div class="clearfix">
+                            <div id="hero">
+                                <img class="owl-carousel-blog img-responsive" src="{{ post.image.url }}" alt="">
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <h2 class="post-title">{{ post.title }}</h2>
+                            <ul class="meta">
+                                <li>{% trans 'Posted By :' %} {{ post.author }}</li>
+                                <li>{{ post.created }}</li>
+                                <li><a href="{% url 'blog:category-list' cat_slug=post.category.slug %}">{{ post.category }}</a></li>
+                            </ul>
+                            {{ post.post_body|safe }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <aside class="sidebar blog-sidebar">
+                        {% if categories_list %}
+                        <div class="widget clearfix">
+                            <h4>{% trans 'Categories' %}</h4>
+                            <div class="body">
+                                <ul class="le-links">
+                                    {% for category in categories_list %}
+                                    <li><a href="{% url 'blog:category-list' cat_slug=category.slug %}">{{ category.category }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </aside>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock %}

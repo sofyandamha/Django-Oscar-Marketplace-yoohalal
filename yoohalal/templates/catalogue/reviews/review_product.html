@@ -1,0 +1,29 @@
+{% load thumbnail %}
+{% load staticfiles %}
+{% load reviews_tags %}
+{% load i18n %}
+
+<div class="row">
+    <div class="col-sm-2">
+        <div class="image_container">
+            {% with image=product.primary_image %}
+                {% thumbnail image.original "x155" upscale=False as thumb %}
+                    <a href="{{ product.get_absolute_url }}"><img src="{{ thumb.url }}" alt="{{ product.get_title }}" class="thumbnail"></a>
+                {% endthumbnail %}
+            {% endwith %}
+        </div>
+    </div>
+    <div class="col-sm-10">
+        <h2><a href="{{ product.get_absolute_url }}">{{ product.get_title }}</a></h2>
+        {% if product.rating != None %}
+            <div class="star-holder inline"><div class="star" data-score="{{ product.rating|stringformat:'d' }}"></div></div>
+        {% endif %}
+        {% if product|is_review_permitted:user %}
+            <div class="new-review-button">
+                <a id="write_review" href="{% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id %}#reviews" class="le-button">
+                    {% trans "Write a review" %}
+                </a>
+            </div>
+        {% endif %}
+    </div>
+</div>

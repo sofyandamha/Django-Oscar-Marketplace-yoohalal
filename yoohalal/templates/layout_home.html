@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load promotion_tags %}
+
+{% block cdn_scripts %}
+{% endblock %}
+
+{% block layout %}
+	<div class="wrapper">
+	    {# Top-horizontal bar with account, notifictions, dashboard links #}
+	    {% include "partials/nav_accounts.html" %}
+
+	    <header>
+			<div class="container no-padding">
+				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+					{% include "partials/brand.html" %}
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
+					{% include "partials/search.html" %}
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3 top-cart-row no-margin">
+					<div class="top-cart-row-container">
+						{# Mini-basket wrapped in a block so some templates can now display it #}
+		                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+					</div>
+				</div>
+			</div>
+		</header>
+
+		{% block navigation %}
+	        {% include "partials/nav_vertical.html" %}
+	    {% endblock %}
+
+	    {# Main content of page - other layout templates may override this block #}
+	    {% block content_wrapper %}
+            {# Render promotions #}
+            {% for promotion in promotions_page %}
+                {% render_promotion promotion %}
+            {% endfor %}
+
+            {# Div exists for AJAX updates to entire content section #}
+            {% block content %}{% endblock %}
+	    {% endblock %}
+
+	    {% include "partials/footer.html" %}
+	</div>
+{% endblock %}
+
+{% block extrascripts %}
+    {% include "partials/extrascripts.html" %}
+    {{ block.super }}
+{% endblock %}

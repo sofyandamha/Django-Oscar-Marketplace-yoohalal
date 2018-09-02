@@ -1,0 +1,42 @@
+{% load currency_filters %}
+{% load category_tags %}
+{% load i18n %}
+
+
+<nav id="top-megamenu-nav" class="megamenu-vertical animate-dropdown">
+    <div class="container">
+        {% block nav_dropdown %}
+        <div class="yamm navbar">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mc-horizontal-menu-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div><!-- /.navbar-header -->
+            <div class="collapse navbar-collapse" id="mc-horizontal-menu-collapse">
+                <ul class="nav navbar-nav">
+                    {% category_tree depth=2 as tree_categories %}
+                    {% if tree_categories %}
+                        {% for tree_category, info in tree_categories %}
+                            {% if info.has_children %}
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                                    <ul class="dropdown-menu">
+                            {% else %}
+                                <li><a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+                            {% endif %}
+
+                            {% for close in info.num_to_close %}
+                                    </ul>
+                                </li>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</nav>

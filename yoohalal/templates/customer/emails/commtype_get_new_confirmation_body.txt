@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktrans with number=number email=sender %}You have a request to validate the confirmation for the order with the order number {{ number }} sent by {{ email }}{% endblocktrans %}

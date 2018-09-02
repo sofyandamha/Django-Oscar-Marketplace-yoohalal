@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load promotion_tags %}
+{% load category_tags %}
+
+{% block layout %}
+    <div class="wrapper">
+        {# Top-horizontal bar with account, notifictions, dashboard links #}
+        {% include "partials/nav_accounts.html" %}
+
+        <header class="no-padding-bottom header-alt">
+            <div class="container no-padding">
+                <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+                    {% include "partials/brand.html" %}
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
+                    {% include "partials/search.html" %}
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3 top-cart-row no-margin">
+                    <div class="top-cart-row-container">
+                        {# Mini-basket wrapped in a block so some templates can now display it #}
+                        {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+                    </div>
+                </div>
+            </div>
+
+            {% block navigation %}
+                {% include "partials/nav_primary.html" %}
+            {% endblock %}
+
+            <div class="animate-dropdown">
+                <div id="breadcrumb-alt">
+                    <div class="container">
+                        <div class="breadcrumb-nav-holder minimal">
+                            {% block breadcrumbs %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="checkout-page">
+            <div class="container">
+                <div class="col-xs-12 no-margin">
+
+                    {% include "partials/alert_messages.html" %}
+
+                    <!-- The main nav on checkout pages contain links to modal flatpages -->
+                    {% block modal %}
+                        {% load flatpages %}
+                        {% get_flatpages '/order/' as flatpages %}
+                        {% for page in flatpages %}
+                        <div id="{{ page.title|slugify }}" class="modal hide fade">
+                            <div class="modal-header">
+                                <a class="close" data-dismiss="modal">×</a>
+                                <h3>{{ page.title }}</h3>
+                            </div>
+                            <div class="modal-body">
+                                <div class="large-content">
+                                    {{ page.content|safe }}
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endblock %}
+
+                    {% block content %}{% endblock %}
+
+                </div>
+            </div>
+        </section>
+
+        <div id="promotions">
+            {% for promotion in promotions_page %}
+                {% render_promotion promotion %}
+            {% endfor %}
+        </div>
+
+        {% include "partials/footer.html" %}
+    </div>
+{% endblock %}

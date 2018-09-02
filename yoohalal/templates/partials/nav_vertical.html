@@ -1,0 +1,68 @@
+{% load currency_filters %}
+{% load category_tags %}
+{% load staticfiles %}
+{% load i18n %}
+{% load slider_tags %}
+
+<div id="top-banner-and-menu">
+    <div class="container">
+        <div class="col-xs-12 col-sm-4 col-md-3 sidemenu-holder">
+            {% block nav_dropdown %}
+            <div class="side-menu animate-dropdown">
+                <div class="head"><i class="fa fa-list"></i> {% trans "Categories" %}</div>
+                <nav class="yamm megamenu-horizontal" role="navigation">
+                    <ul class="nav">
+                        {% category_tree depth=2 as tree_categories %}
+                        <!-- <li class="menu-item"><a href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li> -->
+                        {% if tree_categories %}
+                            {% for tree_category, info in tree_categories %}
+                                {% if info.has_children %}
+                                <li class="dropdown menu-item">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ tree_category.name }}</a>
+                                    <ul class="dropdown-menu mega-menu">
+                                        <li class="yamm-content">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-lg-4">
+                                                    <ul>
+                                {% else %}
+                                    <li class="menu-item"><a href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+                                {% endif %}
+
+                                {% for close in info.num_to_close %}
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                {% endfor %}
+                            {% endfor %}
+                        {% endif %}
+                       <!--  {% block nav_dropdown_extra_items %}
+                            <li class="menu-item"><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                        {% endblock %} -->
+                    </ul>
+                </nav>
+            </div>
+            {% endblock %}
+        </div>
+
+        <div class="col-xs-12 col-sm-8 col-md-9 homebanner-holder">
+            <div id="hero">
+                <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
+                    {% get_slider_images limit=5 slider_number=1 as sliders %}
+                    {% for slider in sliders %}
+                    <div class="item" style="background-image:url({{ MEDIA_URL }}{{ slider.image }})">
+                        <div class="container-fluid">
+                            {% if slider.html_caption %}
+                                {{ slider.html_caption|safe }}
+                            {% endif %}
+                        </div><!-- /.container-fluid -->
+                    </div><!-- /.item -->
+                    {% endfor %}
+                </div>
+            </div>      
+        </div>
+
+    </div>
+</div>

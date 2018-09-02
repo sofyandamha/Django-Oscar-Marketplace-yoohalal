@@ -1,0 +1,24 @@
+{% load currency_filters %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+{% purchase_info_for_product request product as session %}
+
+
+
+{% if session.price.exists %}
+	
+	{% if session.stockrecord.old_price != 0 %}
+		<div class="price-prev">{{ session.stockrecord.old_price|currency:session.price.currency }}</div>
+	{% endif %}
+
+    {% if session.price.excl_tax == 0 %}
+        <div class="price-current pull-right">{% trans "Free" %}</div>
+    {% elif session.price.is_tax_known %}
+        <div class="price-current pull-right">{{ session.price.incl_tax|currency:session.price.currency }}</div>
+    {% else %}
+        <div class="price-current pull-right">{{ session.price.excl_tax|currency:session.price.currency }}</div>
+    {% endif %}
+{% else %}
+    <div class="price-current pull-right">&nbsp;</div>
+{% endif %}

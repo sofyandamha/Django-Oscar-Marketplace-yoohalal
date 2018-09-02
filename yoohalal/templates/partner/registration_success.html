@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% load currency_filters %}
+{% load thumbnail %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block title %}
+    {% trans "Partner Registration Success" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-success">
+	        {% blocktrans with name=partner.name %}
+	            Thank you <strong>{{ name }}</strong>, you have filled the registration form to become our partner. We will validate your information and contact you as soon.
+	        {% endblocktrans %}
+        	</div>
+        </div>
+    </div>
+{% endblock content %}

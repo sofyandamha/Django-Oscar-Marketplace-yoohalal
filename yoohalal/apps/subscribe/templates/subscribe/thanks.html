@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Thanks" %}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>        
+        <li class="breadcrumb-item">
+            <a href="{% url 'subscribe:subscribe-form' %}">{% trans 'Subscribe' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Thanks' %}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <p>
+        {% blocktrans with email=obj.email %}
+            Thank you <strong>{{ email }}</strong> for subscribing, Your subscription has been confirmed.
+        {% endblocktrans %}
+    </p>
+{% endblock content %}

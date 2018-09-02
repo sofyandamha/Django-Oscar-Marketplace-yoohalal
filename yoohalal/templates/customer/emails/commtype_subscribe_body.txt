@@ -1,0 +1,11 @@
+{% extends "customer/emails/base.txt" %}
+{% load i18n %}
+
+{% block body %}
+{% autoescape off %}
+{% trans 'Thank you for subscribing, Your subscription has been confirmed.' %}
+
+{% trans "If you want unsubscribe our newsletter, please go to the following page:" %}
+{{ unsubscribe_url }}
+{% endautoescape %}
+{% endblock %}

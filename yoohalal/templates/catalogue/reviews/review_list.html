@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% load history_tags %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "All reviews" %} | {{ product.title }} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+        </li>
+        {% with category=product.categories.all.0 %}
+            {% for c in category.get_ancestors_and_self %}
+                <li class="breadcrumb-item">
+                    <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+                </li>
+            {% endfor %}
+            <li class="breadcrumb-item">
+                <a href="{{ product.get_absolute_url }}">{{ product.title }}</a>
+            </li>
+        {% endwith %}
+        <li class="breadcrumb-item current">{% trans "All reviews" %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Customer reviews" %}
+{% endblock  %}
+
+{% block content %}
+    <section>        
+        {% include 'catalogue/reviews/review_product.html' %}
+
+        {% if reviews %}
+            <div class="control-bar">
+                <form action="." method="get" class="form-inline">
+                    {% for field in form %}
+                        {{ field.label }}
+                        <div id="filter-review" class="le-select">
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+                    <input type="submit" class="btn btn-default" value="{% trans "Go" %}" />
+                </form>
+            </div>
+            <div class="box-review">
+                <div class="comments">
+                {% for review in reviews %}
+                    <div class="comment-item">
+                        <div class="row no-margin">
+                            {% include 'catalogue/partials/review.html' %}
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+                {% include 'partials/pagination.html' %}
+            </div>
+
+        {% else %}
+            <p>{% trans "This product does not have any reviews yet." %}</p>
+        {% endif %}
+
+    </section>
+{% endblock %}
+
+{% block extrastyles %}
+    {{ block.super }}
+    <style type="text/css">
+        .box-review {
+            padding: 35px;
+            border: 1px solid #e0e0e0;
+            margin-top: 20px;
+        }
+        .new-review-button {
+            margin-top: 20px;
+        }
+        .control-bar {
+            min-height: 58px !important;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 13px;
+            margin-top: 20px;
+        }
+    </style>
+{% endblock %}

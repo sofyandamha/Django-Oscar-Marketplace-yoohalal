@@ -1,0 +1,39 @@
+#id_bank_account {
+    margin: 10px 0 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+#id_bank_account li {
+    border-bottom: solid 1px #e3e3e3;
+    padding: 10px 10px 5px 30px;
+    position: relative;
+    line-height: 25px;
+}
+
+#id_bank_account li label {
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+}
+
+#id_bank_account li input[type=radio] {
+    border-right: solid 1px red;
+    margin-right: 15px;
+}
+
+#id_bank_account li input[type=radio]:before {
+    display: inline-block;
+    background-color: #F5F5F5;
+    background-image: url(../img/external_logo.png);
+    background-position: 209px -217px;
+    width: 25px;
+    height: 25px;
+    content: '\00a0';
+    margin: -5px 100px -5px -5px;
+    padding: 10px;
+}
+
+#id_bank_account li input[type=radio]:checked:before {
+    background-position: 209px -242px;
+}

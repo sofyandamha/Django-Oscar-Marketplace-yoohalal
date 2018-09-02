@@ -1,0 +1,85 @@
+{% extends "layout_blog.html" %}
+{% load i18n %}
+
+{% block title %}
+    {{ title}} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'blog:blog-list' %}">{% trans 'Blog' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{{ title}}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    {% if posts %}
+        <div class="posts sidemeta">
+            {% for post in posts %} 
+                <div class="post format-image">
+                    <div class="date-wrapper">
+                        <div class="date">
+                            <span class="month">{{post.created | date:' M '}}</span>
+                            <span class="day">{{post.created | date:'j'}}</span>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-media">
+                            <a href="{% url 'blog:blog-detail' slug=post.slug %}">
+                                <img src="{{ post.image.url }}" class="image">
+                            </a>
+                        </div>
+                        <h2 class="post-title"><a href="/blog/{{ post.slug }}/">{{ post.title }}</a></h2>
+                        <ul class="meta">
+                            <li>{% trans 'Posted By :' %} {{ post.author }}</li>
+                            <li><a href="{% url 'blog:category-list' cat_slug=post.category.slug %}">{{ post.category }}</a></li>
+                        </ul>
+                        <p>{{ post.post_body|striptags|truncatewords:50 }}</p>
+                        <a href="{% url 'blog:blog-detail' slug=post.slug %}" class="le-button huge">{% trans 'Read More' %}</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>{% trans 'No posts are available.' %}</p>
+    {% endif %}
+
+    {% if is_paginated %}
+        <hr/>
+        <ul class="pagination blog-pagination">
+            {% if page_obj.has_previous %}
+                <li><a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">{% trans 'previous' %}</a></li>
+            {% endif %}
+
+            {% for i in paginator.page_range %}
+                <li {% if page_obj.number == i %} class="current" {% endif %}><a href="{{ request.path }}?page={{i}}">{{i}}</a></li>
+            {% endfor %}
+              
+            {% if page_obj.has_next %}
+                <li><a href="{{ request.path }}?page={{ page_obj.next_page_number }}">{% trans 'next' %}</a></li>
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endblock %}
+
+{% block column_right %}
+    <aside class="sidebar blog-sidebar">
+        {% if categories_list %}
+        <div class="widget clearfix">
+            <h4>{% trans 'Categories' %}</h4>
+            <div class="body">
+                <ul class="le-links">
+                    {% for category in categories_list %}
+                    <li><a href="{% url 'blog:category-list' cat_slug=category.slug %}">{{ category.category }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        {% endif %}
+    </aside>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load reviews_tags %}
+{% load thumbnail %}
+{% load i18n %}
+{% load display_tags %}
+{% load staticfiles %}
+{% load purchase_info_tags %}
+
+{% block product %}
+    <div class="col-xs-12 col-sm-4 no-margin product-item-holder hover">
+        <div class="product-item">
+            {% block product_image %}
+            <div class="image">
+                {% with image=product.primary_image %}
+                    {% thumbnail image.original "x186" upscale=False as thumb %}
+                    <a href="{{ product.get_absolute_url }}">
+                        <img alt="{{ product.get_title }}"  src="{{ thumb.url }}" />
+                    </a>
+                    {% endthumbnail %}
+                {% endwith %}
+            </div>
+            {% endblock %}
+
+            {% block product_title %}
+            {% purchase_info_for_product request product as session %}
+            <div class="body">
+                <div class="label-discount clear"></div>
+                <div class="title">
+                    <a href="{{ product.get_absolute_url }}" title="{{ product.get_title }}">{{ product.get_title|truncatewords:4 }}</a>
+                </div>
+                <div class="brand">{{ session.stockrecord.partner }}</div>
+            </div>
+            {% endblock %}
+
+            {% block product_price %}
+            <div class="prices">
+                {% include "catalogue/partials/stock_record.html" %}
+            </div>
+            <div class="hover-area">
+                <div class="add-cart-button">
+                    {% if not product.is_parent %}
+                    {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+                    {% endif %}
+                </div>
+                <div class="wish-compare">
+                    &nbsp;
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

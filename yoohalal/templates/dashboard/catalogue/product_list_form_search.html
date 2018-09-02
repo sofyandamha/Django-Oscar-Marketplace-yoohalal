@@ -1,0 +1,21 @@
+{% load widget_tweaks %}
+<div class="row">
+	<span class="error-block">{{ form.non_field_errors }}</span>
+	<div class="col-md-6">
+		{% include 'dashboard/partials/form_field_stacked.html' with field=form.upc %}
+		
+		{% include 'dashboard/partials/form_field_stacked.html' with field=form.title %}
+
+		{% if form.category %}
+			{% include 'dashboard/partials/form_field_stacked.html' with field=form.category %}
+        {% endif %}
+	</div>
+	<div class="col-md-6">
+		{% if form.partner %}
+			{% include 'dashboard/partials/form_field_stacked.html' with field=form.partner %}
+        {% endif %}
+		{% if form.product_type %}
+			{% include 'dashboard/partials/form_field_stacked.html' with field=form.product_type %}
+        {% endif %}
+	</div>
+</div>

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load promotion_tags %}
+
+{% block cdn_scripts %}
+{% endblock %}
+
+{% block layout %}
+	<div class="wrapper">
+	    {# Top-horizontal bar with account, notifictions, dashboard links #}
+	    {% include "partials/nav_accounts.html" %}
+
+	    <header class="no-padding-bottom header-alt">
+			<div class="container no-padding">
+				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+					{% include "partials/brand.html" %}
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 top-search-holder no-margin">
+					{% include "partials/search.html" %}
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-3 top-cart-row no-margin">
+					<div class="top-cart-row-container">
+						{# Mini-basket wrapped in a block so some templates can now display it #}
+		                {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+					</div>
+				</div>
+			</div>
+
+			{% block navigation %}
+	            {% include "partials/nav_primary.html" %}
+	        {% endblock %}
+
+	        <div class="animate-dropdown">
+	            <div id="breadcrumb-alt">
+	                <div class="container">
+	                    <div class="breadcrumb-nav-holder minimal">
+	                        {% block breadcrumbs %}{% endblock %}
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+		</header>
+
+	    {# Main content of page - other layout templates may override this block #}
+	    {% block content_wrapper %}
+
+	    <main id="blog" class="inner-bottom-xs">
+	    	<div class="container">
+	    		<div class="row">
+	    			<div class="col-md-9">
+	    				{% block content %}{% endblock %}
+	    			</div>
+	    			<div class="col-md-3">
+	    				{% block column_right %}{% endblock %}
+	    			</div>
+	    	</div>
+	    </main>
+	    {% endblock %}
+
+	    {% include "partials/footer.html" %}
+	</div>
+{% endblock %}
+
+{% block extrascripts %}
+    {% include "partials/extrascripts.html" %}
+    {{ block.super }}
+{% endblock %}

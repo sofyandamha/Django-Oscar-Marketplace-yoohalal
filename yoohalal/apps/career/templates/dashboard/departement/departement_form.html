@@ -1,0 +1,41 @@
+{% extends 'dashboard/layout.html' %}
+{% load thumbnail %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Departement" %} '{{ departement.departement }}' | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li><a href="{% url 'departement-list' %}">{% trans "Departements" %}</a></li>
+        {% if departement %}
+            <li class="active">{% trans "Departement" %} '{{ title }}'</li>
+        {% else %}
+            <li class="active">{{ title }}</li>
+        {% endif %}
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% if departement %}{% trans "Departement" %} '{{ departement.departement }}'{% else %}{% trans "Create new departement" %}{% endif %}
+{% endblock %}
+
+{% block dashboard_content %}
+    <form action="." method="post" class="form-stacked well">
+        {% csrf_token %}
+        {% include "dashboard/partials/form_fields.html" with form=form %}
+        {% block form_actions %}
+            <div class="form-actions">
+                <button class="btn btn-primary btn-lg" type="submit" data-loading-text="{% trans 'Saving...' %}">{% trans "Save" %}</button> {% trans "or" %}
+                {# This is an input so we distinguish between which button was pressed #}
+                <input class="btn btn-primary btn-lg" type="submit" name="action" value="{% trans 'Save and edit departement' %}"/>
+                {% trans "or" %}
+                <a href="{% url 'departement-list' %}">{% trans "cancel" %}</a>
+            </div>
+        {% endblock form_actions %}
+    </form>
+{% endblock dashboard_content %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Applicant Form' %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'career:career-list' %}">{% trans 'Careers' %}</a>
+        </li>
+        <li class="breadcrumb-item">
+            <a href="{% url 'career:career-detail' slug=career.slug %}">{{ career.title }}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans 'Applicant Form' %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Applicant Form" %}
+{% endblock %}
+
+{% block content %}
+    <h3>{% trans "Please complete the job application form below:" %}</h3>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6 career_form">
+            <form id="career_form" action="." method="post" class="form-stacked" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% include "oscar/partials/form_fields.html"  %}
+                <button name="submit" type="submit" value="Submit" class="btn le-button btn-lg" data-loading-text="{%trans 'Processing...' %}">{% trans 'Submit' %}</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

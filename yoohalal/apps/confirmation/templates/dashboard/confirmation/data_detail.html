@@ -1,0 +1,41 @@
+{% extends 'dashboard/layout.html' %}
+{% load currency_filters %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "Payment Confirmation" %} {{ txn.order_number }} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li>
+            <a href="{% url 'confirmation-method-list' %}">{% trans "Payment Confirmations" %}</a>
+        </li>
+        <li class="active">
+            {{ txn.order_number }}
+        </li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Payment Confirmation" %} {{ txn.order_number }}
+{% endblock %}
+
+{% block dashboard_content %}
+    <table class="table table-striped table-bordered">
+        <tbody>
+            <tr><th>{% trans "Order Number" %}</th><td>{{ txn.order_number }}</td></tr>
+            <tr><th>{% trans "Transfer Date" %}</th><td>{{ txn.transfer_date }}</td></tr>
+            <tr><th>{% trans "Destination Bank" %}</th><td>{{ txn.destination_bank }}</td></tr>
+            <tr><th>{% trans "Amount" %}</th><td>{{ txn.amount|default:"-" }}</td></tr>
+            <tr><th>{% trans "Account Owner Name" %}</th><td>{{ txn.account_owner_name }}</td></tr>
+            <tr><th>{% trans "Customer Email" %}</th><td>{{ txn.customer_email }}</td></tr>
+            <tr><th>{% trans "Customer Phone" %}</th><td>{{ txn.customer_phone }}</td></tr>
+            <tr><th>{% trans "Status" %}</th><td>{{ txn.get_status_display }}</td></tr>
+            <tr><th>{% trans "Note" %}</th><td>{{ txn.note }}</td></tr>
+        </tbody>
+    </table>
+{% endblock dashboard_content %}

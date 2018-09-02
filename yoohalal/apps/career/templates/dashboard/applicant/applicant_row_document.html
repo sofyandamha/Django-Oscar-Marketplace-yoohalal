@@ -1,0 +1,7 @@
+{% if record.document.url %}
+	<a href="{{ record.document.url }}" target="_blank">
+		{{ record.filename }}
+	</a>
+{% else %}
+    -
+{% endif %}

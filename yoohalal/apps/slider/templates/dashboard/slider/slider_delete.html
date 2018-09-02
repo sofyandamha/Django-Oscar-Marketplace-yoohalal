@@ -1,0 +1,45 @@
+{% extends 'dashboard/layout.html' %}
+{% load thumbnail %}
+{% load i18n %}
+
+{% block title %}
+    {% trans 'Slider' %} '{{ slider.image.name }}' | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul class="breadcrumb">
+        <li>
+            <a href="{% url 'dashboard:index' %}">{% trans "Dashboard" %}</a>
+        </li>
+        <li><a href="{% url 'slider-list' %}">{% trans "Sliders" %}</a></li>
+        <li class="active">{% trans "Slider" %} '{{ slider.image.name }}'</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Delete Slider" %}
+{% endblock %}
+
+{% block dashboard_content %}
+    <form action="." method="post">
+        {% csrf_token %}
+        <p>{% trans "Are you sure you want to delete this slider?" %}</p>
+
+        <div class="form-group">
+        {% if slider.image.url %}
+            {% with image=slider.image %}
+                {% thumbnail image "120x120" upscale=False as thumb %}
+                    <img src="{{ thumb.url }}" alt="{{ slider.image.name }}"/>
+                {% endthumbnail %}
+            {% endwith %}
+        {% else %}
+            <p> — </p>
+        {% endif %}
+        </div>
+
+        <div class="form-actions">
+            <button class="btn btn-lg btn-danger" type="submit" data-loading-text="{% trans 'Deleting...' %}">{% trans "Delete" %}</button> {% trans "or" %}
+            <a href="{% url 'slider-list' %}">{% trans "cancel" %}</a>
+        </div>
+    </form>
+{% endblock dashboard_content %}

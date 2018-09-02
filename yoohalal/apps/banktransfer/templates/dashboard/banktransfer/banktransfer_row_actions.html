@@ -1,0 +1,13 @@
+{% load django_tables2 %}
+{% load i18n %}
+<div class="btn-toolbar">
+    <div class="btn-group">
+        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="true">
+            {% trans "Actions" %}
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu pull-right">
+            <li><a href="{% url 'banktransfer-transaction-detail' pk=record.id %}">{% trans "View" %}</a></li>
+        </ul>
+    </div>
+</div>

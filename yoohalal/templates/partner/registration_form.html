@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% load i18n %}
+
+{% block title %}
+    {% trans "Create your own store" %} | {{ block.super }}
+{% endblock %}
+
+{% block breadcrumbs %}
+    <ul>
+        <li class="breadcrumb-item">
+            <a href="{{ homepage_url }}">{% trans 'Home' %}</a>
+        </li>
+        <li class="breadcrumb-item current">{% trans "Create your own store" %}</li>
+    </ul>
+{% endblock %}
+
+{% block headertext %}
+    {% trans "Create your own store" %}
+{% endblock %}
+
+{% block content %}
+    {% if not perms.partner.dashboard_access %}
+        <div class="row">
+            <div class="col-sm-6 partner_registration_form">
+                <h2 class="bordered">
+                    {% blocktrans with name=user.get_full_name|default:' ' %}
+                        Assalamualaikum, {{ name }}
+                    {% endblocktrans %}
+                </h2>
+
+                <p>{% trans "Welcome to YooHalal, Let's Open a Store Now!" %}</p>
+
+                <br/>
+
+                <form id="partner_registration_form" action="." method="post" class="form-stacked">
+                    {% csrf_token %}
+                    {% include "oscar/partials/form_fields.html"  %}
+
+                    <button name="partner_registration_submit" type="submit" value="Submit" class="btn le-button btn-lg" data-loading-text="{%trans 'Processing...' %}">{% trans 'Submit' %}</button>
+                    {% if cancel_url %}
+                        {% trans "or" %} <a href="{{ cancel_url }}">{% trans "cancel" %}</a>.
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    {% else %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="alert alert-danger">
+                {% trans "You do not have access to view this page." %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    
+{% endblock content %}

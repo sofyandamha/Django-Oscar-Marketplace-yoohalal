@@ -1,0 +1,201 @@
+{% load i18n %}
+{% load currency_filters %}
+{% load shipping_tags %}
+
+<div class="body">
+    <ul class="tabled-data no-border inverse-bold">
+        {% with offer_discounts=basket.offer_discounts voucher_discounts=basket.grouped_voucher_discounts %}
+            {% block discount_totals %}
+                {% if offer_discounts or voucher_discounts %}
+                    {# Basket total will be discounted so we show a before and after version #}
+
+                    <li>
+                        <label>{% trans "Basket total (before discounts)" %}</label>
+                        <div class="value pull-right">
+                            {% if basket.is_tax_known and not show_tax_separately %}
+                                {{ basket.total_incl_tax_excl_discounts|currency:basket.currency }}
+                            {% else %}
+                                {{ basket.total_excl_tax_excl_discounts|currency:basket.currency }}
+                            {% endif %}
+                        </div>
+                    </li>
+
+                    {% for discount in offer_discounts %}
+                    <li>
+                        <label><span>{% trans "Discount" %}</span> {{ discount.name }}</label>
+                        <div class="value pull-right">
+                            {{ discount.discount|currency:basket.currency }}
+                        </div>
+                    </li>
+                    {% endfor %}
+
+
+                    {% if voucher_discounts %}
+                        <li>
+                            <label>{% trans "Vouchers" %}</label>
+                        </li>
+                        {% for discount in voucher_discounts %}
+                            <li>
+                                <label>
+                                    {{ discount.voucher.name }} ({{ discount.voucher.code }})
+                                    {% if editable %}
+                                        <form action="{% url 'basket:vouchers-remove' pk=discount.voucher.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <input type="submit" value="{% trans 'Remove' %}" class="btn btn-sm btn-danger" />
+                                        </form>
+                                    {% endif %}
+                                </label>
+                                <div class="value pull-right">-{{ discount.discount|currency:basket.currency }}</div>
+                            </li>
+                        {% endfor %}
+                    {% endif %}
+                {% endif %}
+            {% endblock %}
+
+            {% block basket_total %}
+                {% if offer_discounts or voucher_discounts %}
+                    <li>
+                        <label>{% trans "Basket total (after discounts)" %}</label>
+                        <div class="value pull-right">
+                            {% if not show_tax_separately and basket.is_tax_known %}
+                                {{ basket.total_incl_tax|currency:basket.currency }}
+                            {% else %}
+                                {{ basket.total_excl_tax|currency:basket.currency }}
+                            {% endif %}
+                        </div>
+                    </li>
+                {% else %}
+                    {# No discounts to basket #}
+                    <li>
+                        <label>{% trans "Basket total" %}</label>
+                        <div class="value pull-right">
+                            {% if not show_tax_separately and basket.is_tax_known %}
+                                {{ basket.total_incl_tax|currency:basket.currency }}
+                            {% else %}
+                                {{ basket.total_excl_tax|currency:basket.currency }}
+                            {% endif %}
+                        </div>
+                    </li>
+                {% endif %}
+            {% endblock %}
+        {% endwith %}
+
+        {% block shipping_totals %}
+                <li>
+                    <label>{% trans "Shipping" %}
+                        {% if shipping_methods|length > 1 and editable %}
+                            <small class="shipping-method-info">{% trans "Alternative shipping methods can be chosen during checkout" %}</small>
+                        {% endif %}
+                    </label>
+                </li>
+                {% if not shipping_method.is_discounted %}
+                    <li>
+                        <label>{{ shipping_method.name }}</label>
+                        <div class="value pull-right">
+                            {% if not show_tax_separately and shipping_charge.is_tax_known %}
+                                {{ shipping_charge.incl_tax|currency:basket.currency }}
+                            {% else %}
+                                {{ shipping_charge.excl_tax|currency:basket.currency }}
+                            {% endif %}
+                        </div>
+                    </li>
+                {% else %}
+                    {% shipping_charge_discount shipping_method basket as shipping_discount %}
+                    {% shipping_charge_excl_discount shipping_method basket as shipping_charge_excl_discount %}
+                    {# As shipping is discounted, we break it down into its original charge and a discount #}
+                    <li>
+                        <label><span>{% trans "Shipping method" %}</span>{{ shipping_method.name }}</label>
+                    </li>
+                    <li>
+                        <label>{% trans "Shipping total (before discounts)" %}</label>
+                        <div class="value pull-right">
+                            {% if not show_tax_separately and shipping_charge_excl_discount.is_tax_known %}
+                                {{ shipping_charge_excl_discount.incl_tax|currency:basket.currency }}
+                            {% else %}
+                                {{ shipping_charge_excl_discount.excl_tax|currency:basket.currency }}
+                            {% endif %}
+                        </div>
+                    </li>
+                    {# This section needs adjustment to when taxes are shown separately #}
+                    <li>
+                        <label><span>{% trans "Discount" %}</span> {{ shipping_method.discount_name }}</label>
+                        <div class="value pull-right">-{{ shipping_discount|currency:basket.currency }}</div>
+                    </li>
+                    <li>
+                        <label>{% trans "Shipping total (after discounts)" %}</label>
+                        <div class="value pull-right">
+                            {% if not show_tax_separately and shipping_charge.is_tax_known %}
+                                {{ shipping_charge.incl_tax|currency:basket.currency }}
+                            {% else %}
+                                {{ shipping_charge.excl_tax|currency:basket.currency }}
+                            {% endif %}
+                        </div>
+                    </li>
+                {% endif %}
+            {% endblock %}
+
+            {% block tax_totals %}
+                {% if show_tax_separately %}
+                    <li>
+                        <label>{% trans "Tax" %}</label>
+                    </li>
+                    <li>
+                        <label>{% trans "Basket" %}</label>
+                        <div class="value pull-right">
+                            {{ basket.total_tax|currency:basket.currency }}
+                        </div>
+                    </li>
+                    <li>
+                        <label>{% trans "Shipping" %}</label>
+                        <div class="value pull-right">
+                            {{ shipping_charge.tax|currency:basket.currency }}
+                        </div>
+                    </li>
+                {% endif %}
+            {% endblock %}
+
+            {% block post_order_action_totals %}
+                {% if basket.post_order_actions %}
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td></td>
+                    </tr>
+                    <li>
+                      <h3>{% trans "Post order actions" %}</h3><small>{% trans "These will be applied once your order is placed." %}</small>
+                    </li>
+                    {% for discount in basket.post_order_actions %}
+                        <li>
+                            <label>{{ discount.name }}</label>
+                            <div class="value pull-right">{{ discount.description }}</div>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+            {% endblock %}
+
+            
+    </ul>
+    <ul id="total-price" class="tabled-data inverse-bold no-border">
+        {% block order_total %}
+            <li>
+            <label>{% trans "Order total" %}</label>
+                <div class="value pull-right">
+                        {% if order_total.is_tax_known %}
+                            {{ order_total.incl_tax|currency:basket.currency }}
+                        {% else %}
+                            {{ order_total.excl_tax|currency:basket.currency }}
+                        {% endif %}
+                </div>
+            </li>
+            {% if not order_total.is_tax_known %}
+                <li>
+                    <small>{% trans "Taxes will be added during checkout." %}</small>
+                </li>
+            {% endif %}
+        {% endblock %}
+    </ul>
+    {% block formactions %}
+    <div class="buttons-holder">
+        <a class="le-button big" href="{% url 'checkout:index' %}" >{% trans "Proceed to checkout" %}</a>
+    </div>
+    {% endblock formactions %}
+</div>

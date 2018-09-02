@@ -1,0 +1,59 @@
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% if field.is_hidden %}
+    {{ field }}
+{% else %}
+    {% comment %}
+        Make the field widget type available to templates so we can mark-up
+        checkboxes differently to other widgets.
+    {% endcomment %}
+    {% annotate_form_field field %}
+
+    {% block control_group %}
+        <span class="{% if field.errors %}error{% endif %}">
+
+            {% block label %}
+                {% if not nolabel and field.widget_type != 'CheckboxInput' %}
+                    <div class="col-md-3">
+                        {{ field.label_tag }}
+                    </div>
+                {% endif %}
+            {% endblock %}
+
+            {% block controls %}
+                {% block widget %}
+                    {% if field.widget_type == 'CheckboxInput' %}
+                        <div class="col-sm-6 col-sm-offset-3 checkbox">
+                            <label for="{{ field.auto_id }}" class="checkbox {% if field.field.required %}required{% endif %}">
+                                {% render_field field %}
+                                {{ field.label|safe }}{% if field.field.required %} <span>*</span>{% endif %}
+                            </label>
+                        </div>
+                    {% elif field.widget_type == 'RadioSelect' %}
+                        <div class="col-sm-6 col-sm-offset-3">
+                            <label for="{{ field.auto_id }}" class="controls {% if field.field.required %}required{% endif %}">
+                            {% render_field field %}
+                            </label>
+                        </div>
+                    {% else %}
+                        <div class="col-md-9">
+                            {% render_field field class+='form-control' %}
+                        </div>
+                    {% endif %}
+                {% endblock %}
+
+                {% block errors %}
+                    {% for error in field.errors %}
+                        <ul class="error-block">
+                            <li>{{ error }}</li>
+                        </ul>
+                    {% endfor %}
+                {% endblock %}
+
+                {# No help text as it wraps #}
+                
+            {% endblock %}
+        </span>
+    {% endblock %}
+{% endif %}

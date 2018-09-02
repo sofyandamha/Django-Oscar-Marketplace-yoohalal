@@ -1,0 +1,1 @@
+{% load i18n %}{% trans 'Thank you for completing the transaction in Yoohalal, Payment using Bank Transfer is successful. Your order has us forward to the Seller.' %}

@@ -1,0 +1,301 @@
+{% extends "layout.html" %}
+
+{% load history_tags %}
+{% load currency_filters %}
+{% load reviews_tags %}
+{% load staticfiles %}
+{% load product_tags %}
+{% load display_tags %}
+{% load i18n %}
+{% load purchase_info_tags %}
+
+{% block title %}
+    {{ product.title }} | {{ block.super }}
+{% endblock %}
+
+{% block mainstyles %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static "media-center/css/jssocials.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "media-center/css/jssocials-theme-flat.css" %}" />
+{% endblock %}
+
+{% block description %}
+    {{ product.description|default:""|striptags }}
+{% endblock %}
+
+{% block breadcrumbs %}
+<ul>
+    <li class="breadcrumb-item">
+        <a href="{{ homepage_url }}">{% trans "Home" %}</a>
+    </li>
+    {% with category=product.categories.all.0 %}
+        {% for c in category.get_ancestors_and_self %}
+        <li class="breadcrumb-item">
+            <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+        </li>
+        {% endfor %}
+        <li class="breadcrumb-item current">{{ product.title }}</li>
+
+        {% get_back_button as backbutton %}
+        {% if backbutton %}
+            <li class="breadcrumb-item pull-right">
+                <a href="{{ backbutton.url }}">
+                    <i class="icon-arrow-left"></i> {{ backbutton.title }}
+                </a>
+            </li>
+        {% endif %}
+    {% endwith %}
+</ul>
+{% endblock %}
+
+{% block header %}
+{% endblock header %}
+
+{% block content %}
+<div id="single-product">
+    <div class="container">
+        {% block product_gallery %}
+        {% include "catalogue/partials/gallery.html" %}
+        {% endblock %}
+        
+        {% block product_main %}
+        <div class="no-margin col-xs-12 col-sm-7 body-holder">
+            <div class="body">
+                {% comment %}
+                This is a but clunky here.  Better to have some kind of JS-driven dashboard menu that
+                pops out when clicked.  A bit like the Django-Debug-Toolbar button
+                {% endcomment %}
+
+                {% purchase_info_for_product request product as session %}
+
+                {% if product.rating != None %}
+                    <div class="star-holder inline"><div class="star" data-score="{{ product.rating|stringformat:'d' }}"></div></div>
+                {% endif %}
+
+                <div class="availability">
+                    <label>{% trans "Availability:" %}</label>
+                    <span class="available {{ session.availability.code }}">
+                        {% if verbose %}
+                            {{ session.availability.message }}
+                        {% else %}
+                            {{ session.availability.short_message }}
+                        {% endif %}
+                    </span>
+                </div>
+
+
+                <div class="title"><a href="{{ product.get_absolute_url }}">{{ product.get_title }}</a></div>
+
+                <div class="brand">{{ session.stockrecord.partner }}</div>
+
+                <div id="share" class="social-row"></div>
+
+                <div class="buttons-holder">
+                    {% iffeature "wishlists" %}
+                        {% include "catalogue/partials/add_to_wishlist.html" %}
+                    {% endiffeature %}
+                </div>
+
+                <div class="prices top-buffer">
+                    {% if session.price.exists %}
+                        {% if session.price.excl_tax == 0 %}
+                            <div class="price-current">{% trans "Free" %}</div>
+                        {% elif session.price.is_tax_known %}
+                            <div class="price-current">{{ session.price.incl_tax|currency:session.price.currency }}</div>
+                        {% else %}
+                            <div class="price-current">{{ session.price.excl_tax|currency:session.price.currency }}</div>
+                        {% endif %}
+                        {% if session.stockrecord.old_price != 0 %}
+                            <div class="price-prev">
+                                {{ session.stockrecord.old_price|currency:session.price.currency }}
+                            </div>
+                        {% endif %}
+                    {% else %}
+                        <div class="price-current">&nbsp;</div>
+                    {% endif %}
+                </div>
+
+                <div class="row add-holder">
+                    {% block product_basket_form %}
+                        {% include "catalogue/partials/add_to_basket_form.html" %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div>
+</div>
+<section id="single-product-tab">
+    <div class="container">
+        <div class="tab-holder">
+            
+            <ul class="nav nav-tabs simple" >
+                <li class="active"><a href="#description" data-toggle="tab">{% trans "Product Description" %}</a></li>
+                <li><a href="#information" data-toggle="tab">{% trans "Product Information" %}</a></li>
+                {% iffeature "reviews" %}
+                    <li id="review-title">
+                        <a href="#reviews" data-toggle="tab">
+                            {% trans "Customer Reviews" %}
+                            {% if product.num_approved_reviews != 0 %}
+                                ({{ product.num_approved_reviews }})
+                            {% endif %}
+                        </a>
+                    </li>
+                {% endiffeature %}
+                {% with recommended_products=product.sorted_recommended_products|slice:":6" %}
+                    {% if recommended_products %}
+                        <li><a href="#recommended" data-toggle="tab">{% trans "Recommended items" %}</a></li>
+                    {% endif %}
+                {% endwith %}
+            </ul><!-- /.nav-tabs -->
+
+            <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    {% block product_description %}
+                        {% if product.description %}
+                            <p>{{ product.description|safe }}</p>
+                        {% endif %}
+                    {% endblock %}
+                </div>
+                <div class="tab-pane" id="information">
+                    {% block product_info %}
+                    <ul class="tabled-data">
+                        {% if product.upc %}
+                        <li>
+                            <label>{% trans "UPC" %}</label><div class="value">{{ product.upc }}</div>
+                        </li>
+                        {% endif %}
+                        <li>
+                            <label>{% trans "Product Type" %}</label><div class="value">{{ product.get_product_class.name }}</div>
+                        </li>
+
+                        {% if session.price.exists %}
+                            <li>
+                                <label>{% trans "Price (excl. tax)" %}</label><div class="value">{{ session.price.excl_tax|currency:session.price.currency }}</div>
+                            </li>
+                            {% if session.price.is_tax_known %}
+                                <li>
+                                    <label>{% trans "Price (incl. tax)" %}</label><div class="value">{{ session.price.incl_tax|currency:session.price.currency }}</div>
+                                </li>
+                                <li>
+                                    <label>{% trans "Tax" %}</label><div class="value">{{ session.price.tax|currency:session.price.currency }}</div>
+                                </li>
+                            {% endif %}
+                            <li>
+                                <label>{% trans "Availability" %}</label>
+                                <div class="value">{{ session.availability.message }}</div>
+                            </li>
+                        {% endif %}
+                        {% for av in product.attribute_values.all %}
+                            {% if av.attribute.code == 'weight' %}
+                                <li>
+                                    <label>{{ av.attribute.name }} <span class="lowercase">(gr)</span></label>
+                                    <div class="value">{{ av.value_as_html }}</div>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <label>{{ av.attribute.name }}</label>
+                                    <div class="value">{{ av.value_as_html }}</div>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                        {% iffeature "reviews" %}
+                            <li>
+                                <label>{% trans "Number of reviews" %}</label>
+                                <div class="value">{{ product.num_approved_reviews }}</div>
+                            </li>
+                        {% endiffeature %}
+                    </ul>
+                    {% endblock %}
+                </div>
+                {% iffeature "reviews" %}
+                <div class="tab-pane" id="reviews">
+                    {% block product_review %}
+                        {% if product.num_approved_reviews == 0 %}
+                            <p>
+                                {% if product|is_review_permitted:user %}
+                                    {% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id as add_review_url %}
+                                        {% blocktrans %}This product does not have any reviews yet -
+                                        <a href="{{ add_review_url }}#reviews">be the first to write one</a>.
+                                    {% endblocktrans %}
+                                {% else %}
+                                    {% trans "This product does not have any reviews yet" %}.
+                                {% endif %}
+                            </p>
+                        {% else %}
+                            <div class="comments">
+                                {% for review in product.reviews.approved.all|slice:":3" %}
+                                <div class="comment-item">
+                                    <div class="row no-margin">
+                                        {% include 'catalogue/partials/review.html' %}
+                                    </div><!-- /.row -->
+                                </div><!-- /.comment-item -->
+                                {% endfor %}
+                            </div>
+
+                            {% if product|is_review_permitted:user %}
+                            <div class="add-review row">
+                                <div class="col-sm-8 col-xs-12">
+                                    <div class="new-review-form">
+                                        <a id="write_review" href="{% url 'catalogue:reviews-add' product_slug=product.slug product_pk=product.id %}#reviews" class="le-button">
+                                            {% trans "Write a review" %}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endblock product_review %}
+                </div>
+                {% endiffeature %}
+
+                {% with recommended_products=product.sorted_recommended_products|slice:":6" %}
+                {% if recommended_products %}
+                <div class="tab-pane" id="recommended">
+                    {% for product in recommended_products %}
+                    <li class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                        {% render_product product %}
+                    </li>
+                    {% endfor %}
+                </div>
+                {% endif %}
+                {% endwith %}
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% recently_viewed_products current_product=product %}
+
+{% endblock content %}
+
+{% block extrascripts %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $("#share").jsSocials({
+            shareIn: "popup",
+            showCount: false,
+            showLabel: true,
+            shares: ["facebook", "twitter", "googleplus",
+            {
+                renderer: function() {
+                    $text_share = "whatsapp://send?text=" + window.location.href +' '+ $.trim($("meta[name=description]").attr("content") || $("title").text());
+                    $result = $("<div>").addClass("jssocials-share jssocials-share-whatsapp hidden-md hidden-lg");
+                    $("<a>").append("<i class='fa fa-whatsapp jssocials-share-logo'></i> WhatsApp")
+                    .addClass("jssocials-share-link")
+                    .attr("href", $text_share)
+                    .attr("target", "_self")
+                    .appendTo($result);
+
+                    return $result;
+                }
+            }]
+        });
+    </script>
+{% endblock %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static "media-center/js/jssocials.min.js" %}"></script>
+{% endblock %}
